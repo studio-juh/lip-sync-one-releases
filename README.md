@@ -4,7 +4,12 @@ LipSyncOne の Windows 向け配布ファイルと、自動更新フィードを
 
 ## 配布状態
 
-更新チャンネルの接続準備は完了しています。現在、一般向けの安定版リリースはまだ公開していません。
+Windows x64向け安定版`v0.1.2`を公開しています。
+
+- [最新版をダウンロード](https://github.com/studio-juh/lip-sync-one-releases/releases/latest)
+- [LipSyncOne 公式ヘルプ](https://studio-juh.github.io/lip-sync-one-releases/)
+
+ヘルプページは`site/`の静的ファイルをGitHub Pagesへ公開します。配布バイナリやUpdater用Release assetとは分離しています。
 
 ## Release assets
 
