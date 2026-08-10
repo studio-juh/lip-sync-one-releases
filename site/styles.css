@@ -226,6 +226,19 @@ kbd {
 .guide-section > h3 { margin: 30px 0 8px; font-size: 18px; }
 .guide-section > p { max-width: 820px; }
 
+.download-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px;
+  border: 1px solid var(--border-dark);
+  background: var(--surface);
+}
+.download-panel strong, .download-panel span { display: block; }
+.download-panel span { margin-top: 2px; color: var(--muted); font-size: 13px; }
+.download-panel-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+
 .guide-shot { margin: 26px 0 30px; }
 .guide-shot img { width: 100%; border: 1px solid var(--border-dark); background: var(--surface); }
 .guide-shot figcaption { margin-top: 8px; color: var(--muted); font-size: 12px; }
@@ -372,6 +385,8 @@ kbd {
   .guide-section { padding-bottom: 48px; margin-bottom: 44px; }
   .procedure li, .compact-procedure li { grid-template-columns: 32px minmax(0, 1fr); gap: 8px; }
   .procedure li span { grid-column: 2; }
+  .download-panel { align-items: stretch; flex-direction: column; }
+  .download-panel-actions > a { flex: 1 1 150px; }
   .definition-grid { grid-template-columns: 1fr; }
   .help-table { display: block; overflow-x: auto; white-space: normal; }
   .help-table th, .help-table td { min-width: 150px; }
