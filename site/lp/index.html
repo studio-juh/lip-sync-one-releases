@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ja" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="LipSyncOneは、透過PNG差分と音声から、口形・目パチ付きのアルファ動画素材を作るWindows向けデスクトップアプリです。">
+    <meta name="theme-color" content="#f7f7f7">
+    <meta property="og:title" content="LipSyncOne | アルファ動画素材制作">
+    <meta property="og:description" content="差分画像と音声から、透明なリップシンク動画素材を制作。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://studio-juh.github.io/lip-sync-one-releases/lp/">
+    <meta property="og:image" content="https://studio-juh.github.io/lip-sync-one-releases/assets/editor-dark.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>LipSyncOne | アルファ動画素材制作</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="../script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">本文へ移動</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="LipSyncOne 製品紹介の先頭へ">
+          <span class="brand-mark" aria-hidden="true">LS</span>
+          <span><strong>LipSyncOne</strong><small>アルファ動画素材制作</small></span>
+        </a>
+        <nav class="header-actions lp-nav" aria-label="ページ内リンク">
+          <a href="#features">特長</a>
+          <a href="#workflow">制作の流れ</a>
+          <a href="#formats">出力形式</a>
+          <a href="../">ヘルプ</a>
+          <button class="theme-toggle" type="button" aria-label="表示テーマを切り替える">表示切替</button>
+          <a class="download-button" href="https://github.com/studio-juh/lip-sync-one-releases/releases/latest">最新版をダウンロード</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="lp-hero" id="top">
+        <div class="page-width">
+          <div class="hero-copy">
+            <p class="product-label">Windows x64 デスクトップアプリ</p>
+            <h1>差分画像と音声から、<br>透明なリップシンク動画を。</h1>
+            <p class="hero-lead">LipSyncOneは、口形・目パチ・音声をひとつのタイムラインで扱い、Premiere Proなどへ渡せるアルファ動画素材を作るための専用ツールです。</p>
+            <div class="hero-actions">
+              <a class="download-button lp-primary" href="https://github.com/studio-juh/lip-sync-one-releases/releases/latest">Windows版をダウンロード</a>
+              <a class="secondary-button lp-secondary" href="../#quick-start">使いかたを見る</a>
+            </div>
+            <p class="hero-meta">最新安定版 v0.1.2　・　24 FPSを基本　・　音声解析はローカル処理</p>
+          </div>
+          <figure class="product-shot hero-shot">
+            <img src="../assets/editor-dark.png" alt="背景、キャラクター、口形、目パチ、音声をタイムラインへ配置したLipSyncOne編集画面">
+            <figcaption>画像レイヤー、音声、口形キュー、目パチを同じ時間軸で確認</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="lp-section position-section">
+        <div class="page-width position-grid">
+          <div>
+            <p class="section-kicker">POSITION</p>
+            <h2>リップシンク素材だけを、<br>専用工程に切り出す。</h2>
+          </div>
+          <div class="position-copy">
+            <p>総合動画編集ソフト上で口画像を一枚ずつ並べる代わりに、差分画像と音声の処理をLipSyncOneへまとめます。</p>
+            <p>完成した透明動画は、普段使っている編集ソフトへ読み込み、字幕、カット、効果、音声ミックスと組み合わせられます。</p>
+            <p class="scope-note">Live2Dや総合編集ソフトの代替ではありません。少数の差分画像を切り替えるコマアニメーション素材に集中しています。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lp-section" id="features">
+        <div class="page-width">
+          <header class="lp-section-heading">
+            <p class="section-kicker">FEATURES</p>
+            <h2>素材制作に必要な機能を、ひとつの画面へ。</h2>
+          </header>
+          <div class="feature-list">
+            <article><span>01</span><div><h3>2枚から始められる口形</h3><p>閉口・開口の2枚、閉・中・大の3枚、Rhubarb A〜H/Xの9口形に対応します。</p></div></article>
+            <article><span>02</span><div><h3>ローカル音声解析</h3><p>Rhubarbで音声を解析し、声量と無音しきい値を使って静かな区間の開口を抑えます。音声を外部サービスへ送りません。</p></div></article>
+            <article><span>03</span><div><h3>自動目パチ</h3><p>開眼・閉眼の2枚、または中割を含む3枚で、間隔とランダム幅を調整できます。</p></div></article>
+            <article><span>04</span><div><h3>編集できるタイムライン</h3><p>複数音声、無音区間、画像クリップ、レイヤー順、位置、倍率を保存し、あとから開き直して修正できます。</p></div></article>
+            <article><span>05</span><div><h3>小型の透過差分を自由配置</h3><p>口や目を全身画像と同じキャンバスへ広げる必要はありません。位置と基準点を使ってBASEへ合わせます。</p></div></article>
+            <article><span>06</span><div><h3>アルファ動画として受け渡し</h3><p>ProRes 4444、FFV1、lossless VP9を書き出し後に検証し、透明度を保った素材として保存します。</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="lp-section workflow-section" id="workflow">
+        <div class="page-width">
+          <header class="lp-section-heading">
+            <p class="section-kicker">WORKFLOW</p>
+            <h2>読み込みから書き出しまで、4つの工程。</h2>
+          </header>
+          <div class="workflow-list">
+            <article class="workflow-item">
+              <div class="workflow-copy"><span>01</span><h3>プロジェクトを作る</h3><p>HOMEから新規プロジェクトを作成し、透過PNGと音声をアセットへ読み込みます。</p></div>
+              <figure class="product-shot"><img src="../assets/home-dark.png" alt="新規プロジェクトを作成できるLipSyncOneのHOME画面"><figcaption>HOMEから新規作成、または保存済みプロジェクトを開く</figcaption></figure>
+            </article>
+            <article class="workflow-item reverse">
+              <div class="workflow-copy"><span>02</span><h3>口形と目を設定する</h3><p>少ない画像から始め、必要に応じて3枚・9口形へ広げられます。透明余白を除いた小型PNGも配置できます。</p></div>
+              <figure class="product-shot"><img src="../assets/mouth-setup-dark.png" alt="閉口・中口・大口を設定するLipSyncOneの口形設定画面"><figcaption>閉口・中口・大口をRhubarbの口形へ自動対応</figcaption></figure>
+            </article>
+            <article class="workflow-item">
+              <div class="workflow-copy"><span>03</span><h3>音声を解析する</h3><p>音量の影響度と無音しきい値を確認して解析します。結果は口形キューとしてタイムラインへ反映されます。</p></div>
+              <figure class="product-shot"><img src="../assets/lip-sync-analysis-dark.png" alt="音量補正を調整できるLipSyncOneのリップシンク解析画面"><figcaption>ローカル解析。2枚・3枚口形でも声量を考慮</figcaption></figure>
+            </article>
+            <article class="workflow-item reverse">
+              <div class="workflow-copy"><span>04</span><h3>透明動画を書き出す</h3><p>用途、背景、範囲、解像度を選び、代表フレームを確認してから動画を生成します。</p></div>
+              <figure class="product-shot"><img src="../assets/export-dark.png" alt="用途と代表フレームを確認できるLipSyncOneの動画書き出し画面"><figcaption>Premiere Pro向け、可逆マスター、軽量WebMから選択</figcaption></figure>
+            </article>
+          </div>
+          <p class="section-link"><a href="../#quick-start">詳しい操作手順をヘルプで見る →</a></p>
+        </div>
+      </section>
+
+      <section class="lp-section" id="formats">
+        <div class="page-width formats-grid">
+          <header class="lp-section-heading">
+            <p class="section-kicker">EXPORT</p>
+            <h2>制作工程に合わせて選べる出力形式。</h2>
+            <p>透明背景を正式な出力とし、書き出し後にコーデック、フレーム数、音声情報、代表フレームの透明度を確認します。</p>
+          </header>
+          <table class="format-table">
+            <thead><tr><th>用途</th><th>形式</th></tr></thead>
+            <tbody>
+              <tr><th>Adobe Premiere Pro</th><td><strong>ProRes 4444 Alpha</strong><span>MOV / PCM</span></td></tr>
+              <tr><th>可逆アルファマスター</th><td><strong>FFV1</strong><span>MKV / FLAC</span></td></tr>
+              <tr><th>軽量アルファ動画</th><td><strong>lossless VP9</strong><span>WebM / Opus</span></td></tr>
+              <tr><th>Windowsでの確認用</th><td><strong>H.264 カラーキー</strong><span>MP4 / AAC・非可逆</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="lp-section local-section">
+        <div class="page-width local-grid">
+          <div>
+            <p class="section-kicker">LOCAL FIRST</p>
+            <h2>画像も音声も、PCの中で処理。</h2>
+          </div>
+          <ul>
+            <li>口形解析のために音声を外部サービスへ送信しません。</li>
+            <li>プロジェクトと素材は利用者が選んだ場所で管理します。</li>
+            <li>Rhubarbは初回利用時に内容とライセンスを確認してから取得します。</li>
+            <li>アクセス解析やオンライン認証を前提にしません。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="lp-section fit-section">
+        <div class="page-width fit-grid">
+          <div>
+            <p class="section-kicker">FOR</p>
+            <h2>こんな制作工程に。</h2>
+            <ul>
+              <li>音声合成を使った実況・解説動画</li>
+              <li>立ち絵の差分で作る口パク素材</li>
+              <li>Premiere ProやDaVinci Resolveで仕上げる動画</li>
+              <li>透明動画を別の編集プロジェクトへ渡す工程</li>
+            </ul>
+          </div>
+          <div>
+            <p class="section-kicker">NOT FOR</p>
+            <h2>対象にしていないこと。</h2>
+            <ul>
+              <li>Live2Dのようなメッシュ変形や物理演算</li>
+              <li>カット、字幕、色調整を含む総合動画編集</li>
+              <li>連続的な表情変形や高度なキャラクターリグ</li>
+              <li>クラウド上での共同編集・素材管理</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="lp-download" id="download">
+        <div class="page-width download-grid">
+          <div>
+            <p class="section-kicker">DOWNLOAD</p>
+            <h2>LipSyncOneを試す。</h2>
+            <p>Windows x64向け最新安定版 v0.1.2。インストーラー版とポータブル版を公開しています。</p>
+            <p class="signature-note">現在はstudio-juhの自己署名による暫定配布です。別のPCではWindows SmartScreenが表示される場合があります。</p>
+          </div>
+          <div class="download-actions">
+            <a class="download-button lp-primary" href="https://github.com/studio-juh/lip-sync-one-releases/releases/latest">最新版をダウンロード</a>
+            <a class="secondary-button lp-secondary" href="../#install">インストール方法</a>
+            <a href="https://github.com/studio-juh/lip-sync-one-releases/releases">過去のリリースを見る</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer lp-footer">
+      <div class="page-width footer-inner">
+        <div><strong>LipSyncOne</strong><span>アルファ動画素材制作</span></div>
+        <nav aria-label="フッターリンク"><a href="../">ヘルプ</a><a href="https://github.com/studio-juh/lip-sync-one-releases/releases">ダウンロード</a><a href="#top">ページ上部へ</a></nav>
+        <small>© studio-juh　LipSyncOneはアクセス解析を使用しません。</small>
+      </div>
+    </footer>
+  </body>
+</html>
