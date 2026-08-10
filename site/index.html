@@ -47,25 +47,37 @@
       <div class="page-width help-layout">
         <aside class="side-nav" aria-label="ヘルプ目次">
           <p>目次</p>
-          <a href="#quick-start">最初の動画を作る</a>
           <a href="#install">インストール</a>
+          <a href="#quick-start">最初の動画を作る</a>
           <a href="#workspace">画面の見かた</a>
           <a href="#assets">素材を準備する</a>
           <a href="#mouth-setup">口形画像を設定する</a>
           <a href="#lip-sync">音声を解析する</a>
           <a href="#eye-blink">目パチを設定する</a>
           <a href="#timeline">タイムラインを編集する</a>
-          <a href="#export">動画を書き出す</a>
           <a href="#project-files">保存・素材収集</a>
+          <a href="#export">動画を書き出す</a>
           <a href="#updates">更新・Rhubarb</a>
           <a href="#shortcuts">主なショートカット</a>
           <a href="#troubleshooting">困ったときは</a>
         </aside>
 
         <div class="help-content">
+          <section class="guide-section searchable" id="install" data-search="インストール ダウンロード Windows SmartScreen 証明書 portable ポータブル setup">
+            <header class="section-heading"><p class="section-number">01</p><h2>インストール</h2></header>
+            <table class="help-table">
+              <thead><tr><th>配布形式</th><th>使いかた</th><th>向いている用途</th></tr></thead>
+              <tbody>
+                <tr><th>インストーラー版</th><td><code>LipSyncOne_&lt;version&gt;_x64-setup.exe</code>を実行</td><td>通常のWindowsアプリとして使う</td></tr>
+                <tr><th>ポータブル版</th><td>ZIPを展開し、フォルダー内の実行ファイルを起動</td><td>任意の場所で管理する</td></tr>
+              </tbody>
+            </table>
+            <div class="warning"><strong>Windowsの警告について</strong>現在はstudio-juhの自己署名による暫定配布です。公式Releaseから入手したことを確認し、SmartScreenでは「詳細情報」から発行元とファイル名を確認してください。</div>
+          </section>
+
           <section class="guide-section searchable" id="quick-start" data-search="はじめる クイックスタート 新規 プロジェクト 読み込み 解析 書き出し HOME">
             <header class="section-heading">
-              <p class="section-number">01</p>
+              <p class="section-number">02</p>
               <h2>最初の動画を作る</h2>
               <p>最小構成は、BASE画像1枚、閉じ口と開き口、音声1本です。</p>
             </header>
@@ -82,18 +94,6 @@
               <li><strong>動画を書き出す</strong><span>プレビューを確認し、「ファイル → 動画を書き出す」を選びます。</span></li>
             </ol>
             <div class="note"><strong>配置は自動ではありません。</strong>画像や音声を読み込んだだけではタイムラインへ追加されません。ドラッグ＆ドロップ、または選択後の配置操作を使います。</div>
-          </section>
-
-          <section class="guide-section searchable" id="install" data-search="インストール ダウンロード Windows SmartScreen 証明書 portable ポータブル setup">
-            <header class="section-heading"><p class="section-number">02</p><h2>インストール</h2></header>
-            <table class="help-table">
-              <thead><tr><th>配布形式</th><th>使いかた</th><th>向いている用途</th></tr></thead>
-              <tbody>
-                <tr><th>インストーラー版</th><td><code>LipSyncOne_&lt;version&gt;_x64-setup.exe</code>を実行</td><td>通常のWindowsアプリとして使う</td></tr>
-                <tr><th>ポータブル版</th><td>ZIPを展開し、フォルダー内の実行ファイルを起動</td><td>任意の場所で管理する</td></tr>
-              </tbody>
-            </table>
-            <div class="warning"><strong>Windowsの警告について</strong>現在はstudio-juhの自己署名による暫定配布です。公式Releaseから入手したことを確認し、SmartScreenでは「詳細情報」から発行元とファイル名を確認してください。</div>
           </section>
 
           <section class="guide-section searchable" id="workspace" data-search="画面 ワークスペース レイヤー アセット プレビュー プロパティ タイムライン ダーク ライト テーマ">
@@ -197,8 +197,17 @@ usagi_eye_closed.png</code></pre>
             <div class="note"><strong>BASEは背景レイヤーではありません。</strong>口と目が参照する親役割です。通常レイヤーをBASEより下へ置き、背景として使えます。</div>
           </section>
 
+          <section class="guide-section searchable" id="project-files" data-search="保存 lso 圧縮 プロジェクト 素材 収集 移動 バックアップ collect project relink">
+            <header class="section-heading"><p class="section-number">09</p><h2>保存と素材収集</h2></header>
+            <h3>.lsoファイルに保存されるもの</h3>
+            <p>.lsoには編集内容と設定を圧縮して保存します。参照中のPNG・WAV・MP3そのものは、通常の保存では埋め込みません。</p>
+            <h3>別のPCへ移す・バックアップする</h3>
+            <p>「ファイル → プロジェクトを収集して保存」を選びます。.lsoと使用中の素材をまとめた<code>Collected_プロジェクト名</code>フォルダーが作られます。</p>
+            <div class="warning"><strong>元の素材を移動しないでください。</strong>現在は欠落した素材を選び直すrelink画面がありません。通常保存した.lsoを使う場合は、素材の場所と名前を維持してください。</div>
+          </section>
+
           <section class="guide-section searchable" id="export" data-search="動画 書き出し alpha アルファ Premiere Pro ProRes FFV1 WebM カラーキー MP4 解像度 crop トリミング 代表フレーム">
-            <header class="section-heading"><p class="section-number">09</p><h2>動画を書き出す</h2><p>「ファイル → 動画を書き出す」またはCtrl＋Eで開きます。</p></header>
+            <header class="section-heading"><p class="section-number">10</p><h2>動画を書き出す</h2><p>「ファイル → 動画を書き出す」またはCtrl＋Eで開きます。</p></header>
             <figure class="guide-shot">
               <img src="./assets/export-dark.png" alt="用途、背景、解像度、代表フレームを表示したLipSyncOneの動画書き出し画面">
               <figcaption>用途を先に選び、背景、範囲、解像度、代表フレームを確認してから書き出します。</figcaption>
@@ -213,15 +222,6 @@ usagi_eye_closed.png</code></pre>
               </tbody>
             </table>
             <div class="warning"><strong>透明素材にはアルファ形式を選んでください。</strong>H.264 MP4は確認用のカラーキー動画です。透明度を保持しません。</div>
-          </section>
-
-          <section class="guide-section searchable" id="project-files" data-search="保存 lso 圧縮 プロジェクト 素材 収集 移動 バックアップ collect project relink">
-            <header class="section-heading"><p class="section-number">10</p><h2>保存と素材収集</h2></header>
-            <h3>.lsoファイルに保存されるもの</h3>
-            <p>.lsoには編集内容と設定を圧縮して保存します。参照中のPNG・WAV・MP3そのものは、通常の保存では埋め込みません。</p>
-            <h3>別のPCへ移す・バックアップする</h3>
-            <p>「ファイル → プロジェクトを収集して保存」を選びます。.lsoと使用中の素材をまとめた<code>Collected_プロジェクト名</code>フォルダーが作られます。</p>
-            <div class="warning"><strong>元の素材を移動しないでください。</strong>現在は欠落した素材を選び直すrelink画面がありません。通常保存した.lsoを使う場合は、素材の場所と名前を維持してください。</div>
           </section>
 
           <section class="guide-section searchable" id="updates" data-search="アップデート 更新 Rhubarb ダウンロード コンポーネント 1.14.0 mirror ミラー 購入者 証明 BOOTH">
