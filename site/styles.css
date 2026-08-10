@@ -245,6 +245,23 @@ kbd {
 .guide-shot.compact { max-width: 760px; margin: 20px 0 0; }
 .caption-text { margin-top: 10px; color: var(--muted); font-size: 13px; }
 
+.smartscreen-shots {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+.smartscreen-shot { margin: 0; }
+.smartscreen-shot a {
+  display: block;
+  border: 1px solid var(--border-dark);
+  background: #0067b8;
+}
+.smartscreen-shot img { display: block; width: 100%; height: auto; }
+.smartscreen-shot figcaption { margin-top: 9px; font-size: 13px; }
+.smartscreen-shot figcaption strong, .smartscreen-shot figcaption span { display: block; }
+.smartscreen-shot figcaption span { margin-top: 3px; color: var(--muted); }
+
 .procedure {
   display: grid;
   margin: 28px 0 0;
@@ -387,6 +404,7 @@ kbd {
   .procedure li span { grid-column: 2; }
   .download-panel { align-items: stretch; flex-direction: column; }
   .download-panel-actions > a { flex: 1 1 150px; }
+  .smartscreen-shots { grid-template-columns: 1fr; }
   .definition-grid { grid-template-columns: 1fr; }
   .help-table { display: block; overflow-x: auto; white-space: normal; }
   .help-table th, .help-table td { min-width: 150px; }

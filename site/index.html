@@ -80,7 +80,22 @@
                 <tr><th>ポータブル版</th><td>ZIPを展開し、フォルダー内の実行ファイルを起動</td><td>任意の場所で管理する</td></tr>
               </tbody>
             </table>
-            <div class="warning"><strong>Windowsの警告について</strong>現在はstudio-juhの自己署名による暫定配布です。公式Releaseから入手したことを確認し、SmartScreenでは「詳細情報」から発行元とファイル名を確認してください。</div>
+            <div class="warning"><strong>Windowsの警告について</strong>現在はstudio-juhの自己署名による暫定配布です。必ず公式Releaseから入手したファイルであることを確認してから、次の手順でSmartScreenの表示内容を確認してください。</div>
+            <div class="smartscreen-shots" aria-label="Windows SmartScreenの確認手順">
+              <figure class="smartscreen-shot">
+                <a href="./assets/smartscreen-warning.png" aria-label="SmartScreenの最初の警告画面を拡大表示">
+                  <img src="./assets/smartscreen-warning.png" alt="WindowsによってPCが保護されましたと表示され、詳細情報を選べるSmartScreenの警告画面" loading="lazy">
+                </a>
+                <figcaption><strong>1. 「詳細情報」を選ぶ</strong><span>「実行しない」だけが表示されている場合は、「詳細情報」を選びます。</span></figcaption>
+              </figure>
+              <figure class="smartscreen-shot">
+                <a href="./assets/smartscreen-details.png" aria-label="SmartScreenの詳細確認画面を拡大表示">
+                  <img src="./assets/smartscreen-details.png" alt="アプリ名LipSyncOne.exe、発行元studio-juh、実行ボタンが表示されたSmartScreenの詳細画面" loading="lazy">
+                </a>
+                <figcaption><strong>2. 内容を確認して「実行」</strong><span>アプリ名と発行元を確認し、公式Releaseから取得したファイルと一致する場合だけ実行します。</span></figcaption>
+              </figure>
+            </div>
+            <p class="caption-text">画像はポータブル版の例です。インストーラー版ではアプリ名にダウンロードしたセットアップファイル名が表示されます。画像を選ぶと原寸で確認できます。</p>
           </section>
 
           <section class="guide-section searchable" id="quick-start" data-search="はじめる クイックスタート 新規 プロジェクト 読み込み 解析 書き出し HOME">
@@ -257,7 +272,7 @@ usagi_eye_closed.png</code></pre>
           <section class="guide-section searchable" id="troubleshooting" data-search="トラブル エラー 起動 解析 失敗 音声 表示されない 書き出し 再生 SmartScreen Rhubarb Master audio preparation failed">
             <header class="section-heading"><p class="section-number">13</p><h2>困ったときは</h2></header>
             <div class="faq-list">
-              <details><summary>Windowsが実行を止める</summary><p>公式Releaseから取得したファイルであることを確認します。現在は自己署名のためSmartScreenが表示される場合があります。「詳細情報」で発行元とファイル名を確認してください。</p></details>
+              <details><summary>Windowsが実行を止める</summary><p>公式Releaseから取得したファイルであることを確認します。現在は自己署名のためSmartScreenが表示される場合があります。<a href="#install">インストール欄の画面例</a>に沿って「詳細情報」を開き、アプリ名と発行元を確認してください。</p></details>
               <details><summary>音声や画像を読み込んでもタイムラインに出ない</summary><p>読み込みはアセットへの登録だけを行います。画像は対象レイヤーへ、音声はマスター音声トラックへドラッグしてください。</p></details>
               <details><summary>「Master audio preparation failed」と表示される</summary><p>参照元の音声が移動、改名、削除されていないか確認してください。音声を読み込んだだけの場合は、マスター音声トラックへ配置します。</p></details>
               <details><summary>リップシンク解析を開始できない</summary><p>マスター音声にクリップがあり、口レイヤーへ口形画像が設定されているか確認します。Rhubarb未導入の場合は、解析画面の案内からダウンロードします。</p></details>
