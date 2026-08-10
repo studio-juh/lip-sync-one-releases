@@ -247,8 +247,9 @@ kbd {
 
 .smartscreen-shots {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 280px));
   gap: 16px;
+  justify-content: start;
   margin-top: 18px;
 }
 .smartscreen-shot { margin: 0; }
@@ -404,7 +405,7 @@ kbd {
   .procedure li span { grid-column: 2; }
   .download-panel { align-items: stretch; flex-direction: column; }
   .download-panel-actions > a { flex: 1 1 150px; }
-  .smartscreen-shots { grid-template-columns: 1fr; }
+  .smartscreen-shots { grid-template-columns: minmax(0, 280px); }
   .definition-grid { grid-template-columns: 1fr; }
   .help-table { display: block; overflow-x: auto; white-space: normal; }
   .help-table th, .help-table td { min-width: 150px; }
