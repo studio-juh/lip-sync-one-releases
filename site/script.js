@@ -8,14 +8,25 @@ const navLinks = [...document.querySelectorAll(".side-nav a")];
 const savedTheme = localStorage.getItem("lipsyncone-help-theme");
 if (savedTheme === "dark" || savedTheme === "light") {
   root.dataset.theme = savedTheme;
-} else if (matchMedia("(prefers-color-scheme: light)").matches) {
-  root.dataset.theme = "light";
 }
+
+function updateThemeButton() {
+  if (!themeButton) return;
+  const dark = root.dataset.theme === "dark";
+  themeButton.textContent = dark ? "ライト表示" : "ダーク表示";
+  themeButton.setAttribute(
+    "aria-label",
+    dark ? "ライトテーマに切り替える" : "ダークテーマに切り替える",
+  );
+}
+
+updateThemeButton();
 
 themeButton?.addEventListener("click", () => {
   const next = root.dataset.theme === "light" ? "dark" : "light";
   root.dataset.theme = next;
   localStorage.setItem("lipsyncone-help-theme", next);
+  updateThemeButton();
 });
 
 function normalize(value) {

@@ -9,7 +9,7 @@ Windows x64向け安定版`v0.1.2`を公開しています。
 - [最新版をダウンロード](https://github.com/studio-juh/lip-sync-one-releases/releases/latest)
 - [LipSyncOne 公式ヘルプ](https://studio-juh.github.io/lip-sync-one-releases/)
 
-ヘルプページは`site/`の静的ファイルをGitHub Pagesへ公開します。配布バイナリやUpdater用Release assetとは分離しています。
+ヘルプページは`site/`の静的ファイルをGitHub Pagesへ公開します。HOME、画面構成、口形設定、音声解析、タイムライン、動画書き出しを実画面付きで案内し、配布バイナリやUpdater用Release assetとは分離しています。
 
 ## Release assets
 
