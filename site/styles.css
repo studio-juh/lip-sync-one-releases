@@ -271,7 +271,7 @@ kbd {
   overflow: auto;
 }
 .image-lightbox[open] { display: grid; place-items: center; }
-.image-lightbox::backdrop { background: rgb(0 0 0 / 78%); }
+.image-lightbox::backdrop { background: rgb(0 0 0 / 56%); }
 .image-lightbox-hit-area { position: absolute; inset: 0; cursor: zoom-out; }
 .image-lightbox-panel {
   position: relative;
@@ -279,9 +279,9 @@ kbd {
   width: min(100%, 1800px);
   max-height: 94vh;
   padding: 48px 18px 14px;
-  border: 1px solid #555;
-  background: #171717;
-  box-shadow: 0 16px 56px rgb(0 0 0 / 48%);
+  border: 1px solid rgb(255 255 255 / 24%);
+  background: rgb(23 23 23 / 68%);
+  box-shadow: 0 16px 48px rgb(0 0 0 / 34%);
 }
 .image-lightbox figure { margin: 0; }
 .image-lightbox-image {
