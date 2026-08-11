@@ -26,6 +26,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+      - name: Validate site metadata
+        run: node .github/scripts/validate-site-metadata.mjs
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
         with:

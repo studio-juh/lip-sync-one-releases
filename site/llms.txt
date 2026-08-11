@@ -1,0 +1,33 @@
+# LipSyncOne
+
+> LipSyncOneは、キャラクターの差分画像と音声から口パク・目パチ付きの動画を作り、背景を透明なまま書き出せるWindows向けデスクトップアプリです。
+
+## 公式ページ
+
+- [製品紹介](https://studio-juh.github.io/lip-sync-one-releases/lp/): 特長、動画作成の流れ、書き出し形式、対応環境
+- [公式ヘルプ](https://studio-juh.github.io/lip-sync-one-releases/): インストール、素材準備、口形、目パチ、タイムライン、動画書き出し、トラブル対応
+- [最新版](https://github.com/studio-juh/lip-sync-one-releases/releases/latest): Windows 11 x64向けインストーラー版とポータブル版
+- [BOOTH有償ベータ版](https://hanairo-m.booth.pm/items/8707179): 支援案内の抑止と先行・支援者向け機能アクセスを含む購入証明付き
+
+## 現行仕様
+
+- 現行公開版はv0.1.4ベータ版です。
+- PNG差分画像、WAV、MP3を利用できます。
+- 口形は閉・開の2枚、閉・中・大の3枚、Rhubarb A〜H/Xの9枚に対応します。
+- 目パチは開眼・閉眼の2枚、任意の中割を含む3枚に対応します。
+- 音声解析はPC内で行い、画像や音声を外部へ送信しません。
+- アルファ動画はProRes 4444、FFV1、lossless VP9 WebMへ書き出せます。
+- Premiere Proなど別の動画編集ソフトで仕上げる素材制作を主な用途とします。
+
+## 対象外
+
+- Live2Dのようなメッシュ変形や物理演算
+- カット、字幕、色調整を含む総合動画編集
+- クラウド共同編集
+- Windows 11 x64以外の正式対応
+
+## 配布上の注意
+
+- 現在のWindows成果物はstudio-juhの自己署名です。
+- Rhubarb Lip Sync 1.14.0は初回解析時に内容とライセンスを確認してから個別取得します。
+- 正式な仕様と操作方法は製品紹介より公式ヘルプを優先してください。
