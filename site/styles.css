@@ -279,9 +279,7 @@ kbd {
   width: min(100%, 1800px);
   max-height: 94vh;
   padding: 48px 18px 14px;
-  border: 1px solid rgb(255 255 255 / 24%);
-  background: rgb(23 23 23 / 68%);
-  box-shadow: 0 16px 48px rgb(0 0 0 / 34%);
+  pointer-events: none;
 }
 .image-lightbox figure { margin: 0; }
 .image-lightbox-image {
@@ -290,6 +288,7 @@ kbd {
   max-height: calc(94vh - 94px);
   margin-inline: auto;
   object-fit: contain;
+  pointer-events: auto;
 }
 .image-lightbox-caption {
   min-height: 20px;
@@ -303,11 +302,19 @@ kbd {
   position: absolute;
   top: 10px;
   right: 12px;
-  padding: 5px 11px;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  place-items: center;
   border: 1px solid #777;
-  background: #262626;
+  border-radius: 50%;
+  background: rgb(24 24 24 / 72%);
   color: #fff;
   cursor: pointer;
+  font-size: 26px;
+  line-height: 1;
+  pointer-events: auto;
 }
 .image-lightbox-close:hover { background: #3a3a3a; }
 .image-lightbox-close:focus-visible { outline: 3px solid #aac2f1; outline-offset: 2px; }
