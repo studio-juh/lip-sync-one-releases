@@ -4,11 +4,12 @@ LipSyncOne の Windows 向け配布ファイルと、自動更新フィードを
 
 ## 配布状態
 
-Windows x64向け安定版`v0.1.3`を公開しています。
+Windows 11 x64向け`v0.1.4`ベータ版を公開しています。
 
 - [最新版をダウンロード](https://github.com/studio-juh/lip-sync-one-releases/releases/latest)
 - [LipSyncOne 製品紹介](https://studio-juh.github.io/lip-sync-one-releases/lp/)
 - [LipSyncOne 公式ヘルプ](https://studio-juh.github.io/lip-sync-one-releases/)
+- [一般向けお問い合わせ（マシュマロ）](https://marshmallow-qa.com/jyfux4yi4cp85hw)
 
 製品紹介LPとヘルプページは`site/`の静的ファイルをGitHub Pagesへ公開します。HOME、画面構成、口形設定、音声解析、タイムライン、動画書き出しを実画面付きで案内し、配布バイナリやUpdater用Release assetとは分離しています。
 
