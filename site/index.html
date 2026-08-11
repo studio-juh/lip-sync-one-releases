@@ -147,15 +147,20 @@
               <li><strong>目</strong>：開・閉の2枚、または開・中割・閉の3枚。</li>
               <li><strong>背景・小物</strong>：通常レイヤーとしてBASEより上にも下にも配置できます。</li>
             </ul>
-            <h3>ファイル名からまとめて割り当てる</h3>
+            <h3>対応ファイル名一覧</h3>
             <p>アセット欄で画像を複数選択し、「ファイル名から自動割り当て」を押します。読み込み直後に勝手に割り当てることはありません。</p>
-            <pre class="filename-example"><code>usagi_body.png
-usagi_mouth_closed.png
-usagi_mouth_medium.png
-usagi_mouth_wide.png
-usagi_eye_open.png
-usagi_eye_half.png
-usagi_eye_closed.png</code></pre>
+            <table class="help-table">
+              <thead><tr><th>割り当て</th><th>対応ファイル名</th><th>必要な組</th></tr></thead>
+              <tbody>
+                <tr><th>BASE</th><td><code>{名前}_body.png</code></td><td>1枚</td></tr>
+                <tr><th>口形・かんたん2枚</th><td><code>{名前}_mouth_closed.png</code><br><code>{名前}_mouth_open.png</code></td><td>2枚すべて</td></tr>
+                <tr><th>口形・かんたん3枚</th><td><code>{名前}_mouth_closed.png</code><br><code>{名前}_mouth_medium.png</code><br><code>{名前}_mouth_wide.png</code></td><td>3枚すべて</td></tr>
+                <tr><th>口形・詳細9枚</th><td><code>{名前}_mouth_A.png</code>〜<code>{名前}_mouth_H.png</code><br><code>{名前}_mouth_X.png</code></td><td>A〜H/Xの9枚すべて</td></tr>
+                <tr><th>目・2枚</th><td><code>{名前}_eye_open.png</code><br><code>{名前}_eye_closed.png</code></td><td>2枚すべて</td></tr>
+                <tr><th>目・3枚</th><td><code>{名前}_eye_open.png</code><br><code>{名前}_eye_half.png</code><br><code>{名前}_eye_closed.png</code></td><td>3枚すべて</td></tr>
+              </tbody>
+            </table>
+            <p class="caption-text"><code>{名前}</code>は全画像で同じにします。区切りには空白、<code>.</code>、<code>_</code>、<code>-</code>を使用でき、大文字・小文字は区別しません。不足、重複、異なる名前の混在、未対応語は推測して割り当てません。</p>
             <p class="caption-text">空白からドラッグして範囲選択、Ctrl＋クリックで追加・解除、Shift＋クリックで連続選択できます。</p>
           </section>
 
@@ -173,6 +178,23 @@ usagi_eye_closed.png</code></pre>
                 <tr><th>詳細（9口形）</th><td>A〜H、X</td><td>Rhubarb標準の口形を個別に描く</td></tr>
               </tbody>
             </table>
+            <h3>Rhubarb A〜H/Xの意味</h3>
+            <p>A〜H/Xは開き具合の順番ではなく、音声から選ばれる発音別の口形記号です。</p>
+            <table class="help-table">
+              <thead><tr><th>口形</th><th>形の目安</th><th>主な音</th></tr></thead>
+              <tbody>
+                <tr><th>A</th><td>唇を閉じる。休止口より少し力を入れる</td><td>P / B / M</td></tr>
+                <tr><th>B</th><td>歯を閉じ、口を少し開く</td><td>K / S / T、EE</td></tr>
+                <tr><th>C</th><td>口を開く。大口形への中間にも使う</td><td>EH / AE</td></tr>
+                <tr><th>D</th><td>口を大きく開く</td><td>AA</td></tr>
+                <tr><th>E</th><td>口を少し丸める。すぼめ口への中間にも使う</td><td>AO / ER</td></tr>
+                <tr><th>F</th><td>唇をすぼめる</td><td>UW / OW / W</td></tr>
+                <tr><th>G</th><td>上の歯を下唇へ当てる</td><td>F / V</td></tr>
+                <tr><th>H</th><td>舌を上の歯の後ろへ上げる</td><td>L</td></tr>
+                <tr><th>X</th><td>力を抜いて口を閉じる休止形</td><td>無音・発話の間</td></tr>
+              </tbody>
+            </table>
+            <p class="caption-text">かんたん2枚ではA/Xを閉口、B〜Hを開口へまとめます。かんたん3枚では9口形を閉口・中口・大口へ自動で振り分けます。</p>
             <div class="note"><strong>小型の差分画像も使えます。</strong>キャラクター全体と同じキャンバスサイズにする必要はありません。「レイヤー位置」と各画像の「基準点」でBASEへ合わせます。</div>
           </section>
 
