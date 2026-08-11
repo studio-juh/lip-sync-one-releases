@@ -15,6 +15,8 @@ Windows 11 x64向け`v0.1.4`ベータ版を公開しています。
 
 検索エンジンとAI検索向けにcanonical URL、OG / Twitter Card、JSON-LD、`robots.txt`、`sitemap.xml`、補助的な`llms.txt`を公開します。検索向けクローラーは許可し、構造化データとAI向け要約には公開ページで確認できる現行仕様だけを記載します。
 
+`site/google*.html`はGoogle Search Consoleの所有権確認に使用します。Googleが定期的に再確認するため、登録完了後も公開を維持します。
+
 ## Release assets
 
 各安定版の GitHub Release には、同じバージョン番号を持つ次のファイルを添付します。

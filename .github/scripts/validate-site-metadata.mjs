@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
 
@@ -23,6 +23,7 @@ const pages = [
 const sitemap = await read("sitemap.xml");
 const robots = await read("robots.txt");
 const llms = await read("llms.txt");
+const verificationFiles = (await readdir(siteRoot)).filter((name) => /^google[a-z0-9]+\.html$/.test(name));
 
 assert.match(robots, /^User-agent: \*$/m);
 assert.match(robots, /^User-agent: OAI-SearchBot$/m);
@@ -32,6 +33,11 @@ assert.match(
 );
 assert.match(llms, /^# LipSyncOne$/m);
 assert.match(llms, /音声解析はPC内で行い/);
+assert.ok(verificationFiles.length > 0, "site root must include a Google verification file");
+
+for (const name of verificationFiles) {
+  assert.equal((await read(name)).trim(), `google-site-verification: ${name}`);
+}
 
 for (const page of pages) {
   const html = await read(page.path);
