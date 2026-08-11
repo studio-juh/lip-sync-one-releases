@@ -245,6 +245,68 @@ kbd {
 .guide-shot.compact { max-width: 760px; margin: 20px 0 0; }
 .caption-text { margin-top: 10px; color: var(--muted); font-size: 13px; }
 
+.image-zoom-trigger {
+  display: block;
+  cursor: zoom-in;
+}
+.image-zoom-trigger:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+.image-zoom-trigger img { transition: opacity 120ms ease; }
+.image-zoom-trigger:hover img { opacity: 0.88; }
+
+.image-lightbox {
+  width: auto;
+  max-width: none;
+  height: auto;
+  max-height: none;
+  margin: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #f5f5f5;
+}
+.image-lightbox::backdrop { background: rgb(0 0 0 / 78%); }
+.image-lightbox-panel {
+  position: relative;
+  width: min(94vw, 1800px);
+  max-height: 94vh;
+  padding: 48px 18px 14px;
+  border: 1px solid #555;
+  background: #171717;
+  box-shadow: 0 16px 56px rgb(0 0 0 / 48%);
+}
+.image-lightbox figure { margin: 0; }
+.image-lightbox-image {
+  width: auto;
+  max-width: 100%;
+  max-height: calc(94vh - 94px);
+  margin-inline: auto;
+  object-fit: contain;
+}
+.image-lightbox-caption {
+  min-height: 20px;
+  margin-top: 9px;
+  color: #d0d0d0;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+}
+.image-lightbox-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  padding: 5px 11px;
+  border: 1px solid #777;
+  background: #262626;
+  color: #fff;
+  cursor: pointer;
+}
+.image-lightbox-close:hover { background: #3a3a3a; }
+.image-lightbox-close:focus-visible { outline: 3px solid #aac2f1; outline-offset: 2px; }
+body.image-lightbox-open { overflow: hidden; }
+
 .smartscreen-shots {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 280px));
@@ -412,8 +474,10 @@ kbd {
   .support-block { align-items: stretch; flex-direction: column; }
   .footer-inner { grid-template-columns: 1fr; }
   .footer-inner small { grid-column: auto; }
+  .image-lightbox-panel { width: 96vw; padding-inline: 8px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .image-zoom-trigger img { transition: none; }
 }

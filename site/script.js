@@ -69,3 +69,43 @@ const observer = new IntersectionObserver((entries) => {
 }, { rootMargin: "-18% 0px -68%", threshold: [0.05, 0.2, 0.5] });
 
 for (const section of sections) observer.observe(section);
+
+const imageLightbox = document.querySelector(".image-lightbox");
+const lightboxImage = imageLightbox?.querySelector(".image-lightbox-image");
+const lightboxCaption = imageLightbox?.querySelector(".image-lightbox-caption");
+const lightboxClose = imageLightbox?.querySelector(".image-lightbox-close");
+const imageZoomTriggers = [...document.querySelectorAll(".image-zoom-trigger")];
+let lastImageTrigger = null;
+
+function openImageLightbox(trigger) {
+  if (!(imageLightbox instanceof HTMLDialogElement) || !lightboxImage || !lightboxCaption) return;
+  const sourceImage = trigger.querySelector("img");
+  if (!(sourceImage instanceof HTMLImageElement)) return;
+
+  lastImageTrigger = trigger;
+  lightboxImage.src = trigger.href;
+  lightboxImage.alt = sourceImage.alt;
+  lightboxCaption.textContent = sourceImage.closest("figure")?.querySelector("figcaption")?.textContent?.trim()
+    || sourceImage.alt;
+  document.body.classList.add("image-lightbox-open");
+  imageLightbox.showModal();
+}
+
+for (const trigger of imageZoomTriggers) {
+  trigger.addEventListener("click", (event) => {
+    if (!(trigger instanceof HTMLAnchorElement)) return;
+    event.preventDefault();
+    openImageLightbox(trigger);
+  });
+}
+
+lightboxClose?.addEventListener("click", () => imageLightbox?.close());
+imageLightbox?.addEventListener("click", (event) => {
+  if (event.target === imageLightbox) imageLightbox.close();
+});
+imageLightbox?.addEventListener("close", () => {
+  document.body.classList.remove("image-lightbox-open");
+  if (lightboxImage) lightboxImage.removeAttribute("src");
+  lastImageTrigger?.focus();
+  lastImageTrigger = null;
+});

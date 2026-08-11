@@ -83,13 +83,13 @@
             <div class="warning"><strong>Windowsの警告について</strong>現在はstudio-juhの自己署名による暫定配布です。必ず公式Releaseから入手したファイルであることを確認してから、次の手順でSmartScreenの表示内容を確認してください。</div>
             <div class="smartscreen-shots" aria-label="Windows SmartScreenの確認手順">
               <figure class="smartscreen-shot">
-                <a href="./assets/smartscreen-warning.png" aria-label="SmartScreenの最初の警告画面を拡大表示">
+                <a class="image-zoom-trigger" href="./assets/smartscreen-warning.png" aria-label="SmartScreenの最初の警告画面を拡大表示">
                   <img src="./assets/smartscreen-warning.png" alt="WindowsによってPCが保護されましたと表示され、詳細情報を選べるSmartScreenの警告画面" loading="lazy">
                 </a>
                 <figcaption><strong>1. 「詳細情報」を選ぶ</strong><span>「実行しない」だけが表示されている場合は、「詳細情報」を選びます。</span></figcaption>
               </figure>
               <figure class="smartscreen-shot">
-                <a href="./assets/smartscreen-details.png" aria-label="SmartScreenの詳細確認画面を拡大表示">
+                <a class="image-zoom-trigger" href="./assets/smartscreen-details.png" aria-label="SmartScreenの詳細確認画面を拡大表示">
                   <img src="./assets/smartscreen-details.png" alt="アプリ名LipSyncOne.exe、発行元studio-juh、実行ボタンが表示されたSmartScreenの詳細画面" loading="lazy">
                 </a>
                 <figcaption><strong>2. 内容を確認して「実行」</strong><span>アプリ名と発行元を確認し、公式Releaseから取得したファイルと一致する場合だけ実行します。</span></figcaption>
@@ -105,7 +105,7 @@
               <p>最小構成は、BASE画像1枚、閉じ口と開き口、音声1本です。</p>
             </header>
             <figure class="guide-shot">
-              <img src="./assets/home-dark.png" alt="新規プロジェクトとプロジェクトを開くボタンがあるLipSyncOneのHOME画面">
+              <a class="image-zoom-trigger" href="./assets/home-dark.png" aria-label="HOME画面を拡大表示"><img src="./assets/home-dark.png" alt="新規プロジェクトとプロジェクトを開くボタンがあるLipSyncOneのHOME画面"></a>
               <figcaption>起動後のHOME。「新規プロジェクト」から制作を開始します。</figcaption>
             </figure>
             <ol class="procedure">
@@ -122,7 +122,7 @@
           <section class="guide-section searchable" id="workspace" data-search="画面 ワークスペース レイヤー アセット プレビュー プロパティ タイムライン ダーク ライト テーマ">
             <header class="section-heading"><p class="section-number">03</p><h2>画面の見かた</h2><p>編集画面は、素材・プレビュー・設定・時間編集の4領域に分かれています。</p></header>
             <figure class="guide-shot">
-              <img src="./assets/editor-dark.png" alt="レイヤー、アセット、プレビュー、プロパティ、タイムラインを表示したLipSyncOne編集画面">
+              <a class="image-zoom-trigger" href="./assets/editor-dark.png" aria-label="編集画面を拡大表示"><img src="./assets/editor-dark.png" alt="レイヤー、アセット、プレビュー、プロパティ、タイムラインを表示したLipSyncOne編集画面"></a>
               <figcaption>編集画面。選択したレイヤーやクリップに応じて右側のプロパティが切り替わります。</figcaption>
             </figure>
             <dl class="definition-grid">
@@ -134,7 +134,7 @@
             </dl>
             <details class="inline-details">
               <summary>ライトテーマの表示を確認する</summary>
-              <figure class="guide-shot compact"><img src="./assets/editor-light.png" alt="ライトテーマのLipSyncOne編集画面"><figcaption>「表示 → テーマカラー → ライト」で切り替えられます。</figcaption></figure>
+              <figure class="guide-shot compact"><a class="image-zoom-trigger" href="./assets/editor-light.png" aria-label="ライトテーマの編集画面を拡大表示"><img src="./assets/editor-light.png" alt="ライトテーマのLipSyncOne編集画面"></a><figcaption>「表示 → テーマカラー → ライト」で切り替えられます。</figcaption></figure>
             </details>
           </section>
 
@@ -162,7 +162,7 @@ usagi_eye_closed.png</code></pre>
           <section class="guide-section searchable" id="mouth-setup" data-search="口形 画像 閉口 中口 大口 2枚 3枚 9口形 A B C D E F G H X anchor 基準点 透明余白">
             <header class="section-heading"><p class="section-number">05</p><h2>口形画像を設定する</h2><p>レイヤー欄の「＋追加 → 口・リップシンク」から設定します。</p></header>
             <figure class="guide-shot">
-              <img src="./assets/mouth-setup-dark.png" alt="閉口・中口・大口を設定する口・リップシンクレイヤー追加画面">
+              <a class="image-zoom-trigger" href="./assets/mouth-setup-dark.png" aria-label="口形設定画面を拡大表示"><img src="./assets/mouth-setup-dark.png" alt="閉口・中口・大口を設定する口・リップシンクレイヤー追加画面"></a>
               <figcaption>かんたん3枚設定。閉口・中口・大口をRhubarbの9口形へ自動で振り分けます。</figcaption>
             </figure>
             <table class="help-table">
@@ -179,7 +179,7 @@ usagi_eye_closed.png</code></pre>
           <section class="guide-section searchable" id="lip-sync" data-search="リップシンク Rhubarb 解析 音声 声量 音量 しきい値 無音 キュー クリップ単位">
             <header class="section-heading"><p class="section-number">06</p><h2>音声を解析する</h2><p>解析は音声クリップ単位で保存されます。クリップ移動や無音区間の追加だけなら、通常は再解析不要です。</p></header>
             <figure class="guide-shot">
-              <img src="./assets/lip-sync-analysis-dark.png" alt="音量の影響度と無音しきい値を設定するリップシンク解析画面">
+              <a class="image-zoom-trigger" href="./assets/lip-sync-analysis-dark.png" aria-label="リップシンク解析画面を拡大表示"><img src="./assets/lip-sync-analysis-dark.png" alt="音量の影響度と無音しきい値を設定するリップシンク解析画面"></a>
               <figcaption>リップシンク解析。音量補正を使うと、静かな区間で口が開きすぎる状態を抑えられます。</figcaption>
             </figure>
             <ol class="procedure compact-procedure">
@@ -233,7 +233,7 @@ usagi_eye_closed.png</code></pre>
           <section class="guide-section searchable" id="export" data-search="動画 書き出し alpha アルファ Premiere Pro ProRes FFV1 WebM カラーキー MP4 解像度 crop トリミング 代表フレーム">
             <header class="section-heading"><p class="section-number">10</p><h2>動画を書き出す</h2><p>「ファイル → 動画を書き出す」またはCtrl＋Eで開きます。</p></header>
             <figure class="guide-shot">
-              <img src="./assets/export-dark.png" alt="用途、背景、解像度、代表フレームを表示したLipSyncOneの動画書き出し画面">
+              <a class="image-zoom-trigger" href="./assets/export-dark.png" aria-label="動画書き出し画面を拡大表示"><img src="./assets/export-dark.png" alt="用途、背景、解像度、代表フレームを表示したLipSyncOneの動画書き出し画面"></a>
               <figcaption>用途を先に選び、背景、範囲、解像度、代表フレームを確認してから書き出します。</figcaption>
             </figure>
             <table class="help-table">
@@ -294,6 +294,16 @@ usagi_eye_closed.png</code></pre>
         </div>
       </div>
     </main>
+
+    <dialog class="image-lightbox" aria-label="画像の拡大表示">
+      <div class="image-lightbox-panel">
+        <button class="image-lightbox-close" type="button" aria-label="拡大画像を閉じる">閉じる</button>
+        <figure>
+          <img class="image-lightbox-image" alt="">
+          <figcaption class="image-lightbox-caption"></figcaption>
+        </figure>
+      </div>
+    </dialog>
 
     <footer class="site-footer">
       <div class="page-width footer-inner">
