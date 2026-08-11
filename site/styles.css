@@ -257,20 +257,24 @@ kbd {
 .image-zoom-trigger:hover img { opacity: 0.88; }
 
 .image-lightbox {
-  width: auto;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
   max-width: none;
-  height: auto;
+  height: 100vh;
   max-height: none;
-  margin: auto;
-  padding: 0;
+  margin: 0;
+  padding: 3vh 3vw;
   border: 0;
   background: transparent;
   color: #f5f5f5;
+  overflow: auto;
 }
+.image-lightbox[open] { display: grid; place-items: center; }
 .image-lightbox::backdrop { background: rgb(0 0 0 / 78%); }
 .image-lightbox-panel {
   position: relative;
-  width: min(94vw, 1800px);
+  width: min(100%, 1800px);
   max-height: 94vh;
   padding: 48px 18px 14px;
   border: 1px solid #555;
