@@ -103,6 +103,12 @@ lightboxClose?.addEventListener("click", () => imageLightbox?.close());
 imageLightbox?.addEventListener("click", (event) => {
   if (event.target === imageLightbox) imageLightbox.close();
 });
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && imageLightbox?.open) {
+    event.preventDefault();
+    imageLightbox.close();
+  }
+});
 imageLightbox?.addEventListener("close", () => {
   document.body.classList.remove("image-lightbox-open");
   if (lightboxImage) lightboxImage.removeAttribute("src");
