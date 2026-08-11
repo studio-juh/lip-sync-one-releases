@@ -202,7 +202,7 @@ usagi_eye_closed.png</code></pre>
             <div class="note"><strong>口形・目パチレイヤーの鍵</strong>初期状態では位置だけがロックされています。倍率、目パチ設定、解析、表示、レイヤー順はロック中でも変更できます。</div>
           </section>
 
-          <section class="guide-section searchable" id="timeline" data-search="タイムライン レイヤー 目 ロック 名前 変更 並べ替え BASE 音声 ゲイン スナップ ズーム 無音 クリップ">
+          <section class="guide-section searchable" id="timeline" data-search="タイムライン レイヤー 目 ロック 名前 変更 並べ替え BASE 音声 ゲイン スナップ ズーム 無音 クリップ BGM サブ音声">
             <header class="section-heading"><p class="section-number">08</p><h2>タイムラインを編集する</h2></header>
             <table class="help-table">
               <thead><tr><th>操作</th><th>方法</th></tr></thead>
@@ -218,6 +218,7 @@ usagi_eye_closed.png</code></pre>
               </tbody>
             </table>
             <div class="note"><strong>BASEは背景レイヤーではありません。</strong>口と目が参照する親役割です。通常レイヤーをBASEより下へ置き、背景として使えます。</div>
+            <div class="note"><strong>音声は現在マスター音声1トラックです。</strong>複数の台詞クリップは時間順に配置できますが、BGMやサブ音声を重ねる補助音声レイヤーは未対応です。BGM等は書き出した動画をPremiere Proなどへ読み込んだ後に追加してください。</div>
           </section>
 
           <section class="guide-section searchable" id="project-files" data-search="保存 lso 圧縮 プロジェクト 素材 収集 移動 バックアップ collect project relink">
@@ -279,6 +280,7 @@ usagi_eye_closed.png</code></pre>
               <details><summary>無音に近い区間でも口が開く</summary><p>解析画面で無音しきい値を上げるか、音量の影響度を上げて再解析します。特に2枚・3枚口形で効果があります。</p></details>
               <details><summary>口や目が表示されない</summary><p>専用レイヤーの目アイコン、画像割り当て、位置、現在フレームにBASEクリップがあるかを確認します。BASEがない区間では従属する口と目も表示されません。</p></details>
               <details><summary>音声の最後がフレーム境界と合わない</summary><p>音声はフレームで切り捨てず、元の最終サンプルまで保持します。タイムラインのバー端がフレーム線の途中になるのは正常です。</p></details>
+              <details><summary>BGMやサブ音声を重ねられる？</summary><p>現在は、口形解析の基準となるマスター音声1トラックだけを扱います。同じトラックへ複数の台詞クリップを時間順に置くことはできますが、同時に重ねることはできません。BGMやサブ音声はPremiere Proなどの仕上げ先で追加してください。</p></details>
               <details><summary>アルファ動画をWindows標準プレイヤーで再生できない</summary><p>標準プレイヤーがProRes 4444やFFV1のアルファへ対応しない場合があります。編集ソフトへ直接読み込むか、確認用のカラーキーH.264 MP4を書き出してください。</p></details>
               <details><summary>別のPCで素材が見つからない</summary><p>元の.lsoだけでは素材を内包しません。元のPCで「プロジェクトを収集して保存」を実行し、作成されたフォルダー全体を移動してください。</p></details>
             </div>
