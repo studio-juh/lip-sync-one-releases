@@ -32,7 +32,14 @@
 .workflow-section { background: var(--header); }
 .workflow-list { display: grid; gap: 72px; }
 .workflow-item { display: grid; grid-template-columns: minmax(260px, 0.58fr) minmax(560px, 1.42fr); align-items: center; gap: 52px; }
+.workflow-item.reverse { grid-template-columns: minmax(560px, 1.42fr) minmax(260px, 0.58fr); }
 .workflow-item.reverse .workflow-copy { order: 2; }
+.workflow-shot { overflow: hidden; aspect-ratio: 8 / 5; border: 1px solid var(--border-dark); background: var(--surface); }
+.workflow-shot img { display: block; width: 100%; height: 100%; border: 0; object-fit: cover; transform: scale(var(--workflow-shot-scale, 1)); }
+.workflow-item:nth-child(1) { --workflow-shot-scale: 1.45; }
+.workflow-item:nth-child(2) { --workflow-shot-scale: 1.16; }
+.workflow-item:nth-child(3) { --workflow-shot-scale: 1.28; }
+.workflow-item:nth-child(4) { --workflow-shot-scale: 1.06; }
 .workflow-copy h3 { margin: 12px 0 10px; font-size: 26px; }
 .workflow-copy p { margin: 0; color: var(--muted); }
 .section-link { margin: 36px 0 0; text-align: right; }
@@ -69,7 +76,7 @@
   .lp-hero > .page-width { grid-template-columns: 1fr; }
   .hero-copy { max-width: 760px; }
   .position-grid, .formats-grid, .local-grid { grid-template-columns: 1fr; gap: 34px; }
-  .workflow-item { grid-template-columns: 1fr; gap: 24px; }
+  .workflow-item, .workflow-item.reverse { grid-template-columns: 1fr; gap: 24px; }
   .workflow-item.reverse .workflow-copy { order: initial; }
   .download-grid { grid-template-columns: 1fr; gap: 32px; }
   .download-actions { max-width: 360px; }
