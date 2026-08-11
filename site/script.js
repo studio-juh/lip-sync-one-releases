@@ -74,6 +74,7 @@ const imageLightbox = document.querySelector(".image-lightbox");
 const lightboxImage = imageLightbox?.querySelector(".image-lightbox-image");
 const lightboxCaption = imageLightbox?.querySelector(".image-lightbox-caption");
 const lightboxClose = imageLightbox?.querySelector(".image-lightbox-close");
+const lightboxHitArea = imageLightbox?.querySelector(".image-lightbox-hit-area");
 const imageZoomTriggers = [...document.querySelectorAll(".image-zoom-trigger")];
 let lastImageTrigger = null;
 
@@ -100,6 +101,7 @@ for (const trigger of imageZoomTriggers) {
 }
 
 lightboxClose?.addEventListener("click", () => imageLightbox?.close());
+lightboxHitArea?.addEventListener("click", () => imageLightbox?.close());
 imageLightbox?.addEventListener("click", (event) => {
   if (event.target === imageLightbox) imageLightbox.close();
 });

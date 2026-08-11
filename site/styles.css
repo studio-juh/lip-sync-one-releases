@@ -272,8 +272,10 @@ kbd {
 }
 .image-lightbox[open] { display: grid; place-items: center; }
 .image-lightbox::backdrop { background: rgb(0 0 0 / 78%); }
+.image-lightbox-hit-area { position: absolute; inset: 0; cursor: zoom-out; }
 .image-lightbox-panel {
   position: relative;
+  z-index: 1;
   width: min(100%, 1800px);
   max-height: 94vh;
   padding: 48px 18px 14px;
