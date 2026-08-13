@@ -10,7 +10,7 @@
 .hero-meta { margin: 17px 0 0; color: var(--muted); font-size: 12px; }
 
 .product-shot { margin: 0; }
-.product-shot img { width: 100%; border: 1px solid var(--border-dark); background: var(--surface); }
+.product-shot img { width: 100%; height: auto; border: 1px solid var(--border-dark); background: var(--surface); }
 .product-shot figcaption { margin-top: 8px; color: var(--muted); font-size: 11px; }
 
 .lp-section { padding: 82px 0; border-bottom: 1px solid var(--border); }
