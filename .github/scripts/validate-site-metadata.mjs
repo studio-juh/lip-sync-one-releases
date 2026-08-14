@@ -24,6 +24,7 @@ const sitemap = await read("sitemap.xml");
 const robots = await read("robots.txt");
 const llms = await read("llms.txt");
 const legacyLp = await read("lp/index.html");
+const productPage = await read("index.html");
 const verificationFiles = (await readdir(siteRoot)).filter((name) => /^google[a-z0-9]+\.html$/.test(name));
 
 assert.match(robots, /^User-agent: \*$/m);
@@ -37,6 +38,8 @@ assert.match(llms, /音声解析はPC内で行い/);
 assert.match(legacyLp, /<meta name="robots" content="noindex, follow">/);
 assert.match(legacyLp, /<meta http-equiv="refresh" content="0; url=\/">/);
 assert.match(legacyLp, /window\.location\.replace\("\/"/);
+assert.match(productPage, /https:\/\/hanairo-m\.booth\.pm\/items\/8707179/);
+assert.match(productPage, /https:\/\/ko-fi\.com\/studiojuh/);
 assert.ok(verificationFiles.length > 0, "site root must include a Google verification file");
 
 for (const name of verificationFiles) {
