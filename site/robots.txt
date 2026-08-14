@@ -4,4 +4,4 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-Sitemap: https://studio-juh.github.io/lip-sync-one-releases/sitemap.xml
+Sitemap: https://lipsyncone.studiojuh.com/sitemap.xml

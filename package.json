@@ -1,0 +1,13 @@
+{
+  "name": "lip-sync-one-site",
+  "private": true,
+  "scripts": {
+    "check": "node .github/scripts/validate-site-metadata.mjs",
+    "dev": "wrangler dev",
+    "site:deploy": "pnpm check && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "4.123.0"
+  },
+  "packageManager": "pnpm@10.14.0"
+}

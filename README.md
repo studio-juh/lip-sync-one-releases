@@ -7,11 +7,19 @@ LipSyncOne の Windows 向け配布ファイルと、自動更新フィードを
 Windows 11 x64向け`v0.1.7`ベータ版を公開しています。
 
 - [最新版をダウンロード](https://github.com/studio-juh/lip-sync-one-releases/releases/latest)
-- [LipSyncOne 製品紹介](https://studio-juh.github.io/lip-sync-one-releases/lp/)
-- [LipSyncOne 公式ヘルプ](https://studio-juh.github.io/lip-sync-one-releases/)
+- [LipSyncOne 製品紹介](https://lipsyncone.studiojuh.com/)
+- [LipSyncOne 公式ヘルプ](https://lipsyncone.studiojuh.com/help/)
 - [一般向けお問い合わせ（マシュマロ）](https://marshmallow-qa.com/jyfux4yi4cp85hw)
 
-製品紹介LPとヘルプページは`site/`の静的ファイルをGitHub Pagesへ公開します。HOME、画面構成、口形設定、音声解析、タイムライン、動画書き出しを実画面付きで案内し、配布バイナリやUpdater用Release assetとは分離しています。
+製品紹介LPとヘルプページは`site/`の静的ファイルをCloudflare Workers Static Assetsへ公開します。`pnpm deploy`はmetadataを検証してからWranglerで直接デプロイします。HOME、画面構成、口形設定、音声解析、タイムライン、動画書き出しを実画面付きで案内し、配布バイナリやUpdater用Release assetとは分離しています。
+
+```powershell
+pnpm install
+pnpm dev
+pnpm site:deploy
+```
+
+GitHub ActionsによるGitHub Pages公開は使用しません。独自ドメインはCloudflare WorkersのCustom Domainsへ接続し、確定後にcanonical URL、OGP、構造化データ、`robots.txt`、`sitemap.xml`、`llms.txt`を同じURLへ更新します。
 
 検索エンジンとAI検索向けにcanonical URL、OG / Twitter Card、JSON-LD、`robots.txt`、`sitemap.xml`、補助的な`llms.txt`を公開します。検索向けクローラーは許可し、構造化データとAI向け要約には公開ページで確認できる現行仕様だけを記載します。
 

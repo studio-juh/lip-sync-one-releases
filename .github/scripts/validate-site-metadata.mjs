@@ -10,29 +10,33 @@ const siteRoot = resolve(repositoryRoot, "site");
 const pages = [
   {
     path: "index.html",
-    canonical: "https://studio-juh.github.io/lip-sync-one-releases/",
-    expectedType: "WebSite",
+    canonical: "https://lipsyncone.studiojuh.com/",
+    expectedType: "SoftwareApplication",
   },
   {
-    path: "lp/index.html",
-    canonical: "https://studio-juh.github.io/lip-sync-one-releases/lp/",
-    expectedType: "SoftwareApplication",
+    path: "help/index.html",
+    canonical: "https://lipsyncone.studiojuh.com/help/",
+    expectedType: "WebSite",
   },
 ];
 
 const sitemap = await read("sitemap.xml");
 const robots = await read("robots.txt");
 const llms = await read("llms.txt");
+const legacyLp = await read("lp/index.html");
 const verificationFiles = (await readdir(siteRoot)).filter((name) => /^google[a-z0-9]+\.html$/.test(name));
 
 assert.match(robots, /^User-agent: \*$/m);
 assert.match(robots, /^User-agent: OAI-SearchBot$/m);
 assert.match(
   robots,
-  /^Sitemap: https:\/\/studio-juh\.github\.io\/lip-sync-one-releases\/sitemap\.xml$/m,
+  /^Sitemap: https:\/\/lipsyncone\.studiojuh\.com\/sitemap\.xml$/m,
 );
 assert.match(llms, /^# LipSyncOne$/m);
 assert.match(llms, /音声解析はPC内で行い/);
+assert.match(legacyLp, /<meta name="robots" content="noindex, follow">/);
+assert.match(legacyLp, /<meta http-equiv="refresh" content="0; url=\/">/);
+assert.match(legacyLp, /window\.location\.replace\("\/"/);
 assert.ok(verificationFiles.length > 0, "site root must include a Google verification file");
 
 for (const name of verificationFiles) {

@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "lip-sync-one-site",
+  "compatibility_date": "2026-08-14",
+  "routes": [
+    {
+      "pattern": "lipsyncone.studiojuh.com",
+      "custom_domain": true
+    }
+  ],
+  "assets": {
+    "directory": "./site",
+    "html_handling": "auto-trailing-slash"
+  }
+}
