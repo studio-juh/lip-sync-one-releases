@@ -4,7 +4,7 @@ LipSyncOne の Windows 向け配布ファイルと、自動更新フィードを
 
 ## 配布状態
 
-Windows 11 x64向け`v0.1.6`ベータ版を公開しています。
+Windows 11 x64向け`v0.1.7`ベータ版を公開しています。
 
 - [最新版をダウンロード](https://github.com/studio-juh/lip-sync-one-releases/releases/latest)
 - [LipSyncOne 製品紹介](https://studio-juh.github.io/lip-sync-one-releases/lp/)
