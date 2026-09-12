@@ -114,7 +114,7 @@
         </aside>
 
         <div class="help-content">
-          <section class="guide-section searchable" id="install" data-search="インストール ダウンロード Windows SmartScreen 証明書 portable ポータブル setup">
+          <section class="guide-section searchable" id="install" data-search="インストール ダウンロード Windows SmartScreen 証明書 portable ポータブル setup スマート アプリ コントロール スマートアプリコントロール Smart App Control ブロック 無効 オフ 署名">
             <header class="section-heading"><p class="section-number">01</p><h2>インストール</h2></header>
             <div class="download-panel">
               <div><strong>Windows x64 ベータ版</strong><span>LipSyncOne v0.1.7</span></div>
@@ -146,6 +146,23 @@
               </figure>
             </div>
             <p class="caption-text">画像はポータブル版の例です。インストーラー版ではアプリ名にダウンロードしたセットアップファイル名が表示されます。画像を選ぶと原寸で確認できます。</p>
+            <h3 id="smart-app-control">スマート アプリ コントロールでブロックされる場合</h3>
+            <p>Windows 11の「スマート アプリ コントロール」がオンの場合、LipSyncOneの起動やインストールがブロックされることがあります。これは上のSmartScreenとは別の保護機能です。</p>
+            <p>悪意のあるアプリに加え、安全性を十分に判断できず、有効な署名も確認できないアプリをブロックします。そのため、署名のない個人開発アプリや、自己署名で配布されるアプリなども対象になる場合があります。<strong>ブロックされたことだけで、直ちに危険なアプリと確定したわけではありません。</strong>ただし、安全を保証する表示でもないため、入手元とファイルを確認してください。</p>
+            <div class="warning"><strong>オフにする前に</strong>無効化はLipSyncOneだけでなく、このPC上のほかのアプリにも影響し、この機能による保護がなくなります。個別のアプリだけを許可する例外設定はありません。公式配布元から入手したことを確認し、影響を理解したうえで利用を続ける場合に限り、次の操作を検討してください。</div>
+            <ol class="procedure">
+              <li><strong>Windows セキュリティを開く</strong><span>スタートメニューで「Windows セキュリティ」を検索して開きます。</span></li>
+              <li><strong>設定画面へ進む</strong><span>「アプリとブラウザー コントロール」→「スマート アプリ コントロールの設定」を選びます。</span></li>
+              <li><strong>「オフ」を選ぶ</strong><span>表示される注意事項を読み、変更する場合は「オフ」を選びます。その後、アプリの起動またはインストールをやり直します。</span></li>
+            </ol>
+            <figure class="guide-shot">
+              <a class="image-zoom-trigger" href="../assets/smart-app-control-settings.png" aria-label="スマート アプリ コントロールの設定画面を拡大表示">
+                <img src="../assets/smart-app-control-settings.png" alt="Windows セキュリティのスマート アプリ コントロール設定画面。オン、評価、オフの選択肢があり、オフが選択されている" loading="lazy" width="2062" height="1368">
+              </a>
+              <figcaption>「オフ」を選択した設定画面の例です。ブロック警告そのものの画面ではありません。画像を選ぶと拡大できます。</figcaption>
+            </figure>
+            <p>最近のWindows更新では、クリーンインストールなしで再度オンにできるようになっています。再有効化の可否はWindowsの更新状況や設定によるため、変更前にお使いのPCの表示を確認してください。Microsoft Defenderなど、ほかのウイルス対策機能を無効にする必要はありません。</p>
+            <p class="caption-text">参考：<a href="https://support.microsoft.com/ja-jp/windows/security/threat-malware-protection/smart-app-control-frequently-asked-questions" rel="noreferrer">Microsoft公式：スマート アプリ コントロールに関するよく寄せられる質問</a>（2026年9月13日確認・閲覧にはインターネット接続が必要です）。</p>
           </section>
 
           <section class="guide-section searchable" id="quick-start" data-search="はじめる クイックスタート 新規 プロジェクト 読み込み 解析 書き出し HOME">
