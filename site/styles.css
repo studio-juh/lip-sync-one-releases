@@ -240,7 +240,7 @@ kbd {
 .download-panel-actions { display: flex; flex-wrap: wrap; gap: 8px; }
 
 .guide-shot { margin: 26px 0 30px; }
-.guide-shot img { width: 100%; border: 1px solid var(--border-dark); background: var(--surface); }
+.guide-shot img { width: 100%; height: auto; border: 1px solid var(--border-dark); background: var(--surface); }
 .guide-shot figcaption { margin-top: 8px; color: var(--muted); font-size: 12px; }
 .guide-shot.compact { max-width: 760px; margin: 20px 0 0; }
 .caption-text { margin-top: 10px; color: var(--muted); font-size: 13px; }
