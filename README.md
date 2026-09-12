@@ -46,3 +46,5 @@ GitHub ActionsによるGitHub Pages公開は使用しません。独自ドメイ
 製品紹介の本文ではLipSyncOne（リップシンクワン / Lip Sync One）を併記し、立ち絵・口パク自動作成・背景透過動画・実況用途を説明します。title、description、OG / Twitter、SoftwareApplicationとWebSiteのalternateNameを本文に合わせています。サイト名の別名指定は順位や検索語との一致を保証しません。
 
 更新後は`pnpm check`、PC / 狭幅の表示、Cloudflare公開ページのHTMLを確認します。サイトマップのlastmodは実際の内容更新日に合わせます。Googleへの反映確認はSearch ConsoleのURL検査と検索パフォーマンスで行い、必要なら製品紹介URLのインデックス登録をリクエストします。検索結果の改善は再クロール後に評価します。
+
+英字の別表記`lipsync one`、`lip sync one`、`lipsyncone`は製品紹介の名前FAQとSoftwareApplication / WebSiteのalternateNameへ記載します。タイトルへの表記列挙は行いません。
