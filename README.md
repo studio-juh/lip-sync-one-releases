@@ -40,3 +40,9 @@ GitHub ActionsによるGitHub Pages公開は使用しません。独自ドメイ
 `https://github.com/studio-juh/lip-sync-one-releases/releases/latest/download/latest.json`
 
 バイナリは Git 履歴へコミットせず、GitHub Releases にのみ添付します。
+
+## 日本語検索向けの表記（2026-09-13）
+
+製品紹介の本文ではLipSyncOne（リップシンクワン / Lip Sync One）を併記し、立ち絵・口パク自動作成・背景透過動画・実況用途を説明します。title、description、OG / Twitter、SoftwareApplicationとWebSiteのalternateNameを本文に合わせています。サイト名の別名指定は順位や検索語との一致を保証しません。
+
+更新後は`pnpm check`、PC / 狭幅の表示、Cloudflare公開ページのHTMLを確認します。サイトマップのlastmodは実際の内容更新日に合わせます。Googleへの反映確認はSearch ConsoleのURL検査と検索パフォーマンスで行い、必要なら製品紹介URLのインデックス登録をリクエストします。検索結果の改善は再クロール後に評価します。
