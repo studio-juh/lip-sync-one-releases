@@ -1,17 +1,17 @@
 # LipSyncOne Releases
 
-LipSyncOne の Windows 向け配布ファイルと、自動更新フィードを公開するためのリポジトリです。アプリケーションのソースコードはこのリポジトリには含まれません。
+LipSyncOne の Windows 向け配布ファイルと公式サイトを公開するためのリポジトリです。アプリケーションのソースコードはこのリポジトリには含まれません。
 
 ## 配布状態
 
-Windows 11 x64向け`v0.1.7`ベータ版を公開しています。
+Windows 11 x64向け`v0.2.1`を公開しています。
 
 - [最新版をダウンロード](https://github.com/studio-juh/lip-sync-one-releases/releases/latest)
 - [LipSyncOne 製品紹介](https://lipsyncone.studiojuh.com/)
 - [LipSyncOne 公式ヘルプ](https://lipsyncone.studiojuh.com/help/)
 - [一般向けお問い合わせ（マシュマロ）](https://marshmallow-qa.com/jyfux4yi4cp85hw)
 
-製品紹介LPとヘルプページは`site/`の静的ファイルをCloudflare Workers Static Assetsへ公開します。`pnpm deploy`はmetadataを検証してからWranglerで直接デプロイします。HOME、画面構成、口形設定、音声解析、タイムライン、動画書き出しを実画面付きで案内し、配布バイナリやUpdater用Release assetとは分離しています。
+製品紹介LPとヘルプページは`site/`の静的ファイルをCloudflare Workers Static Assetsへ公開します。`pnpm site:deploy`はmetadataを検証してからWranglerで直接デプロイします。HOME、画面構成、口形設定、音声解析、タイムライン、動画書き出しを実画面付きで案内し、配布バイナリやUpdater用Release assetとは分離しています。
 
 ```powershell
 pnpm install
@@ -27,19 +27,7 @@ GitHub ActionsによるGitHub Pages公開は使用しません。独自ドメイ
 
 ## Release assets
 
-各安定版の GitHub Release には、同じバージョン番号を持つ次のファイルを添付します。
-
-- `latest.json`: アプリが参照する更新情報
-- `LipSyncOne_<version>_x64-setup.exe`: Windows NSIS インストーラー
-- `LipSyncOne_<version>_x64-setup.exe.sig`: Tauri Updater の署名
-- `LipSyncOne_<version>_windows-x64-portable.zip`: ポータブル版
-- `SHA256SUMS.txt`: 配布ファイルの SHA-256
-
-アプリが参照する安定版フィード:
-
-`https://github.com/studio-juh/lip-sync-one-releases/releases/latest/download/latest.json`
-
-バイナリは Git 履歴へコミットせず、GitHub Releases にのみ添付します。
+現在のv0.2.1には、BOOTHポータブル版の `LipSyncOne_0.2.1_BOOTH-free.zip` と `SHA256SUMS.txt` を添付しています。過去のNSISインストーラーやUpdater署名は、現行版の配布形式ではありません。バイナリはGitへ登録せず、GitHub Releasesで配布します。
 
 ## 日本語検索向けの表記（2026-09-13）
 
@@ -54,3 +42,7 @@ GitHub ActionsによるGitHub Pages公開は使用しません。独自ドメイ
 製品ページの `#samples` とヘルプの素材準備から、無料サンプルを案内します。ZIPは公式サイト内の `site/downloads/LipSyncOne_SampleAssets_v1.zip` に置き、`/downloads/LipSyncOne_SampleAssets_v1.zip` から直接配布します。PNG 7枚・WAV 1本・READMEで構成し、VOICEVOX:WhiteCULの表記と利用条件を同梱します。素材はGitへ登録しません。
 
 再deploy時は `site/downloads/LipSyncOne_SampleAssets_v1.zip` を配置してください。入力ZIPはアプリrepositoryの `pnpm package:samples` で生成し、`publish/samples/` に出力します。ZIPはGit管理対象外です。`pnpm check` は公開リンクとファイルの存在を確認します。
+
+## ヘルプと画面例の更新（2026-10-12）
+
+オンラインヘルプとアプリ同梱ヘルプの本文・画像を同期しました。現行React UIを日本語・1600×1000で撮影し、無料サンプルを使用しています。撮影時のネイティブ処理境界は検証用fixtureです。操作手順、外部素材更新、S/R変形、整数・ホイール入力、初期値25％、軽量WebMを案内しています。最新の画面例には公開ZIPより後の変更も含まれます。
