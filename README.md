@@ -27,7 +27,7 @@ GitHub ActionsによるGitHub Pages公開は使用しません。独自ドメイ
 
 ## Release assets
 
-現在のv0.2.2には、BOOTHポータブル版の `LipSyncOne_0.2.2_BOOTH-free.zip` と `SHA256SUMS.txt` を添付しています。過去のNSISインストーラーやUpdater署名は、現行版の配布形式ではありません。バイナリはGitへ登録せず、GitHub Releasesで配布します。
+v0.3.0はNSISセットアップEXE・Updater署名・latest.json・SHA256SUMS.txtの4点を公開します。ポータブルZIPと旧版互換用feedは提供しません。バイナリはGitへ登録せずGitHub Releasesで配布します。
 
 ## 日本語検索向けの表記（2026-09-13）
 
