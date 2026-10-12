@@ -4,7 +4,7 @@ LipSyncOne の Windows 向け配布ファイルと公式サイトを公開する
 
 ## 配布状態
 
-Windows 11 x64向け`v0.2.1`を公開しています。
+Windows 11 x64向け`v0.2.2`を公開しています。
 
 - [最新版をダウンロード](https://github.com/studio-juh/lip-sync-one-releases/releases/latest)
 - [LipSyncOne 製品紹介](https://lipsyncone.studiojuh.com/)
@@ -27,7 +27,7 @@ GitHub ActionsによるGitHub Pages公開は使用しません。独自ドメイ
 
 ## Release assets
 
-現在のv0.2.1には、BOOTHポータブル版の `LipSyncOne_0.2.1_BOOTH-free.zip` と `SHA256SUMS.txt` を添付しています。過去のNSISインストーラーやUpdater署名は、現行版の配布形式ではありません。バイナリはGitへ登録せず、GitHub Releasesで配布します。
+現在のv0.2.2には、BOOTHポータブル版の `LipSyncOne_0.2.2_BOOTH-free.zip` と `SHA256SUMS.txt` を添付しています。過去のNSISインストーラーやUpdater署名は、現行版の配布形式ではありません。バイナリはGitへ登録せず、GitHub Releasesで配布します。
 
 ## 日本語検索向けの表記（2026-09-13）
 
@@ -45,4 +45,4 @@ GitHub ActionsによるGitHub Pages公開は使用しません。独自ドメイ
 
 ## ヘルプと画面例の更新（2026-10-12）
 
-オンラインヘルプとアプリ同梱ヘルプの本文・画像を同期しました。現行React UIを日本語・1600×1000で撮影し、無料サンプルを使用しています。撮影時のネイティブ処理境界は検証用fixtureです。操作手順、外部素材更新、S/R変形、整数・ホイール入力、初期値25％、軽量WebMを案内しています。最新の画面例には公開ZIPより後の変更も含まれます。
+オンラインヘルプとアプリ同梱ヘルプの本文・画像を同期しました。現行React UIを日本語・1600×1000で撮影し、無料サンプルを使用しています。撮影時のネイティブ処理境界は検証用fixtureです。操作手順、外部素材更新、S/R変形、整数・ホイール入力、初期値25％、軽量WebMを案内しています。画面例で案内する変更は0.2.2の公開ZIPに含まれています。
