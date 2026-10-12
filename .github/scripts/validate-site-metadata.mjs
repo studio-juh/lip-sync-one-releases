@@ -61,6 +61,9 @@ for (const page of pages) {
   assert.ok(types.includes(page.expectedType), `${page.path} is missing ${page.expectedType}`);
 }
 
+assert.match(productPage, /href="\/downloads\/LipSyncOne_SampleAssets_v1\.zip" download/);
+const sampleZip = await readFile(resolve(siteRoot, "downloads/LipSyncOne_SampleAssets_v1.zip"));
+assert.ok(sampleZip.length > 0, "stage the free sample ZIP before deploying");
 console.log("site metadata validation passed");
 
 async function read(path) {

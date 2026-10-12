@@ -9,6 +9,11 @@
 - [最新版](https://github.com/studio-juh/lip-sync-one-releases/releases/latest): Windows 11 x64向けインストーラー版とポータブル版
 - [BOOTH有償ベータ版](https://hanairo-m.booth.pm/items/8707179): 支援案内の抑止と先行・支援者向け機能アクセスを含む購入証明付き
 
+## 無料サンプル
+
+- [サンプルアセット](https://lipsyncone.studiojuh.com/#samples): 位置調整済みのAI生成PNG 7枚、約6秒のWAV、利用案内。
+- 音声: VOICEVOX:WhiteCUL（ノーマル）。公開時のクレジットとWhiteCUL・VOICEVOX規約の遵守が必要です。
+
 ## 現行仕様
 
 - 現行公開版はv0.1.7ベータ版です。

@@ -48,3 +48,9 @@ GitHub ActionsによるGitHub Pages公開は使用しません。独自ドメイ
 更新後は`pnpm check`、PC / 狭幅の表示、Cloudflare公開ページのHTMLを確認します。サイトマップのlastmodは実際の内容更新日に合わせます。Googleへの反映確認はSearch ConsoleのURL検査と検索パフォーマンスで行い、必要なら製品紹介URLのインデックス登録をリクエストします。検索結果の改善は再クロール後に評価します。
 
 英字の別表記`lipsync one`、`lip sync one`、`lipsyncone`は製品紹介の名前FAQとSoftwareApplication / WebSiteのalternateNameへ記載します。タイトルへの表記列挙は行いません。
+
+## 無料サンプル（2026-10-12）
+
+製品ページの `#samples` とヘルプの素材準備から、無料サンプルを案内します。ZIPは公式サイト内の `site/downloads/LipSyncOne_SampleAssets_v1.zip` に置き、`/downloads/LipSyncOne_SampleAssets_v1.zip` から直接配布します。PNG 7枚・WAV 1本・READMEで構成し、VOICEVOX:WhiteCULの表記と利用条件を同梱します。素材はGitへ登録しません。
+
+再deploy時は `site/downloads/LipSyncOne_SampleAssets_v1.zip` を配置してください。入力ZIPはアプリrepositoryの `pnpm package:samples` で生成し、`publish/samples/` に出力します。ZIPはGit管理対象外です。`pnpm check` は公開リンクとファイルの存在を確認します。
