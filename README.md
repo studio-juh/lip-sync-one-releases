@@ -48,3 +48,8 @@ v0.3.0はNSISセットアップEXE・Updater署名・latest.json・SHA256SUMS.tx
 オンラインヘルプとアプリ同梱ヘルプの本文・画像を同期しました。現行React UIを日本語・1600×1000で撮影し、無料サンプルを使用しています。撮影時のネイティブ処理境界は検証用fixtureです。操作手順、外部素材更新、S/R変形、整数・ホイール入力、初期値25％、軽量WebMを案内しています。画面例で案内する変更は0.2.2の公開ZIPに含まれています。
 
 2026-10-13 サンプル修正: 目3差分の眉の切り出しを修正。ZIPは1,754,956 bytes、SHA-256 `30aebcab19e2193729d15d10bcc446e6ee1b0384d8e6c96af2f556ed201ad0ed`。画像7枚・音声1本・利用案内の構成は維持しています。
+
+2026-10-13 歯なし版へ更新。サンプル1とサンプル2（銀髪）の両ZIPを `site/downloads/` へ配置してdeployしてください。サンプル2の原本はアプリrepositoryの `sample-assets/silver-girl-20261013/`、配布ZIPは `publish/samples/LipSyncOne_SampleAssets2_v1.zip` です。配布ファイルは引き続きGit対象外です。
+
+- `39a4186a56a8bdf27527ad998b64dcd42b54e1d7a55102da8de7e4409fa8b585  LipSyncOne_SampleAssets_v1.zip`
+- `3035c4c887c78c648e58b2ceef5c49b12c80393a4f76962617a11a030b34f26f  LipSyncOne_SampleAssets2_v1.zip`

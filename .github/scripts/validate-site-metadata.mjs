@@ -64,6 +64,8 @@ for (const page of pages) {
 assert.match(productPage, /href="\/downloads\/LipSyncOne_SampleAssets_v1\.zip" download/);
 const sampleZip = await readFile(resolve(siteRoot, "downloads/LipSyncOne_SampleAssets_v1.zip"));
 assert.ok(sampleZip.length > 0, "stage the free sample ZIP before deploying");
+assert.match(productPage, /href="\/downloads\/LipSyncOne_SampleAssets2_v1\.zip" download/);
+assert.ok((await readFile(resolve(siteRoot, "downloads/LipSyncOne_SampleAssets2_v1.zip"))).length > 0, "stage sample 2 before deploying");
 console.log("site metadata validation passed");
 
 async function read(path) {
