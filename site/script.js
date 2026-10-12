@@ -11,6 +11,13 @@ if (savedTheme === "dark" || savedTheme === "light") {
 }
 
 function updateThemeButton() {
+  const theme = root.dataset.theme === "dark" ? "dark" : "light";
+  for (const image of document.querySelectorAll("img[data-theme-light][data-theme-dark]")) {
+    const source = image.dataset[theme === "dark" ? "themeDark" : "themeLight"];
+    image.setAttribute("src", source);
+    const trigger = image.closest("a.image-zoom-trigger");
+    if (trigger) trigger.setAttribute("href", source);
+  }
   if (!themeButton) return;
   const dark = root.dataset.theme === "dark";
   themeButton.textContent = dark ? "ライト表示" : "ダーク表示";
