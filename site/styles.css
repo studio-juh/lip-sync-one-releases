@@ -103,17 +103,7 @@ code {
   color: var(--text);
   text-decoration: none;
 }
-.brand-mark {
-  display: grid;
-  width: 30px;
-  height: 30px;
-  place-items: center;
-  border: 1px solid var(--accent);
-  border-radius: 3px;
-  color: var(--accent);
-  font-size: 12px;
-  font-weight: 700;
-}
+.brand-mark { display: block; width: 30px; height: 30px; flex-shrink: 0; }
 .brand strong, .brand small { display: inline; }
 .brand small { margin-left: 7px; color: var(--muted); font-size: 12px; }
 .header-actions { display: flex; align-items: center; gap: 18px; }
@@ -513,3 +503,8 @@ body.image-lightbox-open { overflow: hidden; }
   html { scroll-behavior: auto; }
   .image-zoom-trigger img { transition: none; }
 }
+
+.product-logo img { width: min(280px, 100%); height: auto; margin-inline: auto; }
+.product-logo .logo-dark { display: none; }
+[data-theme="dark"] .product-logo .logo-light { display: none; }
+[data-theme="dark"] .product-logo .logo-dark { display: block; }
