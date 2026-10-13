@@ -4,7 +4,7 @@ LipSyncOne の Windows 向け配布ファイルと公式サイトを公開する
 
 ## 配布状態
 
-Windows 11 x64向け`v0.3.1`を公開しています。
+Windows 11 x64向け`v0.3.2`を公開しています。
 
 - [最新版をダウンロード](https://github.com/studio-juh/lip-sync-one-releases/releases/latest)
 - [LipSyncOne 製品紹介](https://lipsyncone.studiojuh.com/)
@@ -27,7 +27,7 @@ GitHub ActionsによるGitHub Pages公開は使用しません。独自ドメイ
 
 ## Release assets
 
-v0.3.1はNSISセットアップEXE・Updater署名・latest.json・SHA256SUMS.txtの4点を公開します。ポータブルZIPと旧版互換用feedは提供しません。バイナリはGitへ登録せずGitHub Releasesで配布します。
+v0.3.2はNSISセットアップEXE・Updater署名・latest.json・SHA256SUMS.txtの4点を公開します。ポータブルZIPと旧版互換用feedは提供しません。バイナリはGitへ登録せずGitHub Releasesで配布します。
 
 ## 日本語検索向けの表記（2026-09-13）
 
@@ -52,6 +52,8 @@ v0.3.1はNSISセットアップEXE・Updater署名・latest.json・SHA256SUMS.tx
 2026-10-13 歯なし版へ更新。サンプル1とサンプル2（銀髪）の両ZIPを `site/downloads/` へ配置してdeployしてください。サンプル2の原本はアプリrepositoryの `sample-assets/silver-girl-20261013/`、配布ZIPは `publish/samples/LipSyncOne_SampleAssets2_v1.zip` です。配布ファイルは引き続きGit対象外です。
 
 - `39a4186a56a8bdf27527ad998b64dcd42b54e1d7a55102da8de7e4409fa8b585  LipSyncOne_SampleAssets_v1.zip`
-- `567fdb21970fea59e6c48a193582adeefd9cbf30522b69e4be2b316b5e3070d8  LipSyncOne_SampleAssets2_v1.zip`
+- `de76273e2e1d93784067db749ec512dc3078b6ee39e1987bf091913233b1e30b  LipSyncOne_SampleAssets2_v1.zip`
 
-2026-10-14: v0.3.1を公開。.ls1の関連付けと専用ファイルアイコンに対応。ユーザー編集済みサンプル2へ更新（3,395,764 bytes）。サンプル2はアプリrepositoryの `pnpm package:samples2` で原本から梱包します。
+2026-10-14: v0.3.2を公開。.ls1の関連付けと専用ファイルアイコンに対応。ユーザー編集済みサンプル2へ更新（3,395,764 bytes）。サンプル2はアプリrepositoryの `pnpm package:samples2` で原本から梱包します。
+
+2026-10-14: サンプル2音声を `kasukabe_tsumugi_004_lipsyncone_multi_character.wav`（VOICEVOX:春日部つむぎ）へ差し替え。利用案内・公開checksumを更新。アプリ公開版は0.3.2を維持。
