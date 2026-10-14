@@ -1,12 +1,12 @@
 # LipSyncOne
 
-> LipSyncOneは、キャラクターの差分画像と音声から口パク・目パチ付きの動画を作り、背景を透明なまま書き出せるWindows向けデスクトップアプリです。
+> LipSyncOneは、立ち絵の差分画像と音声から口パク・目パチの2Dアニメーションを自動生成する、Windows向けリップシンクジェネレーターです。
 
 ## 公式ページ
 
 - [製品紹介](https://lipsyncone.studiojuh.com/): 特長、動画作成の流れ、書き出し形式、対応環境
 - [公式ヘルプ](https://lipsyncone.studiojuh.com/help/): インストール、素材準備、口形、目パチ、タイムライン、動画書き出し、トラブル対応
-- [最新版](https://github.com/studio-juh/lip-sync-one-releases/releases/latest): Windows 11 x64向けポータブルZIP
+- [最新版](https://github.com/studio-juh/lip-sync-one-releases/releases/latest): Windows 11 x64向けNSISセットアップEXE
 - [BOOTH有償ベータ版](https://hanairo-m.booth.pm/items/8707179): 支援案内の抑止と先行・支援者向け機能アクセスを含む購入証明付き
 
 ## 無料サンプル
@@ -40,3 +40,12 @@
 - v0.3.0はNSISインストーラーとTauri標準の更新へ統一しました。旧ポータブル版の互換更新は提供しません。セットアップEXEから移行してください。
 
 - 更新確認は「ヘルプ → アップデートを確認」から手動で行います。起動時の自動確認は行いません。
+
+## 用語と用途
+
+- リップシンク（lip sync、口パク）: 音声に合わせて口の差分画像を切り替えるアニメーション。
+- 目パチ（まばたき、瞬き）: 目の差分画像を切り替えて作るアニメーション。
+- 立ち絵アニメーション・2Dコマアニメーション: 本体と口・目の差分画像から動画素材を作成。
+- リップシンクジェネレーター・口パク作成ツール: LipSyncOneの用途を示す一般的な呼び方。
+- VOICEVOXなどの音声合成、ゆっくり実況・ゲーム実況・解説動画の素材制作に使用。
+- 背景透過動画・アルファ付き動画: 編集ソフトへ重ねるためのProRes 4444・FFV1・VP9 WebM出力。

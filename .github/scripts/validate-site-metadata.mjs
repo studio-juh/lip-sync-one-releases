@@ -66,6 +66,37 @@ const sampleZip = await readFile(resolve(siteRoot, "downloads/LipSyncOne_SampleA
 assert.ok(sampleZip.length > 0, "stage the free sample ZIP before deploying");
 assert.match(productPage, /href="\/downloads\/LipSyncOne_SampleAssets2_v1\.zip" download/);
 assert.ok((await readFile(resolve(siteRoot, "downloads/LipSyncOne_SampleAssets2_v1.zip"))).length > 0, "stage sample 2 before deploying");
+
+
+// Search snippets must describe the same page across HTML, social cards and JSON-LD.
+const pageHtml = new Map(await Promise.all(pages.map(async (page) => [page.canonical, await read(page.path)])));
+for (const page of pages) {
+  const html = pageHtml.get(page.canonical);
+  const title = html.match(/<title>(.*?)<\/title>/)?.[1];
+  const description = html.match(/<meta name="description" content="([^"]+)">/)?.[1];
+  assert.ok(title && description, page.path + " must describe its content");
+  assert.equal([...html.matchAll(/<h1\b/g)].length, 1, page.path + " must have one primary heading");
+  for (const field of ["og:title", "twitter:title"]) {
+    assert.match(html, new RegExp('(?:property|name)="' + field + '" content="' + escapeRegExp(title) + '"'));
+  }
+  for (const field of ["og:description", "twitter:description"]) {
+    assert.match(html, new RegExp('(?:property|name)="' + field + '" content="' + escapeRegExp(description) + '"'));
+  }
+  const graph = JSON.parse(html.match(/<script type="application\/ld\+json">\s*([\s\S]*?)\s*<\/script>/)[1])["@graph"];
+  const webPage = graph.find((entry) => entry["@type"] === "WebPage");
+  if (webPage) { assert.equal(webPage.name, title); assert.equal(webPage.description, description); }
+  const software = graph.find((entry) => entry["@type"] === "SoftwareApplication");
+  if (software) assert.equal(software.description, description);
+  // Descriptive links must take readers to a real section, including across pages.
+  for (const [, href] of html.matchAll(/<a\b[^>]*\bhref="([^"]+)"/g)) {
+    const url = new URL(href, page.canonical);
+    if (url.origin !== "https://lipsyncone.studiojuh.com" || !url.hash) continue;
+    const target = pageHtml.get(url.origin + url.pathname);
+    if (!target) continue;
+    assert.match(target, new RegExp('\\bid="' + escapeRegExp(decodeURIComponent(url.hash.slice(1))) + '"'), href + " must target an existing section");
+  }
+}
+
 console.log("site metadata validation passed");
 
 async function read(path) {
