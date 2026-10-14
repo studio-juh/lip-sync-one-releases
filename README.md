@@ -31,7 +31,7 @@ v0.3.3はNSISセットアップEXE・Updater署名・latest.json・SHA256SUMS.tx
 
 ## 日本語検索向けの表記（2026-09-13）
 
-製品紹介の本文ではLipSyncOne（リップシンクワン / Lip Sync One）を併記し、立ち絵・口パク自動作成・背景透過動画・実況用途を説明します。title、description、OG / Twitter、SoftwareApplicationとWebSiteのalternateNameを本文に合わせています。サイト名の別名指定は順位や検索語との一致を保証しません。
+製品紹介の本文ではLipSyncOne（リップシンク One / Lip Sync One）を併記し、立ち絵・口パク自動作成・背景透過動画・実況用途を説明します。title、description、OG / Twitter、SoftwareApplicationとWebSiteのalternateNameを本文に合わせています。サイト名の別名指定は順位や検索語との一致を保証しません。
 
 更新後は`pnpm check`、PC / 狭幅の表示、Cloudflare公開ページのHTMLを確認します。サイトマップのlastmodは実際の内容更新日に合わせます。Googleへの反映確認はSearch ConsoleのURL検査と検索パフォーマンスで行い、必要なら製品紹介URLのインデックス登録をリクエストします。検索結果の改善は再クロール後に評価します。
 
@@ -63,3 +63,5 @@ v0.3.3はNSISセットアップEXE・Updater署名・latest.json・SHA256SUMS.tx
 2026-10-14: 両サンプルに挨拶音声を追加。サンプル1に `ouka_miko_001_hello.wav`、サンプル2に `kasukabe_tsumugi_002_hello.wav` を同梱。最終ZIPを直接配布し、checksumとページの声名・利用案内を更新。アプリ公開版は0.3.3を維持。
 
 2026-10-14: タイトル・説明・SoftwareApplication構造化データと本文・FAQ・ヘルプを検索用途へ整理。Windowsの口パク / 目パチアニメーション作成、リップシンクジェネレーター、まばたき・瞬き、立ち絵差分、2Dコマアニメーション、VOICEVOX / ゆっくり実況、背景透過動画を自然な用途説明へ含める。検索順位や即時反映は保証せず、未対応機能は訴求しない。
+
+2026-10-14: 日本語製品名を「リップシンク One」へ統一。英語表記LipSyncOneとロゴは維持。説明・別名・FAQ・llmsも同じ表記へ更新。
