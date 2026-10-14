@@ -4,7 +4,7 @@ LipSyncOne の Windows 向け配布ファイルと公式サイトを公開する
 
 ## 配布状態
 
-Windows 11 x64向け`v0.3.3`を公開しています。
+Windows 11 x64向け`v0.3.4`を公開しています。
 
 - [最新版をダウンロード](https://github.com/studio-juh/lip-sync-one-releases/releases/latest)
 - [LipSyncOne 製品紹介](https://lipsyncone.studiojuh.com/)
@@ -27,7 +27,7 @@ GitHub ActionsによるGitHub Pages公開は使用しません。独自ドメイ
 
 ## Release assets
 
-v0.3.3はNSISセットアップEXE・Updater署名・latest.json・SHA256SUMS.txtの4点を公開します。ポータブルZIPと旧版互換用feedは提供しません。バイナリはGitへ登録せずGitHub Releasesで配布します。
+v0.3.4はNSISセットアップEXE・Updater署名・latest.json・SHA256SUMS.txtの4点を公開します。ポータブルZIPと旧版互換用feedは提供しません。バイナリはGitへ登録せずGitHub Releasesで配布します。
 
 ## 日本語検索向けの表記（2026-09-13）
 
@@ -65,3 +65,5 @@ v0.3.3はNSISセットアップEXE・Updater署名・latest.json・SHA256SUMS.tx
 2026-10-14: タイトル・説明・SoftwareApplication構造化データと本文・FAQ・ヘルプを検索用途へ整理。Windowsの口パク / 目パチアニメーション作成、リップシンクジェネレーター、まばたき・瞬き、立ち絵差分、2Dコマアニメーション、VOICEVOX / ゆっくり実況、背景透過動画を自然な用途説明へ含める。検索順位や即時反映は保証せず、未対応機能は訴求しない。
 
 2026-10-14: 日本語製品名を「リップシンク One」へ統一。英語表記LipSyncOneとロゴは維持。説明・別名・FAQ・llmsも同じ表記へ更新。
+
+2026-10-15: v0.3.4を公開。レイヤー削除・自動アニメーション割り当て解除、未完成の口・目設定の保存、画像差し替え時の手動修正保持、未使用素材の削除、BASE再作成時の親への追従を改善。
