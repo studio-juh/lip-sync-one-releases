@@ -39,7 +39,7 @@ v0.3.3はNSISセットアップEXE・Updater署名・latest.json・SHA256SUMS.tx
 
 ## 無料サンプル（2026-10-12）
 
-製品ページの `#samples` とヘルプの素材準備から、無料サンプルを案内します。ZIPは公式サイト内の `site/downloads/LipSyncOne_SampleAssets_v1.zip` に置き、`/downloads/LipSyncOne_SampleAssets_v1.zip` から直接配布します。各ZIPはPNG 7枚・WAV 2本・READMEで構成します。サンプル1はWhiteCULと櫻歌ミコ、サンプル2は春日部つむぎの音声を含み、使用する声ごとのクレジットと利用条件を同梱します。素材はGitへ登録しません。
+製品ページの `#samples` とヘルプの素材準備から、無料サンプルを案内します。ZIPは公式サイト内の `site/downloads/LipSyncOne_SampleAssets_v1.zip` に置き、`/downloads/LipSyncOne_SampleAssets_v1.zip` から直接配布します。各ZIPはPNG 7枚・WAV 2本・READMEで構成します。サンプル1は櫻歌ミコ、サンプル2は春日部つむぎの音声を含み、使用する声ごとのクレジットと利用条件を同梱します。素材はGitへ登録しません。
 
 再deploy時は `site/downloads/LipSyncOne_SampleAssets_v1.zip` を配置してください。入力ZIPはアプリrepositoryの `pnpm package:samples` で生成し、`publish/samples/` に出力します。ZIPはGit管理対象外です。`pnpm check` は公開リンクとファイルの存在を確認します。
 
