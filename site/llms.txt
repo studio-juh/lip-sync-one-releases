@@ -11,8 +11,8 @@
 
 ## 無料サンプル
 
-- [サンプルアセット](https://lipsyncone.studiojuh.com/#samples): 位置調整済みのAI生成PNG 7枚、サンプルWAV、利用案内。
-- 音声: サンプル1はVOICEVOX:WhiteCUL、サンプル2はVOICEVOX:春日部つむぎ（いずれもノーマル）。公開時は使用した音声のクレジットを表記し、各キャラクター・VOICEVOX規約を守ってください。
+- [サンプルアセット](https://lipsyncone.studiojuh.com/#samples): 各ZIPに位置調整済みのAI生成PNG 7枚、サンプルWAV 2本、利用案内。
+- 音声: サンプル1はVOICEVOX:WhiteCUL・VOICEVOX:櫻歌ミコ、サンプル2はVOICEVOX:春日部つむぎ（いずれもノーマル）。公開時は使用した音声のクレジットを表記し、各キャラクター・VOICEVOX規約を守ってください。
 
 ## 現行仕様
 
