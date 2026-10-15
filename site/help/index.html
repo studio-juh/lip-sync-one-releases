@@ -19,8 +19,8 @@
     <meta name="twitter:image" content="https://lipsyncone.studiojuh.com/assets/editor-dark.png">
     <title>口パク・目パチアニメーションの作り方｜LipSyncOne公式ヘルプ</title>
     <link rel="canonical" href="https://lipsyncone.studiojuh.com/help/">
-    <link rel="stylesheet" href="../styles.css?v=20261012-help">
-    <script src="../script.js?v=20261012-theme" defer></script>
+    <link rel="stylesheet" href="../styles.css?v=20261016-v036">
+    <script src="../script.js?v=20261016-v036" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -191,15 +191,27 @@
 <p>読み込んだ素材は、まずアセットに登録されます。画像はレイヤーへ、音声はキャラクターの音声行へ配置すると、プレビューや再生に使われます。音声の左にある再生アイコンでは、配置前に音を確認できます。</p>
 <p>「検索・フィルタ」を開くと、名前や使用状況で素材を絞り込めます。素材を広く見たいときは閉じて使えます。</p>
 <h3>画像の名前を揃える</h3><p>同じキャラクターの画像には、同じ名前の接頭辞を付けます。たとえばsample_girl_body.pngとsample_girl_mouth_closed.pngは、同じ素材グループとして選べます。</p>
-<table class="help-table">
+<p>各ファイル名の「コピー」ボタンで名前をコピーできます。<code>{名前}</code>の部分は、同じキャラクターで共通の名前に置き換えてください。</p>
+<p id="filename-copy-status" class="filename-copy-status" role="status" aria-live="polite" aria-atomic="true"></p>
+<table class="help-table filename-table">
               <thead><tr><th>割り当て</th><th>対応ファイル名</th><th>必要な組</th></tr></thead>
               <tbody>
-                <tr><th>BASE</th><td><code>{名前}_body.png</code></td><td>1枚</td></tr>
-                <tr><th>口形・かんたん2枚</th><td><code>{名前}_mouth_closed.png</code><br><code>{名前}_mouth_open.png</code></td><td>2枚すべて</td></tr>
-                <tr><th>口形・かんたん3枚</th><td><code>{名前}_mouth_closed.png</code><br><code>{名前}_mouth_medium.png</code><br><code>{名前}_mouth_wide.png</code></td><td>3枚すべて</td></tr>
-                <tr><th>口形・詳細9枚</th><td><code>{名前}_mouth_A.png</code>〜<code>{名前}_mouth_H.png</code><br><code>{名前}_mouth_X.png</code></td><td>A〜H/Xの9枚すべて</td></tr>
-                <tr><th>目・2枚</th><td><code>{名前}_eye_open.png</code><br><code>{名前}_eye_closed.png</code></td><td>2枚すべて</td></tr>
-                <tr><th>目・3枚</th><td><code>{名前}_eye_open.png</code><br><code>{名前}_eye_half.png</code><br><code>{名前}_eye_closed.png</code></td><td>3枚すべて</td></tr>
+                <tr><th>BASE</th><td class="filename-list"><code>{名前}_body.png</code></td><td>1枚</td></tr>
+                <tr><th>口形・かんたん2枚</th><td class="filename-list"><code>{名前}_mouth_closed.png</code><code>{名前}_mouth_open.png</code></td><td>2枚すべて</td></tr>
+                <tr><th>口形・かんたん3枚</th><td class="filename-list"><code>{名前}_mouth_closed.png</code><code>{名前}_mouth_medium.png</code><code>{名前}_mouth_wide.png</code></td><td>3枚すべて</td></tr>
+                <tr><th>口形・詳細9枚</th><td class="filename-list">
+                  <code>{名前}_mouth_A.png</code>
+                  <code>{名前}_mouth_B.png</code>
+                  <code>{名前}_mouth_C.png</code>
+                  <code>{名前}_mouth_D.png</code>
+                  <code>{名前}_mouth_E.png</code>
+                  <code>{名前}_mouth_F.png</code>
+                  <code>{名前}_mouth_G.png</code>
+                  <code>{名前}_mouth_H.png</code>
+                  <code>{名前}_mouth_X.png</code>
+                </td><td>9枚すべて</td></tr>
+                <tr><th>目・2枚</th><td class="filename-list"><code>{名前}_eye_open.png</code><code>{名前}_eye_closed.png</code></td><td>2枚すべて</td></tr>
+                <tr><th>目・3枚</th><td class="filename-list"><code>{名前}_eye_open.png</code><code>{名前}_eye_half.png</code><code>{名前}_eye_closed.png</code></td><td>3枚すべて</td></tr>
               </tbody>
             </table>
 <p>区切りには「_」をおすすめします。大文字・小文字は区別しません。キャラクターの追加画面で、使う画像にチェックを付けてください。画像が足りない場合や同じ役割が重複する場合は、該当する組を設定できません。</p>
@@ -265,11 +277,12 @@
 <dl class="definition-grid"><div><dt>平均間隔</dt><dd>まばたきする間隔を秒で指定します。</dd></div><div><dt>ランダム幅</dt><dd>間隔にばらつきを加えます。</dd></div><div><dt>閉眼時間</dt><dd>目を閉じている長さをフレーム数で指定します。</dd></div><div><dt>パターン変更</dt><dd>間隔の設定を保ちながら、まばたきのタイミングを変えます。</dd></div></dl><p>口と目のレイヤーは、初期状態では位置がロックされています。位置を調整するときは鍵アイコンで解除してください。倍率や回転、目パチの設定は、位置がロックされていても変更できます。</p>
 </section>
 
-          <section class="guide-section searchable" id="timeline" data-search="タイムライン 位置 入力倍率 回転 左右反転 S R ホイール 整数 長さ 自動 縮小 プレビュー 音声">
+          <section class="guide-section searchable" id="timeline" data-search="タイムライン 位置 入力倍率 回転 左右反転 S R ホイール 整数 長さ 自動 手動 フレーム 余白 縮小 プレビュー 音声">
 <header class="section-heading"><p class="section-number">09</p><h2>タイムラインと画像の位置を調整する</h2></header>
 
-<figure class="guide-shot"><a class="image-zoom-trigger" href="../assets/timeline-light.png" aria-label="音声と画像の配置を確認するタイムラインを拡大表示"><img src="../assets/timeline-light.png" data-theme-light="../assets/timeline-light.png" data-theme-dark="../assets/timeline-dark.png" width="1600" height="1000" alt="音声と画像の配置を確認するタイムライン" loading="lazy"></a><figcaption>音声に合わせてタイムラインの長さが変わります。画像の表示時間や各レイヤーの重なりも確認できます。</figcaption></figure>
-<p>音声を配置・移動・削除すると、タイムラインの長さが音声の終わりに合わせて伸び縮みします。手動で配置した画像などが後ろにある場合は、その表示範囲も残ります。</p>
+<figure class="guide-shot"><a class="image-zoom-trigger" href="../assets/timeline-light.png" aria-label="音声と画像の配置を確認するタイムラインを拡大表示"><img src="../assets/timeline-light.png" data-theme-light="../assets/timeline-light.png" data-theme-dark="../assets/timeline-dark.png" width="1600" height="1000" alt="音声と画像の配置を確認するタイムライン" loading="lazy"></a><figcaption>配置した素材に合わせてタイムラインの長さが変わります。画像の表示時間や各レイヤーの重なりも確認できます。</figcaption></figure>
+<h3>タイムラインの長さ</h3><p>初期設定は「自動」です。画像や音声を配置・移動・短縮・削除すると、最後の素材の終わりに合わせてタイムラインが伸び縮みします。全体へ自動で伸ばしているBASEや、自動の口パク・目パチは長さの基準にしません。</p>
+<p>末尾に余白を残したいときは、プロパティ上部の「タイムラインの長さ」を開き、「長さの決め方」を「手動」に変えます。「長さ（フレーム）」に整数を入力してください。24 FPSなら240フレームで10秒です。入力を止めると少し待って反映し、Enterでも確定できます。Escで未確定の入力を戻します。</p><p>配置済みの素材より短い長さは指定できません。欄に表示される最短フレーム数以上を指定してください。手動でも、後から素材を終端より後ろへ配置すると自動で延長します。「自動」に戻すと、再び素材の終端へ揃います。設定はプロジェクトへ保存され、元に戻す・やり直すにも対応します。</p>
 <h3>位置・大きさ・回転</h3><p>画像またはレイヤーを選ぶと、プロパティに位置・入力倍率・回転が表示されます。数値を入力すると、入力が止まってから少し待ってプレビューに反映されます。Enterを押すとすぐに確定します。</p><p>位置は1px、倍率は1％、回転は1度刻みで入力できます。数値欄にマウスを置いてホイールを動かすと、1ずつ変更できます。「左右反転」で画像を反転できます。</p>
 <table class="help-table"><thead><tr><th>操作</th><th>方法</th></tr></thead><tbody><tr><th>マウスで拡大・縮小</th><td>プレビューで画像を選び、マウスをプレビュー上に置いてSを押してから動かします。</td></tr><tr><th>マウスで回転</th><td>画像を選び、Rを押してからマウスを動かします。</td></tr><tr><th>変形を確定・取り消す</th><td>クリックまたはEnterで確定。右クリックまたはEscで取り消します。</td></tr><tr><th>プレビューを拡大・縮小</th><td>プレビュー上でホイールを動かします。「全体表示」で画像全体が収まります。</td></tr><tr><th>プレビューの表示位置を動かす</th><td>Hを押しながらドラッグします。</td></tr><tr><th>表示・非表示</th><td>レイヤーの目アイコンで切り替えます。</td></tr><tr><th>名前・重なり順</th><td>レイヤー名のダブルクリックで名前を変更。行を上下へドラッグして順番を変えます。</td></tr><tr><th>音量</th><td>音声クリップを選び、プロパティのゲインを調整します。</td></tr></tbody></table>
 <p>BASEはキャラクター本体のレイヤーです。口と目はBASEに追従します。背景は通常レイヤーで用意し、キャラクターより下へ配置してください。</p>
@@ -279,7 +292,22 @@
 <header class="section-heading"><p class="section-number">10</p><h2>保存とバックアップ</h2></header>
 
 <h3>保存したプロジェクトを開く</h3><p>インストール後は、.ls1ファイルをダブルクリックしてLipSyncOneで開けます。別のアプリが開く場合は、ファイルを右クリックして「プログラムから開く」でLipSyncOneを選んでください。すでにLipSyncOneが起動している場合は、同じウィンドウで開きます。未保存の変更があるときは、保存するか、破棄するか、開く操作をキャンセルするかを選べます。</p>
-<p>「ファイル → 保存」で、編集内容を.ls1ファイルに保存します。画像や音声は外部ファイルを参照するため、通常の保存では素材そのものを.ls1に埋め込みません。</p><h3>別のPCへ移すとき</h3><p>「ファイル → プロジェクトを収集して保存」を選ぶと、.ls1と使用中の素材をまとめたフォルダーが作られます。そのフォルダー全体を移動してください。</p><p>通常の.ls1を使う場合は、素材の場所と名前を維持してください。素材が見つからなくなったときは元の場所へ戻すか、アセットのプロパティからファイルを差し替えます。</p><p>0.2.0以降は現在の保存形式に対応しています。それより古い形式のプロジェクトは、作成した当時のアプリで開いてください。</p>
+<p>「ファイル → 保存」で、編集内容を.ls1ファイルに保存します。画像や音声は外部ファイルを参照するため、通常の保存では素材そのものを.ls1に埋め込みません。</p>
+<h3>素材のパスについて</h3><p>保存先の.ls1と同じフォルダーや、その下のフォルダーにある素材は、保存時に自動で相対パスにします。それ以外の素材は絶対パスを使います。初めて保存するときも同じで、保存方法を選ぶ必要はありません。素材自体は移動・コピーしません。</p><p>「名前を付けて保存」で別のフォルダーへ保存するときも、元と同じ素材を参照するようにパスを調整します。</p>
+<div class="note" id="relative-path-example">
+  <strong>相対パスでまとめたいときのフォルダー構成</strong>
+  <p>作業用の親フォルダーを作り、その直下に.ls1を保存してください。使う画像・音声も同じフォルダーの中にまとめます。素材用のサブフォルダーを作ってもかまいません。</p>
+  <pre>作品フォルダー/
+├─ 作品.ls1
+└─ 素材/
+   ├─ 本体.png
+   ├─ 口_閉じ.png
+   └─ 音声.wav</pre>
+  <p>この構成で素材を読み込み、プロジェクトを保存すると、素材は「素材/本体.png」のような相対パスで記録されます。中の配置を変えずに「作品フォルダー」全体を移動すれば、別の場所でも素材を参照できます。</p>
+  <p>.ls1だけを別のサブフォルダーへ入れ、素材をその外に置いた場合は絶対パスになります。相対パスにしたい素材は、すべて.ls1と同じフォルダーか、その下に置いてください。</p>
+  <p>すでに読み込んだ素材を後から移動した場合は、アセットのプロパティから移動先のファイルへ差し替え、保存し直してください。既存の作品を素材ごとまとめたい場合は、次の「プロジェクトを収集して保存」も利用できます。</p>
+</div>
+<h3>別のPCへ移すとき</h3><p>「ファイル → プロジェクトを収集して保存」を選ぶと、.ls1と使用中の素材をまとめたフォルダーが作られます。そのフォルダー全体を移動してください。</p><p>素材をプロジェクトのフォルダー内に置いている場合は、フォルダー内の配置を保ったまま全体を移動できます。外のフォルダーにある素材は、場所と名前を維持してください。素材が見つからなくなったときは元の場所へ戻すか、アセットのプロパティからファイルを差し替えます。</p><p>0.2.0以降は現在の保存形式に対応しています。それより古い形式のプロジェクトは、作成した当時のアプリで開いてください。</p>
 </section>
 
           <section class="guide-section searchable" id="export" data-search="動画 書き出し 透明 アルファ Premiere Pro ProRes FFV1 軽量 WebM MP4 背景 解像度">
@@ -311,6 +339,8 @@
               <details><summary>リップシンク解析を開始できない</summary><p>対象キャラクターの音声行にクリップがあり、そのキャラクターの口レイヤーへ口形画像が設定されているか確認します。同梱エンジンが見つからないと表示される場合は、アプリを再インストールしてください。</p></details>
               <details><summary>無音に近い区間でも口が開く</summary><p>解析画面で無音しきい値を上げるか、音量の影響度を上げて再解析します。特に2枚・3枚口形で効果があります。</p></details>
               <details><summary>口や目が表示されない</summary><p>専用レイヤーの目アイコン、画像割り当て、位置、現在フレームにBASEクリップがあるかを確認します。BASEがない区間では従属する口と目も表示されません。</p></details>
+              <details><summary>自動アニメーションを解除したい</summary><p>レイヤー一覧で対象を右クリックし、「通常の画像レイヤーに戻す」を選びます。ロック中も解除でき、元の画像配置・素材・口形や目の設定は残ります。元に戻す操作で復元できます。キーボードでは対象レイヤーにフォーカスしてShift+F10またはメニューキーを押します。</p></details>
+              <details><summary>一部の区間だけ口や目を差し替えたい</summary><p>レイヤーの「追加」から「口の差し替え」または「目の差し替え」を選びます。そのキャラクターの口形・目設定に登録した画像を、アセットからタイムラインの差し替え行へドラッグしてください。位置ロック中も配置できます。配置したクリップを選ぶと、画像・開始位置・表示時間を調整できます。区間外では自動の口パク・目パチに戻ります。配置できない場合は、ガイドに表示される登録画像や重複区間の案内を確認してください。</p></details>
               <details><summary>音声の最後がフレーム境界と合わない</summary><p>音声はフレームで切り捨てず、元の最終サンプルまで保持します。タイムラインのバー端がフレーム線の途中になるのは正常です。</p></details>
               <details><summary>BGMやサブ音声を重ねられる？</summary><p>異なるキャラクターの音声行は同時再生できます。同じ音声行のクリップは重ねられません。BGMの加工や音声エフェクトなどはPremiere Proなどの仕上げ先で行ってください。</p></details>
               <details><summary>アルファ動画をWindows標準プレイヤーで再生できない</summary><p>標準プレイヤーがProRes 4444やFFV1のアルファへ対応しない場合があります。編集ソフトへ直接読み込むか、確認用のカラーキーH.264 MP4を書き出してください。</p></details>

@@ -5,6 +5,64 @@ const sections = [...document.querySelectorAll(".searchable")];
 const noResults = document.querySelector(".no-results");
 const navLinks = [...document.querySelectorAll(".side-nav a")];
 
+const filenameCopyStatus = document.querySelector("#filename-copy-status");
+async function copyFilename(filename) {
+  try {
+    await navigator.clipboard.writeText(filename);
+    return;
+  } catch {
+    // Local file help may not have Clipboard API permission. Keep an offline
+    // copy path in the same click action before offering manual selection.
+  }
+  const previousFocus = document.activeElement;
+  const buffer = document.createElement("textarea");
+  buffer.className = "clipboard-buffer";
+  buffer.value = filename;
+  buffer.readOnly = true;
+  buffer.setAttribute("aria-label", "コピーするファイル名");
+  document.body.append(buffer);
+  try {
+    buffer.focus({ preventScroll: true });
+    buffer.select();
+    if (!document.execCommand("copy")) throw new Error("Copy unavailable");
+  } finally {
+    buffer.remove();
+    previousFocus?.focus({ preventScroll: true });
+  }
+}
+
+for (const code of document.querySelectorAll(".filename-table code")) {
+  const filename = code.textContent.trim();
+  const row = document.createElement("span");
+  row.className = "filename-copy-row";
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "filename-copy-button";
+  button.textContent = "コピー";
+  button.setAttribute("aria-label", `${filename} をコピー`);
+  code.replaceWith(row);
+  row.append(code, button);
+  let resetLabel;
+  button.addEventListener("click", async () => {
+    try {
+      await copyFilename(filename);
+      button.textContent = "コピー済み";
+      window.clearTimeout(resetLabel);
+      resetLabel = window.setTimeout(() => { button.textContent = "コピー"; }, 2000);
+      if (filenameCopyStatus) filenameCopyStatus.textContent = `${filename} をコピーしました。`;
+    } catch {
+      window.clearTimeout(resetLabel);
+      button.textContent = "コピー";
+      const selection = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(code);
+      selection?.removeAllRanges();
+      selection?.addRange(range);
+      if (filenameCopyStatus) filenameCopyStatus.textContent = "ファイル名を選択しました。Ctrl+Cでコピーしてください。";
+    }
+  });
+}
+
 const savedTheme = localStorage.getItem("lipsyncone-help-theme");
 if (savedTheme === "dark" || savedTheme === "light") {
   root.dataset.theme = savedTheme;

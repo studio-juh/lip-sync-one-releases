@@ -508,3 +508,23 @@ body.image-lightbox-open { overflow: hidden; }
 .product-logo .logo-dark { display: none; }
 [data-theme="dark"] .product-logo .logo-light { display: none; }
 [data-theme="dark"] .product-logo .logo-dark { display: block; }
+
+.filename-list > code { display: block; margin-block: 4px; overflow-wrap: anywhere; }
+.filename-copy-row { display: flex; align-items: center; gap: 8px; margin-block: 4px; }
+.filename-copy-row code { min-width: 0; overflow-wrap: anywhere; user-select: all; }
+.filename-copy-button {
+  flex: 0 0 auto;
+  min-width: 80px;
+  padding: 3px 8px;
+  border: 1px solid var(--border-dark);
+  border-radius: 3px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 12px;
+  cursor: pointer;
+}
+.filename-copy-button:hover { border-color: var(--accent); background: var(--accent-soft); }
+.filename-copy-button:active { background: var(--surface-strong); }
+.filename-copy-button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.filename-copy-status { min-height: 1.75em; color: var(--muted); font-size: 13px; }
+.clipboard-buffer { position: fixed; top: 0; left: 0; width: 1px; height: 1px; opacity: 0; }
