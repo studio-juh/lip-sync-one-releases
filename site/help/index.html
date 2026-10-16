@@ -19,8 +19,8 @@
     <meta name="twitter:image" content="https://lipsyncone.studiojuh.com/assets/editor-dark.png">
     <title>口パク・目パチアニメーションの作り方｜LipSyncOne公式ヘルプ</title>
     <link rel="canonical" href="https://lipsyncone.studiojuh.com/help/">
-    <link rel="stylesheet" href="../styles.css?v=20261016-v037">
-    <script src="../script.js?v=20261016-v037" defer></script>
+    <link rel="stylesheet" href="../styles.css?v=20261016-v037-r2">
+    <script src="../script.js?v=20261016-v037-r2" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -174,6 +174,7 @@
 <ol class="procedure"><li><strong>新しいプロジェクトを作る</strong><span>HOMEで新規プロジェクトを作成します。</span></li><li><strong>画像と音声を読み込む</strong><span>imagesフォルダーのPNG 7枚と、audioフォルダーのWAVを「アセット」へ読み込みます。</span></li><li><strong>キャラクターを追加する</strong><span>「キャラクターを追加」を開き、「素材のグループ」でsample_girlを選びます。名前と画像を確認し、「キャラクターを追加」を押します。</span></li><li><strong>音声を配置する</strong><span>追加したキャラクターのタブを選び、アセットの「音声」からWAVをタイムラインの音声行へドラッグします。配置後に口パクの解析が始まります。</span></li><li><strong>再生して確認する</strong><span>解析が終わったらタイムラインを再生します。必要に応じて画像の位置や大きさを調整します。</span></li><li><strong>動画を書き出す</strong><span>「ファイル → 動画を書き出す」を開き、透明背景のまま「軽量WebM」などで保存します。</span></li></ol>
 <figure class="guide-shot"><a class="image-zoom-trigger" href="../assets/home-light.png" aria-label="日本語表示のHOME画面を拡大表示"><img src="../assets/home-light.png" data-theme-light="../assets/home-light.png" data-theme-dark="../assets/home-dark.png" width="1600" height="1000" alt="日本語表示のHOME画面" loading="lazy"></a><figcaption>HOMEから新しい制作を始めるか、保存したプロジェクトを開きます。</figcaption></figure>
 <p class="note">サンプル1の音声はVOICEVOX:櫻歌ミコ、サンプル2はVOICEVOX:春日部つむぎです。音声を使った動画を公開する際は、動画内や概要欄に使用した音声のクレジットを表記してください。詳しい利用条件はZIP内のREADMEをご確認ください。</p>
+<h3 id="sample-three">サンプル3：男の子の全身画像2枚で口パク</h3><p><a href="https://lipsyncone.studiojuh.com/downloads/LipSyncOne_SampleAssets3_v1.zip" download>サンプルアセット3をダウンロード</a>して展開します。閉口・開口の透過PNG 2枚（1024×1536）と猫使アルの説明音声、確認用GIF、利用案内を含みます。口以外の画素は一致するよう調整済みです。audioフォルダーのWAVをそのキャラクターの音声行へ配置して試せます。音声を使った作品の公開時は「VOICEVOX:猫使アル」と表記し、ZIP内READMEの公式規約をご確認ください。目パチ用の差分は含みません。</p><p>以前の公開版0.3.7など、専用の追加画面がない場合は、新規プロジェクトのキャンバスを1024×1536へ設定し、PNG 2枚を読み込みます。名前だけ指定してキャラクターを追加し、BASEには画像を置きません。「口・リップシンクレイヤーを追加」の「かんたん（2枚）」で閉口・開口を指定して保存し、そのキャラクターの音声行へ音声を配置します。全身画像を口形として切り替えるので、別の本体画像や切り抜きは不要です。</p><p>「全身画像2枚で口パク」の追加画面があるバージョンでは、そこから2枚を指定できます。専用画面の有無に合わせて手順を選んでください。詳しい手順と画像の利用条件は、ZIP内のREADMEもご確認ください。</p>
 </section>
 
           <section class="guide-section searchable" id="workspace" data-search="画面 レイヤー アセット プレビュー プロパティ パネル タイムライン サイズ">
@@ -182,6 +183,7 @@
 <figure class="guide-shot"><a class="image-zoom-trigger" href="../assets/editor-light.png" aria-label="サンプル画像と音声を配置した編集画面を拡大表示"><img src="../assets/editor-light.png" data-theme-light="../assets/editor-light.png" data-theme-dark="../assets/editor-dark.png" width="1600" height="1000" alt="サンプル画像と音声を配置した編集画面" loading="lazy"></a><figcaption>左側で素材とレイヤーを管理し、中央でプレビューとタイムライン、右側で選択した項目の設定を確認します。</figcaption></figure>
 <dl class="definition-grid"><div><dt>レイヤー</dt><dd>画像の重なり順、表示・非表示、位置のロックを管理します。</dd></div><div><dt>アセット</dt><dd>読み込んだ画像と音声を表示します。素材を選び、目的のレイヤーや音声行へ配置します。</dd></div><div><dt>プレビュー</dt><dd>画像の重なりや口・目の動きを確認します。市松模様の部分は透明です。</dd></div><div><dt>タイムライン</dt><dd>画像と音声を表示・再生する時間を調整します。</dd></div><div><dt>プロパティ</dt><dd>選択中の画像、レイヤー、クリップの設定を編集します。</dd></div></dl>
 <p>パネルの境界をドラッグすると、表示領域の広さを変えられます。タイムラインを広げてプレビューを小さくすることもできます。元に戻す場合は「表示 → パネル配置を初期化」を選びます。</p>
+<h3>カンバスの大きさを調整する</h3><p>「編集 → カンバスサイズ」を開くと、現在のコマを縮小表示します。辺や角のハンドルをドラッグするか、幅・高さを数値で入力して調整します。角をShiftキーと一緒にドラッグすると、縦横比を保てます。点線は変更前のサイズです。</p><p>画像の大きさは変わらず、中心を基準に余白や切り取り範囲だけが変わります。ハンドルは矢印キーで1px、Shiftと矢印キーで10pxずつ調整できます。ドラッグ中のEscはその調整を取り消します。「適用」で確定し、「キャンセル」なら変更しません。確定後もCtrl+Zで元に戻せます。</p>
 </section>
 
           <section class="guide-section searchable" id="assets" data-search="素材 PNG JPEG WAV MP3 音声 再生 検索 フィルタ ファイル名 外部 更新 再読み込み">
@@ -218,8 +220,12 @@
 <h3>元のファイルを編集したとき</h3><p>画像や音声を別のソフトで編集して保存すると、アプリが変更を自動で読み直します。すぐに更新したいときは「ファイル → アセットを再読み込み」を選びます。音声の内容が変わった場合は、波形と口パクも更新されます。</p><p>保存途中で一時的に読み込めない画像は、直前の表示を保ちながら再読み込みを待ちます。素材を移動・削除した場合は、元の場所へ戻すか、アセットのファイルを差し替えてください。</p>
 </section>
 
-          <section class="guide-section searchable" id="characters" data-search="複数 キャラクター 話者 タブ 共通 未割当 追加 素材 グループ 録音">
+          <section class="guide-section searchable" id="characters" data-search="複数 キャラクター 話者 タブ 共通 未割当 追加 素材 グループ 録音 全身 立ち絵 body 2枚 閉口 開口">
 <header class="section-heading"><p class="section-number">05</p><h2>キャラクターを追加する</h2></header>
+
+<h3>口だけが違う全身画像2枚から始める</h3><p>閉じた口と開いた口の全身画像があれば、別の本体・口パーツを用意せずに口パクを付けられます。同じ位置・大きさの画像を使うと、切り替え時に体が動きません。ファイル名は自由で、切り抜きや口の位置合わせは不要です。</p><ol class="procedure compact-procedure"><li><strong>2枚で作る方法を選ぶ</strong><span>「キャラクターを追加」を開き、「使う画像」で「全身画像2枚で口パク」を選びます。</span></li><li><strong>閉口と開口を指定する</strong><span>「画像を追加」で素材を読み込み、「口を閉じた全身画像」と「口を開いた全身画像」を選びます。先に読み込んだ画像も使えます。「2枚でキャラクターを追加」を押してください。</span></li><li><strong>音声を配置する</strong><span>追加したキャラクターのタブを選び、音声をそのキャラクターの音声行へ配置します。自動解析が終わると、画像全体が閉口・開口で切り替わります。BASEを動かすと両方へ同じ位置・倍率・回転が反映されます。</span></li></ol><p>元画像は加工しません。追加は1回の「元に戻す」で取り消せます。音声を置く前は閉口画像を表示します。</p>
+
+<h3>本体・口・目のパーツ画像から作る</h3><p>従来の方法は「使う画像」で「本体・口・目のパーツ画像」を選びます。次の手順とファイル名によるグループ設定を使えます。</p>
 
 <figure class="guide-shot"><a class="image-zoom-trigger" href="../assets/character-add-light.png" aria-label="素材を選んでキャラクターを追加する画面を拡大表示"><img src="../assets/character-add-light.png" data-theme-light="../assets/character-add-light.png" data-theme-dark="../assets/character-add-dark.png" width="1600" height="1000" alt="素材を選んでキャラクターを追加する画面" loading="lazy"></a><figcaption>名前と素材グループを選び、本体・口・目の画像をまとめて設定します。追加画面から画像を読み込むこともできます。</figcaption></figure>
 <ol class="procedure compact-procedure"><li><strong>画像を読み込む</strong><span>「キャラクターを追加」を開き、「画像を追加」から本体と口・目の差分画像を追加します。先にアセットへ読み込んだ画像も使えます。</span></li><li><strong>素材のグループを選ぶ</strong><span>「キャラクターを追加」を開き、画像の名前に対応するグループを選びます。</span></li><li><strong>名前と画像を確認する</strong><span>名前は自由に変更できます。手入力した名前は素材グループを選び直しても保たれます。使う画像を確認して「キャラクターを追加」を押します。</span></li><li><strong>音声を配置する</strong><span>そのキャラクターのタブを選び、対応する音声を配置します。</span></li></ol>

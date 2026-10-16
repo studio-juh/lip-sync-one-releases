@@ -20,8 +20,8 @@
     <title>LipSyncOne｜Windowsの口パク・目パチアニメーション作成アプリ</title>
     <link rel="canonical" href="https://lipsyncone.studiojuh.com/">
     <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./lp/styles.css?v=20261016-v037">
-    <script src="./script.js?v=20261016-v037" defer></script>
+    <link rel="stylesheet" href="./lp/styles.css?v=20261016-v037-r2">
+    <script src="./script.js?v=20261016-v037-r2" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -277,7 +277,7 @@
         <div class="page-width">
           <header class="lp-section-heading"><h2>口パク・目パチアニメーションのよくある質問</h2></header>
           <div class="feature-list">
-            <article><span>Q1</span><div><h3>口パクに必要な画像は何枚ですか？</h3><p>キャラクター本体の立ち絵に、閉じ口と開き口の2枚を用意すると始められます。目パチを付ける場合は開いた目と閉じた目も用意します。<a href="./help/#assets">差分画像の準備方法</a>を確認してください。</p></div></article>
+            <article><span>Q1</span><div><h3>口パクに必要な画像は何枚ですか？</h3><p>口だけが違う全身画像2枚から始められます。「キャラクターを追加 → 全身画像2枚で口パク」で閉口・開口画像を指定します。本体と口を分けたパーツ方式も使えます。目パチを付ける場合は、開いた目と閉じた目の差分も用意します。<a href="./help/#assets">差分画像の準備方法</a>を確認してください。</p></div></article>
             <article><span>Q2</span><div><h3>日本語の音声でリップシンクできますか？</h3><p>日本語のセリフを収録したWAV・MP3を読み込んで解析できます。口形は音声からの推定なので、声や発音によって結果が変わります。<a href="./help/#lip-sync">音声解析と調整の手順</a>をご覧ください。</p></div></article>
             <article><span>Q3</span><div><h3>背景を透過したまま動画にできますか？</h3><p>透過PNGを使い、アルファ付きProRes 4444・FFV1・VP9 WebMへ書き出せます。Premiere ProやDaVinci Resolveで仕上げる素材にはProRes 4444を用意しています。<a href="./help/#export">透明動画の書き出し方法</a>を確認できます。</p></div></article>
             <article><span>Q4</span><div><h3>製品名の表記は？</h3><p>日本語表記は「リップシンク One」、英語表記は「LipSyncOne」です。「Lip Sync One」も同じ製品名の表記です。</p></div></article>
@@ -294,17 +294,19 @@
           <div>
             <p class="section-kicker">FREE SAMPLE</p>
             <h2 id="samples-title">無料サンプルで、口パクを試す。</h2>
-            <p>茶髪と銀髪の2種類から選べます。それぞれ、位置調整済みの透過PNG 7枚とサンプル音声を無料でダウンロードできます。LipSyncOne 0.2.1以降で、口パク・目パチをお試しください。</p>
+            <p>女の子2種類のパーツ素材と、男の子の全身画像2枚から選べます。サンプル1・2は口パクと目パチ用のPNG 7枚と音声、サンプル3は口パク用の閉口・開口PNG 2枚と猫使アルの説明音声です。すべて無料でダウンロードできます。</p>
             <p><a class="download-button lp-primary" href="/downloads/LipSyncOne_SampleAssets_v1.zip" download>サンプル1：茶髪の女の子（ZIP・1.8 MB）</a></p>
             <p><a class="download-button lp-primary" href="/downloads/LipSyncOne_SampleAssets2_v1.zip" download>サンプル2：銀髪の女の子（ZIP・3.3 MB）</a></p>
-            <p>ZIPを展開し、画像7枚と音声を読み込みます。「キャラクターを追加」でsample_girl（サンプル1）またはsample_silver（サンプル2）を選び、WAVをそのキャラクターの音声行へ配置してください。<a href="./help/#quick-start">詳しい手順を見る</a></p>
+            <p><a class="download-button lp-primary" href="/downloads/LipSyncOne_SampleAssets3_v1.zip" download>サンプル3：男の子・全身画像2枚（ZIP・3.7 MB）</a></p>
+            <p>サンプル1・2は、ZIPを展開して画像7枚と音声を読み込みます。「キャラクターを追加」でsample_girl（サンプル1）またはsample_silver（サンプル2）を選び、WAVをそのキャラクターの音声行へ配置してください。<a href="./help/#quick-start">詳しい手順を見る</a></p>
+            <p>サンプル3は、口以外の画素が一致するよう調整した全身画像です。切り抜き不要で口パクを試せます。「キャラクターを追加 → 全身画像2枚で口パク」から、この2枚を指定できます。<a href="./help/#sample-three">サンプル3の使い方を見る</a></p>
           </div>
           <div>
             <h3>サンプルに含まれるもの</h3>
-            <ul><li>本体1枚・目3枚・口3枚（透過PNG／1254×1254）</li><li>音声WAV 2本・使いかたと利用案内</li></ul>
+            <ul><li>サンプル1・2：本体1枚・目3枚・口3枚（透過PNG／1254×1254）、音声WAV 2本</li><li>サンプル3：男の子の閉口・開口の全身画像2枚（透過PNG／1024×1536）、猫使アルの音声WAV 1本・確認用GIF。目パチ差分は含みません</li><li>すべてのZIPに使いかたと利用案内を同梱</li></ul>
             <p>画像はAIで生成・位置調整したものです。音声キャラクターの公式立ち絵ではありません。</p>
-            <p>音声：サンプル1は<strong>VOICEVOX:櫻歌ミコ（ノーマル）</strong>、サンプル2は<strong>VOICEVOX:春日部つむぎ（ノーマル）</strong>です。それぞれ短い「こんにちは」音声も含みます。<br>音声を使った作品を公開する際は、使用した音声に応じて「VOICEVOX:櫻歌ミコ」「VOICEVOX:春日部つむぎ」と表記してください。</p>
-            <p>利用・再配布は同梱READMEと<a href="https://voicevox35miko.studio.site/rule" rel="noreferrer">櫻歌ミコ利用規約</a>・<a href="https://tsumugi-official.studio.site/rule" rel="noreferrer">春日部つむぎ利用規約</a>・<a href="https://voicevox.hiroshiba.jp/term/" rel="noreferrer">VOICEVOX利用規約</a>に従ってください。</p>
+            <p>音声：サンプル1は<strong>VOICEVOX:櫻歌ミコ（ノーマル）</strong>、サンプル2は<strong>VOICEVOX:春日部つむぎ（ノーマル）</strong>、サンプル3は<strong>VOICEVOX:猫使アル（ノーマル）</strong>です。サンプル1・2には短い「こんにちは」音声も含みます。<br>音声を使った作品を公開する際は、使用した音声に応じて「VOICEVOX:櫻歌ミコ」「VOICEVOX:春日部つむぎ」「VOICEVOX:猫使アル」と表記してください。</p>
+            <p>利用・再配布は同梱READMEと<a href="https://voicevox35miko.studio.site/rule" rel="noreferrer">櫻歌ミコ利用規約</a>・<a href="https://tsumugi-official.studio.site/rule" rel="noreferrer">春日部つむぎ利用規約</a>・<a href="https://nekotukarb.wixsite.com/nekonohako/利用規約" rel="noreferrer">猫使アル利用規約</a>・<a href="https://voicevox.hiroshiba.jp/term/" rel="noreferrer">VOICEVOX利用規約</a>に従ってください。</p>
           </div>
         </div>
       </section>
@@ -315,7 +317,7 @@
             <p class="section-kicker">DOWNLOAD</p>
             <h2>LipSyncOneを試す。</h2>
             <p>Windows 11 x64向けのv0.3.7を公開しています。セットアップEXEを実行し、スタートメニューから起動してください。以降は「ヘルプ → アップデートを確認」から手動で確認し、「更新して再起動」で更新できます。起動時の自動確認は行いません。旧ポータブル版からも、今回はセットアップEXEでインストールしてください。保存済みのプロジェクトと素材はそのまま使えます。</p>
-            <p>0.3.7を公開しました。タイムラインの長さは素材に合わせて自動で伸び縮みし、プロパティから手動でも指定できます。「口の差し替え」「目の差し替え」は素材をドラッグして配置できます。保存時の相対パス対応や、ヘルプのファイル名コピーも追加しました。</p><p>0.3.6からは「ヘルプ → アップデートを確認」で0.3.7へ更新できます。起動時の自動確認は行いません。</p>
+            <p>0.3.7の配布ファイルを更新しました。口だけが違う全身画像2枚からキャラクターを追加でき、画像の切り抜きや口の位置合わせが不要になりました。カンバスサイズは縮小プレビューとハンドルで調整できます。キャラクター追加画面のプレビュー表示と、口形の後ろに画像クリップが残る問題も修正しました。</p><p>0.3.6からは「ヘルプ → アップデートを確認」で更新できます。すでに0.3.7をお使いの場合は、最新のセットアップEXEをダウンロードして再実行してください。同じバージョンの差し替えはアプリ内更新の対象になりません。起動時の自動確認は行いません。</p>
             <p class="signature-note">セットアップEXEにはWindowsの実行ファイル署名を付けていません。Windowsの警告が表示された場合は、公式配布元から入手したファイルか確認してください。</p>
           </div>
           <div class="download-actions">

@@ -68,6 +68,11 @@ assert.match(productPage, /href="\/downloads\/LipSyncOne_SampleAssets2_v1\.zip" 
 assert.ok((await readFile(resolve(siteRoot, "downloads/LipSyncOne_SampleAssets2_v1.zip"))).length > 0, "stage sample 2 before deploying");
 
 
+assert.match(productPage, /href="\/downloads\/LipSyncOne_SampleAssets3_v1\.zip" download/);
+assert.ok((await readFile(resolve(siteRoot, "downloads/LipSyncOne_SampleAssets3_v1.zip"))).length > 0, "stage sample 3 before deploying");
+assert.match(productPage, /サンプル3[^<]+男の子/);
+assert.match(await read("help/index.html"), /id="sample-three"/);
+
 // Search snippets must describe the same page across HTML, social cards and JSON-LD.
 const pageHtml = new Map(await Promise.all(pages.map(async (page) => [page.canonical, await read(page.path)])));
 for (const page of pages) {

@@ -4,7 +4,7 @@ LipSyncOne の Windows 向け配布ファイルと公式サイトを公開する
 
 ## 配布状態
 
-Windows 11 x64向け`v0.3.5`を公開しています。
+Windows 11 x64向け`v0.3.7`を公開しています。
 
 - [最新版をダウンロード](https://github.com/studio-juh/lip-sync-one-releases/releases/latest)
 - [LipSyncOne 製品紹介](https://lipsyncone.studiojuh.com/)
@@ -27,7 +27,7 @@ GitHub ActionsによるGitHub Pages公開は使用しません。独自ドメイ
 
 ## Release assets
 
-v0.3.5はNSISセットアップEXE・Updater署名・latest.json・SHA256SUMS.txtの4点を公開します。ポータブルZIPと旧版互換用feedは提供しません。バイナリはGitへ登録せずGitHub Releasesで配布します。
+v0.3.7はNSISセットアップEXE・Updater署名・latest.json・SHA256SUMS.txtの4点を公開します。ポータブルZIPと旧版互換用feedは提供しません。バイナリはGitへ登録せずGitHub Releasesで配布します。
 
 ## 日本語検索向けの表記（2026-09-13）
 
@@ -69,3 +69,12 @@ v0.3.5はNSISセットアップEXE・Updater署名・latest.json・SHA256SUMS.tx
 2026-10-15: v0.3.4を公開。レイヤー削除・自動アニメーション割り当て解除、未完成の口・目設定の保存、画像差し替え時の手動修正保持、未使用素材の削除、BASE再作成時の親への追従を改善。
 
 2026-10-15: v0.3.5を公開。埋込ICCの名前や有無で画像を拒否する処理を撤去し、大口などのサムネイルが表示されない問題を修正。PNG / JPEGの共通読み込みへ反映。
+
+
+2026-10-16: サンプル3（男の子の全身画像2枚）を追加。`site/downloads/LipSyncOne_SampleAssets3_v1.zip` と個別sha256を配置し、製品ページ・ヘルプ・llmsから案内します。PNG2枚（1024×1536、口以外のRGBAと全域alphaは一致）、確認用GIF、利用案内の4ファイル。音声なし。公開0.3.7の既存「口・リップシンクレイヤーを追加 → かんたん（2枚）」の手順と、新しい2枚追加画面を持つバージョンの手順を区別しています。アプリ本体・既存サンプル1 / 2・Updaterは変更しません。再deploy前には3種類のサンプルZIPをすべて配置してください。メディアはGit管理対象外です。
+
+2026-10-16: サンプル3へ指定の猫使アル（ノーマル）説明音声を追加。配布名はaudio/nekotsuka_aru_001_two_image_lipsync.wav。原音を加工せず同梱し、VOICEVOX:猫使アルのクレジットと公式規約をREADME・配布ページへ記載。サンプル3はPNG2枚・WAV1本・GIF・READMEの5ファイルになりました。画像・アプリ本体は変更しません。
+
+## 0.3.7 配布ファイル更新（2026-10-16）
+
+全身画像2枚からのキャラクター追加、カンバスの縮小プレビューとハンドル調整、追加プレビューの全体表示とBASE口形timeline修正を反映します。既存0.3.7は最新インストーラーを再実行してください。同じversionの差し替えはアプリ内更新の対象になりません。公式ヘルプ・サンプル3の利用案内も現行導線へ同期します。
