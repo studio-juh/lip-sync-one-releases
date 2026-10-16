@@ -4,7 +4,7 @@ LipSyncOne の Windows 向け配布ファイルと公式サイトを公開する
 
 ## 配布状態
 
-Windows 11 x64向け`v0.3.7`を公開しています。
+Windows 11 x64向け`v0.3.8`を公開しています。
 
 - [最新版をダウンロード](https://github.com/studio-juh/lip-sync-one-releases/releases/latest)
 - [LipSyncOne 製品紹介](https://lipsyncone.studiojuh.com/)
@@ -27,7 +27,7 @@ GitHub ActionsによるGitHub Pages公開は使用しません。独自ドメイ
 
 ## Release assets
 
-v0.3.7はNSISセットアップEXE・Updater署名・latest.json・SHA256SUMS.txtの4点を公開します。ポータブルZIPと旧版互換用feedは提供しません。バイナリはGitへ登録せずGitHub Releasesで配布します。
+v0.3.8はNSISセットアップEXE・Updater署名・latest.json・SHA256SUMS.txtの4点を公開します。ポータブルZIPと旧版互換用feedは提供しません。バイナリはGitへ登録せずGitHub Releasesで配布します。
 
 ## 日本語検索向けの表記（2026-09-13）
 
