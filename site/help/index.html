@@ -67,7 +67,7 @@
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="#top" aria-label="LipSyncOne ヘルプの先頭へ">
-          <img class="brand-mark" src="./assets/app-icon.svg" width="30" height="30" alt="">
+          <img class="brand-mark" src="../assets/app-icon.svg" width="30" height="30" alt="">
           <span><strong>LipSyncOne</strong><small>ヘルプ</small></span>
         </a>
         <nav class="header-actions" aria-label="関連リンク">
@@ -85,7 +85,7 @@
           <p class="breadcrumb">LipSyncOne / ヘルプ</p>
           <h1>LipSyncOne ヘルプ</h1>
           <p>画像と音声を読み込み、口パク・目パチ付きの透明動画を書き出すまでの操作を紹介します。</p>
-          <p class="version-note">Windows 11 x64 ／ 0.3.8の使い方（掲載画像は一部旧版） ／ 2026年10月17日更新</p>
+          <p class="version-note">Windows 11 x64 ／ 0.3.9の使い方（掲載画像は一部旧版） ／ 2026年10月17日更新</p>
         </div>
       </section>
 
@@ -136,14 +136,14 @@
             <div class="warning"><strong>Windowsの警告について</strong>公式サイト・BOOTH版にはWindowsの実行ファイル署名を付けていません。公式配布元から入手したファイルであることを確認し、SmartScreenが表示された場合は詳細を確認してください。</div>
             <div class="smartscreen-shots" aria-label="Windows SmartScreenの確認手順">
               <figure class="smartscreen-shot">
-                <a class="image-zoom-trigger" href="assets/smartscreen-warning.png" aria-label="SmartScreenの最初の警告画面を拡大表示">
-                  <img src="assets/smartscreen-warning.png" alt="WindowsによってPCが保護されましたと表示され、詳細情報を選べるSmartScreenの警告画面" loading="lazy">
+                <a class="image-zoom-trigger" href="../assets/smartscreen-warning.png" aria-label="SmartScreenの最初の警告画面を拡大表示">
+                  <img src="../assets/smartscreen-warning.png" alt="WindowsによってPCが保護されましたと表示され、詳細情報を選べるSmartScreenの警告画面" loading="lazy">
                 </a>
                 <figcaption><strong>1. 「詳細情報」を選ぶ</strong><span>「実行しない」だけが表示されている場合は、「詳細情報」を選びます。</span></figcaption>
               </figure>
               <figure class="smartscreen-shot">
-                <a class="image-zoom-trigger" href="assets/smartscreen-details.png" aria-label="SmartScreenの詳細確認画面を拡大表示">
-                  <img src="assets/smartscreen-details.png" alt="アプリ名LipSyncOne.exe、発行元studio-juh、実行ボタンが表示されたSmartScreenの詳細画面" loading="lazy">
+                <a class="image-zoom-trigger" href="../assets/smartscreen-details.png" aria-label="SmartScreenの詳細確認画面を拡大表示">
+                  <img src="../assets/smartscreen-details.png" alt="アプリ名LipSyncOne.exe、発行元studio-juh、実行ボタンが表示されたSmartScreenの詳細画面" loading="lazy">
                 </a>
                 <figcaption><strong>2. 内容を確認して「実行」</strong><span>アプリ名と発行元を確認し、公式Releaseから取得したファイルと一致する場合だけ実行します。</span></figcaption>
               </figure>
@@ -159,8 +159,8 @@
               <li><strong>「オフ」を選ぶ</strong><span>表示される注意事項を読み、変更する場合は「オフ」を選びます。その後、アプリの起動またはインストールをやり直します。</span></li>
             </ol>
             <figure class="guide-shot">
-              <a class="image-zoom-trigger" href="assets/smart-app-control-settings.png" aria-label="スマート アプリ コントロールの設定画面を拡大表示">
-                <img src="assets/smart-app-control-settings.png" alt="Windows セキュリティのスマート アプリ コントロール設定画面。オン、評価、オフの選択肢があり、オフが選択されている" loading="lazy" width="2062" height="1368">
+              <a class="image-zoom-trigger" href="../assets/smart-app-control-settings.png" aria-label="スマート アプリ コントロールの設定画面を拡大表示">
+                <img src="../assets/smart-app-control-settings.png" alt="Windows セキュリティのスマート アプリ コントロール設定画面。オン、評価、オフの選択肢があり、オフが選択されている" loading="lazy" width="2062" height="1368">
               </a>
               <figcaption>「オフ」を選択した設定画面の例です。ブロック警告そのものの画面ではありません。画像を選ぶと拡大できます。</figcaption>
             </figure>
@@ -173,7 +173,7 @@
 
 <p>初めて使う方は、<a href="https://lipsyncone.studiojuh.com/downloads/LipSyncOne_SampleAssets_v1.zip">無料サンプルアセット</a>を使うと、画像の準備から始めずに口パクと目パチを試せます。ZIPを展開してから、次の順に進めてください。</p>
 <ol class="procedure"><li><strong>新しいプロジェクトを作る</strong><span>HOMEで新規プロジェクトを作成します。</span></li><li><strong>画像と音声を読み込む</strong><span>imagesフォルダーのPNG 7枚と、audioフォルダーのWAVを「アセット」へ読み込みます。</span></li><li><strong>キャラクターを追加する</strong><span>「キャラクターを追加」を開き、「素材のグループ」でsample_girlを選びます。名前と画像を確認し、「キャラクターを追加」を押します。</span></li><li><strong>音声を配置する</strong><span>追加したキャラクターのタブを選び、アセットの「音声」からWAVをタイムラインの音声行へドラッグします。配置後に口パクの解析が始まります。</span></li><li><strong>再生して確認する</strong><span>解析が終わったらタイムラインを再生します。必要に応じて画像の位置や大きさを調整します。</span></li><li><strong>動画を書き出す</strong><span>「ファイル → 動画を書き出す」を開き、透明背景のまま「軽量WebM」などで保存します。</span></li></ol>
-<figure class="guide-shot"><a class="image-zoom-trigger" href="assets/home-light.png" aria-label="日本語表示のHOME画面を拡大表示"><img src="assets/home-light.png" data-theme-light="assets/home-light.png" data-theme-dark="assets/home-dark.png" width="1600" height="1000" alt="日本語表示のHOME画面" loading="lazy"></a><figcaption>HOMEから新しい制作を始めるか、保存したプロジェクトを開きます。</figcaption></figure>
+<figure class="guide-shot"><a class="image-zoom-trigger" href="../assets/home-light.png" aria-label="日本語表示のHOME画面を拡大表示"><img src="../assets/home-light.png" data-theme-light="../assets/home-light.png" data-theme-dark="../assets/home-dark.png" width="1600" height="1000" alt="日本語表示のHOME画面" loading="lazy"></a><figcaption>HOMEから新しい制作を始めるか、保存したプロジェクトを開きます。</figcaption></figure>
 <p class="note">サンプル1の音声はVOICEVOX:櫻歌ミコ、サンプル2はVOICEVOX:春日部つむぎです。音声を使った動画を公開する際は、動画内や概要欄に使用した音声のクレジットを表記してください。詳しい利用条件はZIP内のREADMEをご確認ください。</p>
 <h3 id="sample-three">サンプル3：男の子の全身画像2枚で口パク</h3><p><a href="https://lipsyncone.studiojuh.com/downloads/LipSyncOne_SampleAssets3_v1.zip" download>サンプルアセット3をダウンロード</a>して展開します。閉口・開口の透過PNG 2枚（1024×1536）と猫使アルの説明音声、確認用GIF、利用案内を含みます。口以外の画素は一致するよう調整済みです。audioフォルダーのWAVをそのキャラクターの音声行へ配置して試せます。音声を使った作品の公開時は「VOICEVOX:猫使アル」と表記し、ZIP内READMEの公式規約をご確認ください。目パチ用の差分は含みません。</p><p>以前の公開版0.3.7など、専用の追加画面がない場合は、新規プロジェクトのキャンバスを1024×1536へ設定し、PNG 2枚を読み込みます。名前だけ指定してキャラクターを追加し、BASEには画像を置きません。「口・リップシンクレイヤーを追加」の「かんたん（2枚）」で閉口・開口を指定して保存し、そのキャラクターの音声行へ音声を配置します。全身画像を口形として切り替えるので、別の本体画像や切り抜きは不要です。</p><p>「全身画像2枚で口パク」の追加画面があるバージョンでは、そこから2枚を指定できます。専用画面の有無に合わせて手順を選んでください。詳しい手順と画像の利用条件は、ZIP内のREADMEもご確認ください。</p>
 </section>
@@ -181,7 +181,7 @@
           <section class="guide-section searchable" id="workspace" data-search="画面 レイヤー アセット プレビュー プロパティ パネル タイムライン サイズ">
 <header class="section-heading"><p class="section-number">03</p><h2>画面の見方</h2></header>
 
-<figure class="guide-shot"><a class="image-zoom-trigger" href="assets/editor-light.png" aria-label="サンプル画像と音声を配置した編集画面を拡大表示"><img src="assets/editor-light.png" data-theme-light="assets/editor-light.png" data-theme-dark="assets/editor-dark.png" width="1600" height="1000" alt="サンプル画像と音声を配置した編集画面" loading="lazy"></a><figcaption>左側で素材とレイヤーを管理し、中央でプレビューとタイムライン、右側で選択した項目の設定を確認します。</figcaption></figure>
+<figure class="guide-shot"><a class="image-zoom-trigger" href="../assets/editor-light.png" aria-label="サンプル画像と音声を配置した編集画面を拡大表示"><img src="../assets/editor-light.png" data-theme-light="../assets/editor-light.png" data-theme-dark="../assets/editor-dark.png" width="1600" height="1000" alt="サンプル画像と音声を配置した編集画面" loading="lazy"></a><figcaption>左側で素材とレイヤーを管理し、中央でプレビューとタイムライン、右側で選択した項目の設定を確認します。</figcaption></figure>
 <dl class="definition-grid"><div><dt>レイヤー</dt><dd>画像の重なり順、表示・非表示、位置のロックを管理します。</dd></div><div><dt>アセット</dt><dd>読み込んだ画像と音声を表示します。素材を選び、目的のレイヤーや音声行へ配置します。</dd></div><div><dt>プレビュー</dt><dd>画像の重なりや口・目の動きを確認します。市松模様の部分は透明です。</dd></div><div><dt>タイムライン</dt><dd>画像と音声を表示・再生する時間を調整します。</dd></div><div><dt>プロパティ</dt><dd>選択中の画像、レイヤー、クリップの設定を編集します。</dd></div></dl>
 <p>パネルの境界をドラッグすると、表示領域の広さを変えられます。タイムラインを広げてプレビューを小さくすることもできます。元に戻す場合は「表示 → パネル配置を初期化」を選びます。</p>
 <h3>カンバスの大きさを調整する</h3><p>「編集 → カンバスサイズ」を開くと、現在のコマを縮小表示します。辺や角のハンドルをドラッグするか、幅・高さを数値で入力して調整します。角をShiftキーと一緒にドラッグすると、縦横比を保てます。点線は変更前のサイズです。</p><p>画像の大きさは変わらず、中心を基準に余白や切り取り範囲だけが変わります。ハンドルは矢印キーで1px、Shiftと矢印キーで10pxずつ調整できます。ドラッグ中のEscはその調整を取り消します。「適用」で確定し、「キャンセル」なら変更しません。確定後もCtrl+Zで元に戻せます。</p>
@@ -228,7 +228,7 @@
 
 <h3>本体・口・目のパーツ画像から作る</h3><p>従来の方法は「使う画像」で「本体・口・目のパーツ画像」を選びます。次の手順とファイル名によるグループ設定を使えます。</p>
 
-<figure class="guide-shot"><a class="image-zoom-trigger" href="assets/character-add-light.png" aria-label="素材を選んでキャラクターを追加する画面を拡大表示"><img src="assets/character-add-light.png" data-theme-light="assets/character-add-light.png" data-theme-dark="assets/character-add-dark.png" width="1600" height="1000" alt="素材を選んでキャラクターを追加する画面" loading="lazy"></a><figcaption>名前と素材グループを選び、本体・口・目の画像をまとめて設定します。追加画面から画像を読み込むこともできます。</figcaption></figure>
+<figure class="guide-shot"><a class="image-zoom-trigger" href="../assets/character-add-light.png" aria-label="素材を選んでキャラクターを追加する画面を拡大表示"><img src="../assets/character-add-light.png" data-theme-light="../assets/character-add-light.png" data-theme-dark="../assets/character-add-dark.png" width="1600" height="1000" alt="素材を選んでキャラクターを追加する画面" loading="lazy"></a><figcaption>名前と素材グループを選び、本体・口・目の画像をまとめて設定します。追加画面から画像を読み込むこともできます。</figcaption></figure>
 <ol class="procedure compact-procedure"><li><strong>画像を読み込む</strong><span>「キャラクターを追加」を開き、「画像を追加」から本体と口・目の差分画像を追加します。先にアセットへ読み込んだ画像も使えます。</span></li><li><strong>素材のグループを選ぶ</strong><span>「キャラクターを追加」を開き、画像の名前に対応するグループを選びます。</span></li><li><strong>名前と画像を確認する</strong><span>名前は自由に変更できます。手入力した名前は素材グループを選び直しても保たれます。使う画像を確認して「キャラクターを追加」を押します。</span></li><li><strong>音声を配置する</strong><span>そのキャラクターのタブを選び、対応する音声を配置します。</span></li></ol>
 <p>複数人が話す動画では、話者ごとにキャラクターと音声を用意します。異なる音声行は同時に再生できます。同じ音声行ではクリップを重ねられません。</p><p>「全体」タブでは全員の配置をまとめて確認できます。「共通／未割当」は、特定のキャラクターに属さない背景や小物などに使います。タブを切り替えても、他のキャラクターが自動で非表示や消音になることはありません。</p>
 <p>同名のレイヤーは「BASE（キャラクター名）」のように区別して表示します。音声の所属を変える場合は、現在の配置を削除し、目的のキャラクターの音声行へ配置し直します。元の音声アセットは残ります。</p><p>録音は「編集 → 録音…」から始められます。録音した音声を素材として保存してから、目的の音声行へ配置してください。</p>
@@ -237,7 +237,7 @@
           <section class="guide-section searchable" id="mouth-setup" data-search="口形 画像 閉口 中口 大口 2枚 3枚 9口形 A B C D E F G H X anchor 基準点 透明余白">
             <header class="section-heading"><p class="section-number">06</p><h2>口形画像を設定する</h2><p>キャラクターのタブを選び、レイヤー欄の「＋追加 → 口・リップシンク」を開きます。設定済みの口レイヤーを選び、プロパティから開くこともできます。</p></header>
             <figure class="guide-shot">
-              <a class="image-zoom-trigger" href="assets/mouth-setup-light.png" aria-label="口形設定画面を拡大表示"><img src="assets/mouth-setup-light.png" data-theme-light="assets/mouth-setup-light.png" data-theme-dark="assets/mouth-setup-dark.png" alt="閉口・中口・大口を設定する口・リップシンクレイヤー追加画面"></a>
+              <a class="image-zoom-trigger" href="../assets/mouth-setup-light.png" aria-label="口形設定画面を拡大表示"><img src="../assets/mouth-setup-light.png" data-theme-light="../assets/mouth-setup-light.png" data-theme-dark="../assets/mouth-setup-dark.png" alt="閉口・中口・大口を設定する口・リップシンクレイヤー追加画面"></a>
               <figcaption>かんたん3枚では、閉じた口・中くらいの口・大きく開いた口を選びます。</figcaption>
             </figure>
             <table class="help-table">
@@ -273,7 +273,7 @@
 
 <p>口形画像を設定したキャラクターの音声行へ音声を配置すると、自動解析が始まります。解析が終わると、声に合わせて口形が切り替わるようになります。</p>
 <p>音声ごとに「解析する言語」を選べます。タイムラインの音声を選び、プロパティで「日本語・その他」（初期値）または「英語」を指定してください。選択はプロジェクトに保存され、開き直した後や再解析でも引き継がれます。変更は次回の解析から反映されるので、既存の口形を更新する場合は、同じプロパティの「リップシンク」から解析し直します。解析画面でも言語を変更できます。共通／未割当の音声は、キャラクターへ割り当ててから解析してください。</p>
-<figure class="guide-shot"><a class="image-zoom-trigger" href="assets/lip-sync-analysis-light.png" aria-label="音量の影響度と無音しきい値を調整するリップシンク解析画面を拡大表示"><img src="assets/lip-sync-analysis-light.png" data-theme-light="assets/lip-sync-analysis-light.png" data-theme-dark="assets/lip-sync-analysis-dark.png" width="1600" height="1000" alt="音量の影響度と無音しきい値を調整するリップシンク解析画面" loading="lazy"></a><figcaption>手動解析では、対象の音声と音量補正を確認してから解析します。</figcaption></figure>
+<figure class="guide-shot"><a class="image-zoom-trigger" href="../assets/lip-sync-analysis-light.png" aria-label="音量の影響度と無音しきい値を調整するリップシンク解析画面を拡大表示"><img src="../assets/lip-sync-analysis-light.png" data-theme-light="../assets/lip-sync-analysis-light.png" data-theme-dark="../assets/lip-sync-analysis-dark.png" width="1600" height="1000" alt="音量の影響度と無音しきい値を調整するリップシンク解析画面" loading="lazy"></a><figcaption>手動解析では、対象の音声と音量補正を確認してから解析します。</figcaption></figure>
 <h3>あとから調整する</h3><ol class="procedure compact-procedure"><li><strong>口レイヤーを選ぶ</strong><span>対象キャラクターの口レイヤーを選択します。</span></li><li><strong>解析画面を開く</strong><span>プロパティの「リップシンク」を押します。</span></li><li><strong>補正を調整する</strong><span>「音量の影響度」の初期値は25％、「無音しきい値」は−42 dBです。小さい声で口が開きすぎる場合は、影響度やしきい値を少し上げて試します。</span></li><li><strong>解析して適用する</strong><span>「マスター音声を解析」を押します。解析が終わると、結果がタイムラインに反映されます。</span></li></ol>
 <p>自動解析中は進捗が表示され、キャンセルできます。解析に失敗しても音声の配置は残るので、設定を確認して再解析してください。</p><p>解析エンジンのRhubarbと必要なデータはアプリに同梱しています。解析のために音声を外部へ送信しません。</p>
 </section>
@@ -282,14 +282,15 @@
 <header class="section-heading"><p class="section-number">08</p><h2>目パチを設定する</h2></header>
 
 <p>開いた目と閉じた目の2枚で目パチを付けられます。半閉じの画像も用意すると、まばたきの途中を表現できます。キャラクター追加でまとめて設定するか、「＋追加 → 目・目パチ」から設定します。</p>
+<p>目パチに音声は必要ありません。初期状態ではタイムライン全体で動作し、音声が短いキャラクターも最後まで目パチします。目パチの帯の両端をドラッグすると表示区間を変更できます。プロパティの「目の表示区間」で「タイムライン全体に合わせる」を外し、開始位置と表示時間をフレーム数で指定することもできます。設定はキャラクターごとに保存され、位置ロック中も変更できます。「タイムライン全体に合わせる」を再びオンにすると全体へ追従します。</p>
 <dl class="definition-grid"><div><dt>平均間隔</dt><dd>まばたきする間隔を秒で指定します。</dd></div><div><dt>ランダム幅</dt><dd>間隔にばらつきを加えます。</dd></div><div><dt>閉眼時間</dt><dd>目を閉じている長さをフレーム数で指定します。</dd></div><div><dt>パターン変更</dt><dd>間隔の設定を保ちながら、まばたきのタイミングを変えます。</dd></div></dl><p>口と目のレイヤーは、初期状態では位置がロックされています。位置を調整するときは鍵アイコンで解除してください。倍率や回転、目パチの設定は、位置がロックされていても変更できます。</p>
 </section>
 
           <section class="guide-section searchable" id="timeline" data-search="タイムライン 位置 入力倍率 回転 左右反転 S R ホイール 整数 長さ 自動 手動 フレーム 余白 縮小 プレビュー 音声">
 <header class="section-heading"><p class="section-number">09</p><h2>タイムラインと画像の位置を調整する</h2></header>
 
-<figure class="guide-shot"><a class="image-zoom-trigger" href="assets/timeline-light.png" aria-label="音声と画像の配置を確認するタイムラインを拡大表示"><img src="assets/timeline-light.png" data-theme-light="assets/timeline-light.png" data-theme-dark="assets/timeline-dark.png" width="1600" height="1000" alt="音声と画像の配置を確認するタイムライン" loading="lazy"></a><figcaption>配置した素材に合わせてタイムラインの長さが変わります。画像の表示時間や各レイヤーの重なりも確認できます。</figcaption></figure>
-<h3>タイムラインの長さ</h3><p>初期設定は「自動」です。画像や音声を配置・移動・短縮・削除すると、最後の素材の終わりに合わせてタイムラインが伸び縮みします。全体へ自動で伸ばしているBASEや、自動の口パク・目パチは長さの基準にしません。</p>
+<figure class="guide-shot"><a class="image-zoom-trigger" href="../assets/timeline-light.png" aria-label="音声と画像の配置を確認するタイムラインを拡大表示"><img src="../assets/timeline-light.png" data-theme-light="../assets/timeline-light.png" data-theme-dark="../assets/timeline-dark.png" width="1600" height="1000" alt="音声と画像の配置を確認するタイムライン" loading="lazy"></a><figcaption>配置した素材に合わせてタイムラインの長さが変わります。画像の表示時間や各レイヤーの重なりも確認できます。</figcaption></figure>
+<h3>タイムラインの長さ</h3><p>初期設定は「自動」です。画像や音声を配置・移動・短縮・削除すると、最後の素材の終わりに合わせてタイムラインが伸び縮みします。手動で指定した目の表示区間も長さの基準になります。全体へ自動で伸ばしているBASEや、自動の口パク・全体に追従する目パチは長さの基準にしません。</p>
 <p>末尾に余白を残したいときは、プロパティ上部の「タイムラインの長さ」を開き、「長さの決め方」を「手動」に変えます。「長さ（フレーム）」に整数を入力してください。24 FPSなら240フレームで10秒です。入力を止めると少し待って反映し、Enterでも確定できます。Escで未確定の入力を戻します。</p><p>配置済みの素材より短い長さは指定できません。欄に表示される最短フレーム数以上を指定してください。手動でも、後から素材を終端より後ろへ配置すると自動で延長します。「自動」に戻すと、再び素材の終端へ揃います。設定はプロジェクトへ保存され、元に戻す・やり直すにも対応します。</p>
 <h3>位置・大きさ・回転</h3><p>画像またはレイヤーを選ぶと、プロパティに位置・入力倍率・回転が表示されます。数値を入力すると、入力が止まってから少し待ってプレビューに反映されます。Enterを押すとすぐに確定します。</p><p>位置は1px、倍率は1％、回転は1度刻みで入力できます。数値欄にマウスを置いてホイールを動かすと、1ずつ変更できます。「左右反転」で画像を反転できます。</p>
 <table class="help-table"><thead><tr><th>操作</th><th>方法</th></tr></thead><tbody><tr><th>マウスで拡大・縮小</th><td>プレビューで画像を選び、マウスをプレビュー上に置いてSを押してから動かします。</td></tr><tr><th>マウスで回転</th><td>画像を選び、Rを押してからマウスを動かします。</td></tr><tr><th>変形を確定・取り消す</th><td>クリックまたはEnterで確定。右クリックまたはEscで取り消します。</td></tr><tr><th>プレビューを拡大・縮小</th><td>プレビュー上でホイールを動かします。「全体表示」で画像全体が収まります。</td></tr><tr><th>プレビューの表示位置を動かす</th><td>Hを押しながらドラッグします。</td></tr><tr><th>表示・非表示</th><td>レイヤーの目アイコンで切り替えます。</td></tr><tr><th>名前・重なり順</th><td>レイヤー名のダブルクリックで名前を変更。行を上下へドラッグして順番を変えます。</td></tr><tr><th>音量</th><td>音声クリップを選び、プロパティのゲインを調整します。</td></tr></tbody></table>
@@ -321,7 +322,7 @@
           <section class="guide-section searchable" id="export" data-search="動画 書き出し 透明 アルファ Premiere Pro ProRes FFV1 軽量 WebM MP4 背景 解像度">
 <header class="section-heading"><p class="section-number">11</p><h2>透明動画を書き出す</h2></header>
 
-<p>「ファイル → 動画を書き出す」、またはCtrl＋Eで書き出し画面を開きます。初期設定は「軽量WebM」、背景は「透明（アルファ）」です。</p><figure class="guide-shot"><a class="image-zoom-trigger" href="assets/export-light.png" aria-label="透明背景の軽量WebMを書き出す設定画面を拡大表示"><img src="assets/export-light.png" data-theme-light="assets/export-light.png" data-theme-dark="assets/export-dark.png" width="1600" height="1000" alt="透明背景の軽量WebMを書き出す設定画面" loading="lazy"></a><figcaption>用途、背景、出力サイズ、範囲を確認します。中央の代表フレームで見た目を確認してから書き出してください。</figcaption></figure>
+<p>「ファイル → 動画を書き出す」、またはCtrl＋Eで書き出し画面を開きます。初期設定は「軽量WebM」、背景は「透明（アルファ）」です。</p><figure class="guide-shot"><a class="image-zoom-trigger" href="../assets/export-light.png" aria-label="透明背景の軽量WebMを書き出す設定画面を拡大表示"><img src="../assets/export-light.png" data-theme-light="../assets/export-light.png" data-theme-dark="../assets/export-dark.png" width="1600" height="1000" alt="透明背景の軽量WebMを書き出す設定画面" loading="lazy"></a><figcaption>用途、背景、出力サイズ、範囲を確認します。中央の代表フレームで見た目を確認してから書き出してください。</figcaption></figure>
 <table class="help-table"><thead><tr><th>用途</th><th>形式</th><th>使い分け</th></tr></thead><tbody><tr><th>Adobe Premiere Pro</th><td>ProRes 4444 Alpha / MOV</td><td>動画編集ソフトへ渡す編集用素材</td></tr><tr><th>可逆アルファマスター</th><td>FFV1 / MKV</td><td>劣化を抑えて保管するマスター素材</td></tr><tr><th>軽量WebM</th><td>VP9 Alpha / WebM</td><td>透明度を保ちながら容量を抑える</td></tr><tr><th>互換MP4・カラーキー</th><td>H.264 / MP4</td><td>背景色を付けた確認用動画。透明度は保持しません。</td></tr></tbody></table>
 <p>仕上げ先の動画編集ソフトが、選んだ形式の透明度に対応しているか確認してください。アルファ付き素材をWindows標準のプレイヤーで再生できない場合でも、編集ソフトでは読み込めることがあります。</p>
 </section>
