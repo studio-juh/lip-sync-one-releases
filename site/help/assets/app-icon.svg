@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>LipSyncOne</title><rect width="512" height="512" rx="108" fill="#303638"/><g transform="translate(-62 -30) scale(.66)"><g id="symbol">
+<path d="M456 198C307 195 201 282 200 422C199 493 223 548 269 585L236 660C277 662 317 643 352 626C389 636 426 641 465 638C608 632 698 568 699 422C700 281 615 198 456 198Z" fill="#ffffff" stroke="#62CFA2" stroke-width="49" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="383" cy="394" rx="27" ry="29" fill="#303638"/>
+<ellipse cx="598" cy="368" rx="27" ry="29" fill="#303638"/>
+<path d="M416 459C456 448 511 442 558 438C572 437 579 443 579 458C580 509 560 554 518 566C466 582 417 550 405 495C401 477 399 465 416 459Z" fill="#303638"/>
+<path d="M410 513C451 486 511 495 546 546C538 555 529 562 518 566C473 579 432 558 410 513Z" fill="#62CFA2"/>
+<g fill="none" stroke="#62CFA2" stroke-width="43" stroke-linecap="round"><path d="M766 445L811 420"/><path d="M765 514L817 526"/><path d="M731 575L756 610"/></g>
+</g></g></svg>

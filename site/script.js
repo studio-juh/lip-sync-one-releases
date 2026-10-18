@@ -63,7 +63,11 @@ for (const code of document.querySelectorAll(".filename-table code")) {
   });
 }
 
-const savedTheme = localStorage.getItem("lipsyncone-help-theme");
+function readThemePreference() {
+  try { return localStorage.getItem("lipsyncone-help-theme"); } catch { return null; }
+}
+
+const savedTheme = readThemePreference();
 if (savedTheme === "dark" || savedTheme === "light") {
   root.dataset.theme = savedTheme;
 }
@@ -90,7 +94,7 @@ updateThemeButton();
 themeButton?.addEventListener("click", () => {
   const next = root.dataset.theme === "light" ? "dark" : "light";
   root.dataset.theme = next;
-  localStorage.setItem("lipsyncone-help-theme", next);
+  try { localStorage.setItem("lipsyncone-help-theme", next); } catch { /* Theme switching still works when storage is unavailable. */ }
   updateThemeButton();
 });
 
