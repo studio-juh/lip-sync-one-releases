@@ -86,8 +86,8 @@
           <p class="breadcrumb">LipSyncOne / ヘルプ</p>
           <h1>LipSyncOne ヘルプ</h1>
           <p>画像やVRMモデルと音声から、口パク・目パチ・動きの付いた透明動画を作る操作を紹介します。</p>
-          <p class="version-note">Windows 11 x64 ／ 開発版0.4.0の使い方 ／ 2026年10月19日更新</p>
-          <nav class="start-paths" aria-label="作りたいものから始める"><a class="start-card" href="#sample-three"><span class="start-card-label">いちばん簡単</span><strong>全身画像2枚で口パク</strong><span>口だけが違う2枚と音声から作る</span></a><a class="start-card" href="#parts-start"><span class="start-card-label">口も目も動かす</span><strong>本体・口・目のパーツ画像</strong><span>差分画像を組み合わせて作る</span></a><a class="start-card" href="#vrm"><span class="start-card-label">開発版0.4.0</span><strong>VRMモデルで作る</strong><span>3Dモデルに口パクや動きを付ける</span></a></nav>
+          <p class="version-note">Windows 11 x64 ／ 0.4.0の使い方 ／ 2026年10月19日更新</p>
+          <nav class="start-paths" aria-label="作りたいものから始める"><a class="start-card" href="#sample-three"><span class="start-card-label">いちばん簡単</span><strong>全身画像2枚で口パク</strong><span>口だけが違う2枚と音声から作る</span></a><a class="start-card" href="#parts-start"><span class="start-card-label">口も目も動かす</span><strong>本体・口・目のパーツ画像</strong><span>差分画像を組み合わせて作る</span></a><a class="start-card" href="#vrm"><span class="start-card-label">VRM対応</span><strong>VRMモデルで作る</strong><span>3Dモデルに口パクや動きを付ける</span></a></nav>
         </div>
       </section>
 
@@ -128,7 +128,7 @@
             <header class="section-heading"><p class="section-number">START</p><h2>まずはサンプルで動画を作る</h2></header>
 
 <p>画像と音声を用意すれば、口パクを自動で付けられます。まずは、準備の少ない「全身画像2枚」で試してみましょう。</p>
-<p class="note"><strong>このページは開発版0.4.0の操作案内です。</strong>現在の公開版は0.3.9です。VRM・モーション・キー編集など、0.4.0で追加する機能は公開版には含まれません。画像の口パク・目パチは公開版でも制作できます。</p>
+<p class="note"><strong>LipSyncOne 0.4.0の操作案内です。</strong>画像の口パク・目パチに加え、VRM・モーション・キーフレームを使った制作を紹介します。</p>
 <div class="guide-step" id="sample-three"><h3>1. サンプル3をダウンロードする</h3><p><a class="secondary-button" href="https://lipsyncone.studiojuh.com/downloads/LipSyncOne_SampleAssets3_v1.zip" download>サンプル3：全身画像2枚をダウンロード</a></p><p>ZIPを展開します。imagesフォルダーに閉口・開口のPNG、audioフォルダーにWAVが入っています。自分の画像で試す場合も、同じ位置・大きさで口だけが違う2枚を用意してください。</p></div>
 <div class="guide-step"><h3>2. 新しいプロジェクトを作る</h3><p>HOMEの「新規プロジェクト」を選びます。</p><figure class="guide-shot"><a class="image-zoom-trigger" href="assets/home-light.png" aria-label="新規プロジェクトとプロジェクトを開くボタンがあるHOME画面を拡大表示"><img src="assets/home-light.png" data-theme-light="assets/home-light.png" data-theme-dark="assets/home-dark.png" alt="新規プロジェクトとプロジェクトを開くボタンがあるHOME画面" loading="lazy" width="1600" height="1000"></a><figcaption>「新規プロジェクト」で制作を始めます。保存済みの作品は「プロジェクトを開く」から再開できます。</figcaption></figure></div>
 <div class="guide-step"><h3>3. 2枚の画像でキャラクターを追加する</h3><p>「キャラクターを追加」を開き、「全身画像2枚で口パク」を選びます。「画像を追加」から2枚を読み込み、閉じた口と開いた口をそれぞれ指定して「2枚でキャラクターを追加」を押します。</p><figure class="guide-shot"><a class="image-zoom-trigger" href="assets/two-image-character-light.png" aria-label="閉口と開口の全身画像2枚を指定したキャラクター追加画面を拡大表示"><img src="assets/two-image-character-light.png" data-theme-light="assets/two-image-character-light.png" data-theme-dark="assets/two-image-character-dark.png" alt="閉口と開口の全身画像2枚を指定したキャラクター追加画面" loading="lazy" width="1600" height="1000"></a><figcaption>2枚の画像全体を見比べ、口以外の位置が揃っていることを確認します。切り抜きや口の位置合わせは不要です。</figcaption></figure></div>
@@ -203,7 +203,7 @@
           <section class="guide-section searchable" id="vrm" data-search="VRM VRMA モーション アニメーション 読み込み 繰り返す 3D モデル 取込 ポーズ コマ送り なめらか 表情 口パク リップシンク 目パチ 揺れ物 呼吸 髪 服 回転 カメラ リグ コントローラー 全身 腰 左右 FK IK G R S XYZ 平行投影 透視投影 テンキー5 光源 光の強さ 明るさ GLSL シェーダー">
             <header class="section-heading"><p class="section-number">3D</p><h2>VRMモデルを使う</h2></header>
 
-<p class="version-badge">開発版0.4.0の機能です。公開版0.3.9には含まれません。</p>
+<p class="version-badge">0.4.0から利用できます。</p>
 <p>VRMモデルにも、音声に合わせた口パクと自動の目パチを付けられます。画像のキャラクターや背景と、同じ作品に置くこともできます。</p>
 <ol class="procedure compact-procedure"><li><strong>モデルを追加する</strong><span>「キャラクターを追加」で「VRMモデル」を選びます。「VRMを追加」で.vrmファイルを読み込み、「モデルを選択」で選んで「キャラクターを追加」を押します。追加後にプレビューへ表示します。VRM 0.x / 1.0に対応します。</span></li><li><strong>音声を配置する</strong><span>そのキャラクターの音声行へ音声を置きます。口パクの解析が始まります。</span></li><li><strong>動きを確認する</strong><span>再生ボタンで確認します。口パク・目パチ・呼吸などは「動き」タブから調整できます。</span></li></ol>
 <h3>ポーズを変える</h3><p>モデルを選び、「動き → 3Dの配置・基本ポーズ」でポーズプリセットを選んで「ポーズを適用」を押します。プレビューの「向き・ポーズ（3D）」では、関節の輪を選んで直接調整できます。</p>
@@ -266,9 +266,10 @@ void main() {
             <header class="section-heading"><p class="section-number">07</p><h2>配置と表示する時間を調整する</h2></header>
 
 <h3>素材を使う時間を変える</h3><p>タイムラインの帯をドラッグすると開始位置、左右の端をドラッグすると長さを変えられます。同じ行の同じ時間へは、2つ以上の素材を置けません。別の行や空いている時間へ配置してください。</p>
+<p>音声は1行のまとめ表示から始まります。配置や削除をするときは「個別」を押して音声行を開き、「まとめる」で戻せます。まとめ表示でも波形をドラッグして再生位置を動かせます。表示の切り替えで音声の配置や再生内容は変わりません。</p>
 <figure class="guide-shot"><a class="image-zoom-trigger" href="assets/timeline-light.png" aria-label="音声・画像・口形の表示区間を確認するタイムラインを拡大表示"><img src="assets/timeline-light.png" data-theme-light="assets/timeline-light.png" data-theme-dark="assets/timeline-dark.png" alt="音声・画像・口形の表示区間を確認するタイムライン" loading="lazy" width="1048" height="408"></a><figcaption>音声の行と素材の行は別です。口パクの帯は解析結果、画像やモーションの帯は配置した素材を表します。</figcaption></figure>
 <h3>位置・大きさ・回転を変える</h3><p>画像やレイヤーを選び、「配置 → 画面上の配置」を開きます。数値を変えると、少し待ってプレビューへ反映します。Enterですぐ確定、Escで未確定の入力を戻せます。</p>
-<figure class="guide-shot"><a class="image-zoom-trigger" href="assets/properties-position-light.png" aria-label="配置タブで位置・入力倍率・回転を調整するプロパティを拡大表示"><img src="assets/properties-position-light.png" data-theme-light="assets/properties-position-light.png" data-theme-dark="assets/properties-position-dark.png" alt="配置タブで位置・入力倍率・回転を調整するプロパティ" loading="lazy" width="360" height="534"></a><figcaption>位置は1px、入力倍率は1％、回転は1度刻みです。数値欄を選んでいる間だけ、ホイールで1ずつ変更できます。</figcaption></figure>
+<figure class="guide-shot"><a class="image-zoom-trigger" href="assets/properties-position-light.png" aria-label="配置タブで位置・入力倍率・回転を調整するプロパティを拡大表示"><img src="assets/properties-position-light.png" data-theme-light="assets/properties-position-light.png" data-theme-dark="assets/properties-position-dark.png" alt="配置タブで位置・入力倍率・回転を調整するプロパティ" loading="lazy" width="360" height="586"></a><figcaption>位置は1px、入力倍率は1％、回転は1度刻みです。数値欄を選んでいる間だけ、ホイールで1ずつ変更できます。</figcaption></figure>
 <table class="help-table"><thead><tr><th>したいこと</th><th>操作</th></tr></thead><tbody><tr><th>画像を移動する</th><td>プレビューの画像を選んでドラッグします。</td></tr><tr><th>画像を拡大・縮小する</th><td>画像を選び、プレビュー上でSを押してマウスを動かします。</td></tr><tr><th>画像を回転する</th><td>画像を選び、プレビュー上でRを押してマウスを動かします。</td></tr><tr><th>変形を確定・取り消す</th><td>クリックかEnterで確定。右クリックかEscで取り消します。</td></tr><tr><th>左右反転する</th><td>プロパティの「左右反転」を押します。</td></tr><tr><th>表示・非表示を切り替える</th><td>レイヤーの目アイコンを押します。</td></tr><tr><th>重なり順を変える</th><td>レイヤー一覧の行を上下へドラッグします。</td></tr></tbody></table>
 <p>BASEはキャラクター本体です。口と目はBASEの位置に追従します。口・目の位置を動かすときは、鍵アイコンで位置ロックを解除してください。背景は通常のレイヤーに置き、キャラクターより下へ移動します。</p>
 <h3>タイムラインの長さを変える</h3><p>初期設定は「自動」です。最後の画像・音声・モーションなどの終わりに合わせて、タイムラインが伸び縮みします。末尾に余白を作りたいときは、プロパティ下部の「作品設定 → タイムラインの長さ」で「手動」を選びます。24 FPSなら240フレームで10秒です。</p><p>配置済みの素材より短い長さは指定できません。「自動」に戻すと、素材の終端へ揃います。</p>
@@ -280,19 +281,19 @@ void main() {
           <section class="guide-section searchable" id="keyframes" data-search="キーフレーム キー ◆ ◇ I Alt 自動キー 未記録 プレビュー 保存 ポーズ 基準 現在のコマ 動かす">
             <header class="section-heading"><p class="section-number">KEY</p><h2>キーフレームと自動キー</h2></header>
 
-<p class="version-badge">開発版0.4.0の機能です。公開版0.3.9には含まれません。</p><p>キーフレームは、「このコマでは、この位置やポーズにする」という記録です。0コマ目と24コマ目に違う位置を記録すると、その間をつないで動かせます。</p>
-<ol class="procedure compact-procedure"><li><strong>コマを選ぶ</strong><span>動かすレイヤーを選び、タイムラインを「キー」に切り替えます。記録したいコマへ再生位置を動かします。</span></li><li><strong>値を変える</strong><span>プロパティかプレビューで、位置・大きさ・回転などを調整します。</span></li><li><strong>◇で記録する</strong><span>値の横の◇を押すと、現在のコマに記録します。記録済みのコマでは◆になります。</span></li></ol>
-<figure class="guide-shot"><a class="image-zoom-trigger" href="assets/keyframes-light.png" aria-label="キー表示のタイムラインと値の横の記録ボタンを拡大表示"><img src="assets/keyframes-light.png" data-theme-light="assets/keyframes-light.png" data-theme-dark="assets/keyframes-dark.png" alt="キー表示のタイムラインと値の横の記録ボタン" loading="lazy" width="1600" height="1000"></a><figcaption>別のコマでも値を変えて記録し、再生して動きを確認します。最初のキーを途中に作るときは、0コマ目の基準値も記録します。</figcaption></figure>
-<h3>自動キーで、調整と同時に記録する</h3><p>タイムラインの「自動キー」をオンにすると、変更した項目だけを現在のコマへ記録します。初期状態はオフです。同じコマにあるキーを変更すると、そのキーを更新します。</p>
+<p class="version-badge">0.4.0から利用できます。</p><p>キーフレームは、「このコマでは、この位置やポーズにする」という記録です。0コマ目と24コマ目に違う位置を記録すると、その間をつないで動かせます。</p>
+<ol class="procedure compact-procedure"><li><strong>コマを選ぶ</strong><span>動かすレイヤーを選び、タイムラインを「キー」に切り替えます。記録したいコマへ再生位置を動かします。</span></li><li><strong>値を変える</strong><span>プロパティかプレビューで、位置・大きさ・回転・不透明度を調整します。</span></li><li><strong>キーを追加する</strong><span>「キーを追加」を押すと、そのコマの配置をまとめて記録します。記録済みのコマは「キーを更新」で上書き、「キーを削除」でまとめて削除できます。</span></li></ol>
+<figure class="guide-shot"><a class="image-zoom-trigger" href="assets/keyframes-light.png" aria-label="配置を一括で記録するボタンとキーのタイムラインを拡大表示"><img src="assets/keyframes-light.png" data-theme-light="assets/keyframes-light.png" data-theme-dark="assets/keyframes-dark.png" alt="配置を一括で記録するボタンとキーのタイムライン" loading="lazy" width="1600" height="1000"></a><figcaption>位置・回転・大きさ・不透明度を1つの◆にまとめて編集します。別のコマでも値を変えて記録し、再生して動きを確認します。最初のキーを途中に作るときは、0コマ目の基準値も記録します。</figcaption></figure>
+<h3>自動キーで、調整と同時に記録する</h3><p>タイムラインの「自動キー」をオンにすると、配置の変更を現在のコマへまとめて記録します。初期状態はオフです。同じコマにあるキーを変更すると、そのキーを更新します。VRMの関節・表情などは変更した項目を記録します。</p>
 <h3>未記録プレビューのままにしない</h3><p>キーがある項目を、自動キーがオフのまま変更すると、まず未記録の状態で見た目を試せます。「未記録」が出たら、Iキーや記録ボタンでキーにしてください。別のコマへ移動するか、Escで取り消すと変更は消えます。</p><p class="warning"><strong>未記録の変更は保存・動画出力に含まれません。</strong>試した位置やポーズを残すときは、先にキーへ記録してください。</p>
-<details class="inline-details"><summary>記録できる項目とショートカット</summary><p>画像の位置・倍率・回転・不透明度、VRMの配置・基本ポーズ・表情・カメラなどを記録できます。位置は「配置」、ポーズは「動き」、表情や不透明度は「見た目」で調整します。</p><p>Iで記録、Alt＋Iで現在のキーを削除できます。数値の編集中はEnterでも記録できます。削除や記録は、元に戻す・やり直すに対応します。</p></details>
+<details class="inline-details"><summary>項目ごとに細かく編集する・ショートカット</summary><p>プロパティの「項目別のキー編集」を開くと、位置・倍率・回転・不透明度の個別キーや、VRMの基本ポーズ・表情・カメラなどを編集できます。位置は「配置」、ポーズは「動き」、表情や不透明度は「見た目」で調整します。</p><p>キーのタイムラインではIで配置をまとめて記録、Alt＋Iで現在の配置キーを削除できます。「キー」表示中の数値入力はEnterでも記録できます。詳細編集では項目ごとの操作になります。削除や記録は、元に戻す・やり直すに対応します。</p></details>
           </section>
 
           <section class="guide-section searchable" id="curves" data-search="ベジェ Bezier グラフ カーブ ハンドル 補間 キー 時間 伸縮 時間伸縮 S スケール 支点 衝突 なめらか">
             <header class="section-heading"><p class="section-number">CURVE</p><h2>動きの速さとキーの間隔を整える</h2></header>
 
-<p class="version-badge">開発版0.4.0の機能です。公開版0.3.9には含まれません。</p>
-<h3>動き出しや止まり方を変える</h3><p>キー編集で「グラフ」を開きます。補間を「ベジェ」にすると、ハンドルを動かして、ゆっくり動き出す・ゆっくり止まるといった変化を作れます。</p>
+<p class="version-badge">0.4.0から利用できます。</p>
+<h3>動き出しや止まり方を変える</h3><p>キーのタイムラインで「キーの詳細」を開き、項目を選んで「グラフ」を押します。補間を「ベジェ」にすると、ハンドルを動かして、ゆっくり動き出す・ゆっくり止まるといった変化を作れます。</p>
 <figure class="guide-shot"><a class="image-zoom-trigger" href="assets/graph-light.png" aria-label="キーフレームの値とベジェのハンドルを編集するグラフ画面を拡大表示"><img src="assets/graph-light.png" data-theme-light="assets/graph-light.png" data-theme-dark="assets/graph-dark.png" alt="キーフレームの値とベジェのハンドルを編集するグラフ画面" loading="lazy" width="1600" height="1000"></a><figcaption>横軸は時間、縦軸は値です。キーとハンドルをドラッグするか、数値で調整します。</figcaption></figure>
 <table class="help-table"><thead><tr><th>補間</th><th>動き方</th></tr></thead><tbody><tr><th>一定</th><td>次のキーまで同じ値を保ち、切り替えます。</td></tr><tr><th>直線</th><td>一定の速さで変わります。</td></tr><tr><th>ベジェ</th><td>ハンドルで動き出しや止まり方を調整します。</td></tr></tbody></table>
 <h3>動きを全体的に長く・短くする</h3><p>キーを複数選んでSを押すと、キーの間隔を伸縮できます。支点は再生位置・選択の先頭・末尾から選びます。Enterで確定、Escで取り消します。時刻は整数フレームへ揃います。</p>
@@ -310,7 +311,7 @@ void main() {
    ├─ 本体.png
    ├─ 口_閉じ.png
    └─ 音声.wav</pre><p>この構成なら「素材/本体.png」のように記録します。中の配置を変えずに「作品フォルダー」全体を移動すれば、移動後も素材を参照できます。</p><p>.ls1だけを別のサブフォルダーへ入れ、素材をその外に置くと絶対パスになります。相対パスでまとめたい場合は、素材をすべて.ls1と同じフォルダーか、その下へ入れてください。</p><p>読み込み済みの素材を後から移動した場合は、アセットのプロパティで移動先へ差し替え、保存し直します。「名前を付けて保存」では、同じ素材を参照するようにパスを調整します。</p></details>
-<details class="inline-details"><summary>旧版のプロジェクトと復旧について</summary><p>開発版0.4.0は、VRMとキーを含むv3形式で保存します。0.3系のv2ファイルは開くときに移行しますが、保存するまでは元ファイルを変えません。v3で保存すると旧版では開けないため、元の作品を残す場合は「名前を付けて保存」で別名にしてください。v1など、それ以前の形式は対象外です。</p><p>作業中は復旧用データを自動保存します。正常に終了できなかったときは、次回起動時に復旧を案内します。通常の保存やバックアップも併せて行ってください。</p></details>
+<details class="inline-details"><summary>旧版のプロジェクトと復旧について</summary><p>0.4.0は、VRMとキーを含むv3形式で保存します。0.3系のv2ファイルは開くときに移行しますが、保存するまでは元ファイルを変えません。v3で保存すると旧版では開けないため、元の作品を残す場合は「名前を付けて保存」で別名にしてください。v1など、それ以前の形式は対象外です。</p><p>作業中は復旧用データを自動保存します。正常に終了できなかったときは、次回起動時に復旧を案内します。通常の保存やバックアップも併せて行ってください。</p></details>
           </section>
 
           <section class="guide-section searchable" id="export" data-search="動画 書き出し 出力 透明 アルファ Premiere Pro DaVinci Resolve ProRes FFV1 軽量 WebM MP4 背景 解像度">
@@ -340,14 +341,14 @@ void main() {
             <header class="section-heading"><p class="section-number">10</p><h2>アプリを更新する</h2></header>
 
 <p>「ヘルプ → アップデートを確認…」から手動で確認します。起動時の自動確認は行いません。</p><ol class="procedure compact-procedure"><li><strong>プロジェクトを保存する</strong><span>編集中の内容を保存します。</span></li><li><strong>更新を確認する</strong><span>新しい版がある場合は、案内を読んで「更新して再起動」を選びます。</span></li><li><strong>再起動を待つ</strong><span>更新ファイルの取得と適用が終わると、アプリを再起動します。取得中は取り消せます。</span></li></ol>
-<p>現在の公開版は0.3.9です。このヘルプの0.4.0の画面・追加機能は開発中のものです。更新内容と公開状況は<a href="https://github.com/studio-juh/lip-sync-one-releases/releases">リリース一覧</a>で確認できます。</p>
+<p>このヘルプは0.4.0に対応しています。更新内容と公開状況は<a href="https://github.com/studio-juh/lip-sync-one-releases/releases">リリース一覧</a>で確認できます。</p>
 <details class="inline-details"><summary>BOOTHの購入者証明について</summary><p>購入者証明ファイル（.lso-license）は「ヘルプ → 購入状態」から読み込みます。</p></details>
           </section>
 
           <section class="guide-section searchable" id="shortcuts" data-search="ショートカット キーボード 保存 undo redo 再生 拡大 縮小 回転">
             <header class="section-heading"><p class="section-number">11</p><h2>よく使うショートカット</h2></header>
 
-<table class="help-table shortcut-table"><tbody><tr><th>Ctrl＋S</th><td>保存</td><th>Ctrl＋E</th><td>動画の書き出し</td></tr><tr><th>Ctrl＋Z</th><td>元に戻す</td><th>Ctrl＋Shift＋Z</th><td>やり直す</td></tr><tr><th>Space</th><td>再生・一時停止</td><th>S / R</th><td>選択素材の拡大縮小 / 回転</td></tr><tr><th>G</th><td>VRMの選択部位を移動</td><th>テンキー5</th><td>VRMの平行投影 / 透視投影を切替</td></tr><tr><th>Enter / Esc</th><td>変形を確定 / 取り消す</td><th>I / Alt＋I</th><td>キーを記録 / 削除</td></tr><tr><th>Ctrl＋C / V</th><td>クリップをコピー / 貼り付け</td><th>Ctrl＋K</th><td>このヘルプ内を検索</td></tr></tbody></table><p>変形操作は、対象を選んでプレビュー上へマウスを置いて使います。数値や文字の入力中は、素材の変形を始めません。VRMやキーの操作は開発版0.4.0の機能です。</p>
+<table class="help-table shortcut-table"><tbody><tr><th>Ctrl＋S</th><td>保存</td><th>Ctrl＋E</th><td>動画の書き出し</td></tr><tr><th>Ctrl＋Z</th><td>元に戻す</td><th>Ctrl＋Shift＋Z</th><td>やり直す</td></tr><tr><th>Space</th><td>再生・一時停止</td><th>S / R</th><td>選択素材の拡大縮小 / 回転</td></tr><tr><th>G</th><td>VRMの選択部位を移動</td><th>テンキー5</th><td>VRMの平行投影 / 透視投影を切替</td></tr><tr><th>Enter / Esc</th><td>変形を確定 / 取り消す</td><th>I / Alt＋I</th><td>キーを記録 / 削除</td></tr><tr><th>Ctrl＋C / V</th><td>クリップをコピー / 貼り付け</td><th>Ctrl＋K</th><td>このヘルプ内を検索</td></tr></tbody></table><p>変形操作は、対象を選んでプレビュー上へマウスを置いて使います。数値や文字の入力中は、素材の変形を始めません。VRMやキーの操作は0.4.0から利用できます。</p>
           </section>
 
           <section class="guide-section searchable" id="troubleshooting" data-search="トラブル エラー 起動 解析 失敗 音声 表示されない 書き出し 再生 波形 SmartScreen Rhubarb Master audio preparation failed">
