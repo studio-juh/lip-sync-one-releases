@@ -86,7 +86,7 @@
           <p class="breadcrumb">LipSyncOne / ヘルプ</p>
           <h1>LipSyncOne ヘルプ</h1>
           <p>画像やVRMモデルと音声から、口パク・目パチ・動きの付いた透明動画を作る操作を紹介します。</p>
-          <p class="version-note">Windows 11 x64 ／ 0.4.5の使い方 ／ 2026年10月22日更新</p>
+          <p class="version-note">Windows 11 x64 ／ 0.4.6の使い方 ／ 2026年10月22日更新</p>
           <nav class="start-paths" aria-label="作りたいものから始める"><a class="start-card" href="#sample-three"><span class="start-card-label">いちばん簡単</span><strong>全身画像2枚で口パク</strong><span>口だけが違う2枚と音声から作る</span></a><a class="start-card" href="#parts-start"><span class="start-card-label">口も目も動かす</span><strong>本体・口・目のパーツ画像</strong><span>差分画像を組み合わせて作る</span></a><a class="start-card" href="#vrm"><span class="start-card-label">VRM対応</span><strong>VRMモデルで作る</strong><span>3Dモデルに口パクや動きを付ける</span></a></nav>
         </div>
       </section>
@@ -200,7 +200,7 @@
 <details class="inline-details"><summary>録音した音声を使う</summary><p>「編集 → 録音…」から録音できます。音声ファイルを素材として保存し、使うキャラクターの音声行へ配置してください。</p></details>
           </section>
 
-          <section class="guide-section searchable" id="vrm" data-search="VRM VRMA モーション アニメーション 読み込み 繰り返す 3D モデル 取込 ポーズ コマ送り なめらか 表情 口パク リップシンク 目パチ 揺れ物 呼吸 髪 服 回転 カメラ リグ コントローラー 全身 腰 左右 FK IK G R S XYZ 平行投影 透視投影 テンキー5 光源 光の強さ 明るさ GLSL シェーダー">
+          <section class="guide-section searchable" id="vrm" data-search="VRM VRMA FBX GLB モーション アニメーション 読み込み 繰り返す 3D モデル 取込 ポーズ コマ送り なめらか 表情 口パク リップシンク 目パチ 揺れ物 呼吸 髪 服 回転 カメラ リグ コントローラー 全身 腰 左右 FK IK G R S XYZ 平行投影 透視投影 テンキー5 光源 光の強さ 明るさ GLSL シェーダー">
             <header class="section-heading"><p class="section-number">3D</p><h2>VRMモデルを使う</h2></header>
 
 <p class="version-badge">0.4.0から利用できます。</p>
@@ -213,6 +213,13 @@
 <figure class="guide-shot"><a class="image-zoom-trigger" href="assets/vrm-motion-light.png" aria-label="VRMのモーションと口形を別の行で確認するタイムラインを拡大表示"><img src="assets/vrm-motion-light.png" data-theme-light="assets/vrm-motion-light.png" data-theme-dark="assets/vrm-motion-dark.png" alt="VRMのモーションと口形を別の行で確認するタイムライン" loading="lazy" width="1600" height="1000"></a><figcaption>青い帯はモーション、その下の「レイヤー名 · 口形」は口パクの解析結果です。口形の行は確認用で、素材は配置しません。</figcaption></figure>
 <p>同じ行の同じ時間には、画像・モーションを重ねて置けません。2つのモーションを隙間なく並べると、次の動きへ滑らかにつながります。帯を選び、「動き → モーション」の「ブレンド（フレーム）」でつなぐ長さを変えられます。初期値は6フレーム、0ならすぐに切り替わります。</p>
 <p>同じプロパティで、速さや「繰り返す」を変更できます。Deleteや「モーションを解除」で選んだ配置だけを外せます。音声は別に配置してください。</p>
+<details class="inline-details" id="motion-conversion"><summary>FBX・GLBの動きやポーズを使う</summary>
+<p>「アセット → 動き → 読み込み」からFBXまたはGLBを選びます。モデル自体ではなく、人型の動きだけを取り込みます。0.4.6から使えます。</p>
+<figure class="guide-shot"><a class="image-zoom-trigger" href="assets/motion-conversion-light.png" aria-label="モーションの取込と補正画面を拡大表示"><img src="assets/motion-conversion-light.png" data-theme-light="assets/motion-conversion-light.png" data-theme-dark="assets/motion-conversion-dark.png" alt="動きを再生し、骨対応や基準姿勢を確認するモーション取込画面" loading="lazy" width="1080" height="720"></a><figcaption>使う動きを選び、再生ボタンやスライダーで確認してから「取り込む」を押します。元の姿勢が正しいか、毎回プレビューで確認してください。</figcaption></figure>
+<ol><li>複数の動きがある場合は「使う動き」を選びます。静止ポーズにしたいときは「静止ポーズ」をオンにし、使うコマを指定します。</li><li>移動させず使いたい場合は「移動 → その場で再生」を選びます。上下の動きは残ります。</li><li>向きや腕の角度が違う場合は「骨・基準姿勢」を開きます。部位と元の骨を対応付け、必要なら基準角度・上方向・正面方向を調整します。</li><li>取り込んだ素材をアセットからVRMレイヤーへドラッグします。VRMの「動き → モーション」から取り込む場合は、そのVRMへ同時に配置します。</li></ol>
+<p>後から素材を選び「変換設定」で調整できます。その素材の全配置へ反映します。別設定を使いたいときは「別設定として複製」を選んでください。元ファイルの外部編集は自動で反映し、「ファイル → アセットを再読み込み」でも更新できます。保存途中は最後の表示を保ちます。</p>
+<p>元のFBX・GLBと作品ファイルを一緒に保管してください。動画には書き出し開始時の素材と設定を使います。骨が対応しない場合は設定を確認し、モデル・材質・ライト・任意の表情・IKの変換は対象外です。VRMAファイルへの書き出しは今後の対応です。</p>
+</details>
 <h3>音声なしでも呼吸・目パチを付ける</h3><p>「動き → 呼吸・待機」で「呼吸・待機アニメーション」をオンにします。「強さ (%)」で動きの大きさ、「速さ (%)」でテンポを調整できます。目パチも音声なしで動作します。「髪・服を揺らす」では、モデルに設定された揺れ物を動かします。</p>
 <h3>遠近感や光を変える</h3><p>新しいモデルは透視投影で表示します。プレビュー操作パネルの「平行投影 / 透視投影」、またはテンキー5で切り替えられます。視点は作品のカメラに固定されており、中ボタンでは回転しません。</p><p>「見た目 → 光源」で光の方向を選び、「光の強さ」で明るさを変えます。標準・スタジオ・やわらかい光・サイドライト・リムライト・フラットから選べます。投影や光源の設定は保存され、動画にも反映されます。</p>
 <details class="inline-details" id="scene-depth"><summary>0.4.4：画像とモデルの前後関係を変える</summary><p>レイヤーを選び、「配置 → 奥行き Z」を変えます。大きい値ほど手前、小さい値ほど奥へ移動します。プレビューのZハンドル、またはGのあとにZを押しても調整できます。Escで取り消します。</p><p>同じ奥行きならレイヤー順で重なります。画像とモデルには共通の投影を使います。透視投影では、手前へ動かすと大きく、奥へ動かすと小さく見えます。動かした状態をアニメーションにしたいときはキーへ記録してください。</p></details>
