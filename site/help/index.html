@@ -86,7 +86,7 @@
           <p class="breadcrumb">LipSyncOne / ヘルプ</p>
           <h1>LipSyncOne ヘルプ</h1>
           <p>画像やVRMモデルと音声から、口パク・目パチ・動きの付いた透明動画を作る操作を紹介します。</p>
-          <p class="version-note">Windows 11 x64 ／ 0.4.6の使い方 ／ 2026年10月22日更新</p>
+          <p class="version-note">Windows 11 x64 ／ 0.4.7の使い方 ／ 2026年10月22日更新</p>
           <nav class="start-paths" aria-label="作りたいものから始める"><a class="start-card" href="#sample-three"><span class="start-card-label">いちばん簡単</span><strong>全身画像2枚で口パク</strong><span>口だけが違う2枚と音声から作る</span></a><a class="start-card" href="#parts-start"><span class="start-card-label">口も目も動かす</span><strong>本体・口・目のパーツ画像</strong><span>差分画像を組み合わせて作る</span></a><a class="start-card" href="#vrm"><span class="start-card-label">VRM対応</span><strong>VRMモデルで作る</strong><span>3Dモデルに口パクや動きを付ける</span></a></nav>
         </div>
       </section>
@@ -223,7 +223,7 @@
 <h3>音声なしでも呼吸・目パチを付ける</h3><p>「動き → 呼吸・待機」で「呼吸・待機アニメーション」をオンにします。「強さ (%)」で動きの大きさ、「速さ (%)」でテンポを調整できます。目パチも音声なしで動作します。「髪・服を揺らす」では、モデルに設定された揺れ物を動かします。</p>
 <h3>遠近感や光を変える</h3><p>新しいモデルは透視投影で表示します。プレビュー操作パネルの「平行投影 / 透視投影」、またはテンキー5で切り替えられます。視点は作品のカメラに固定されており、中ボタンでは回転しません。</p><p>「見た目 → 光源」で光の方向を選び、「光の強さ」で明るさを変えます。標準・スタジオ・やわらかい光・サイドライト・リムライト・フラットから選べます。投影や光源の設定は保存され、動画にも反映されます。</p>
 <details class="inline-details" id="scene-depth"><summary>0.4.4：画像とモデルの前後関係を変える</summary><p>レイヤーを選び、「配置 → 奥行き Z」を変えます。大きい値ほど手前、小さい値ほど奥へ移動します。プレビューのZハンドル、またはGのあとにZを押しても調整できます。Escで取り消します。</p><p>同じ奥行きならレイヤー順で重なります。画像とモデルには共通の投影を使います。透視投影では、手前へ動かすと大きく、奥へ動かすと小さく見えます。動かした状態をアニメーションにしたいときはキーへ記録してください。</p></details>
-<details class="inline-details" id="layer-opacity"><summary>画像・モデルを薄くする・フェードさせる</summary><p>レイヤーを選び、「見た目 → 不透明度 (%)」を変えます。100%は元の表示、50%は半分の濃さ、0%は見えない状態です。元の画像やモデルにある透明部分は保たれます。キャラクター全体も薄くしている場合は、その濃さと掛け合わせます。</p><p>フェードさせたいときは、別のコマで値を変えて「キーを追加」または「キーを更新」を押します。未記録の変更は動画に入らないため、先にキーへ記録してください。</p><p class="note">0.4.5では、「口の差し替え」「目の差し替え」の不透明度もその行で変更できます。配置は元のレイヤーに追従します。</p></details>
+<details class="inline-details" id="layer-opacity"><summary>画像を薄くする・フェードさせる</summary><p>画像レイヤーを選び、「見た目 → 不透明度 (%)」を変えます。100%は元の表示、50%は半分の濃さ、0%は見えない状態です。キャラクター全体も薄くしている場合は、その濃さと掛け合わせます。</p><p>フェードさせたいときは、別のコマで値を変えて「キーを追加」または「キーを更新」を押します。未記録の変更は動画に入らないため、先にキーへ記録してください。「口の差し替え」「目の差し替え」の不透明度もその行で変更できます。</p><p class="note">VRMモデル全体を半透明にする設定はありません。髪・まつ毛などモデル本来の透明部分と、透明背景の動画出力は使えます。以前の作品にあるVRM全体の不透明度やキーは、表示の濃さに影響しません。</p></details>
 <figure class="guide-shot"><a class="image-zoom-trigger" href="assets/properties-appearance-light.png" aria-label="見た目タブの光源と光の強さを拡大表示"><img src="assets/properties-appearance-light.png" data-theme-light="assets/properties-appearance-light.png" data-theme-dark="assets/properties-appearance-dark.png" alt="Vitaモデルと見た目タブの光源・材質設定" loading="lazy" width="1600" height="1000"></a><figcaption>「見た目」タブで光源や明るさを調整できます。迷ったら標準の材質・光源から始め、プレビューを見ながら変えてみましょう。</figcaption></figure>
 <details class="inline-details"><summary>キーボードでポーズを調整する</summary><p>プレビュー上でGは移動、Rは回転、Sは拡大縮小です。X・Y・Zで軸を限定します。同じ軸をもう一度押すとローカル軸、さらに押すと視点軸へ戻ります。Rをもう一度押すとトラックボール回転です。Enterまたはクリックで確定、Escまたは右クリックで取り消します。</p><p>自動キーがオフで、すでにキーがある項目を変えた場合は未記録プレビューになります。保存や書き出しの前にキーへ記録してください。詳しくは<a href="#keyframes">キーフレームと自動キー</a>をご覧ください。</p><p>回転は最終的な向きを記録します。動画で一周以上回したいときは、途中の向きにもキーを入れてください。</p></details>
 <details class="inline-details"><summary>外部でモデルやモーションを編集したとき</summary><p>元の.vrmや.vrmaを保存すると変更を読み直します。「ファイル → アセットを再読み込み」で、すぐに更新することもできます。保存途中で読めない間は直前の表示や動きを保ち、再試行します。</p></details>
