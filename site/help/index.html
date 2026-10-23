@@ -86,7 +86,7 @@
           <p class="breadcrumb">LipSyncOne / ヘルプ</p>
           <h1>LipSyncOne ヘルプ</h1>
           <p>画像やVRMモデルと音声から、口パク・目パチ・動きの付いた透明動画を作る操作を紹介します。</p>
-          <p class="version-note">Windows 11 x64 ／ 0.4.8の使い方 ／ 2026年10月22日更新</p>
+          <p class="version-note">Windows 11 x64 ／ 0.4.9の使い方 ／ 2026年10月22日更新</p>
           <nav class="start-paths" aria-label="作りたいものから始める"><a class="start-card" href="#sample-three"><span class="start-card-label">いちばん簡単</span><strong>全身画像2枚で口パク</strong><span>口だけが違う2枚と音声から作る</span></a><a class="start-card" href="#parts-start"><span class="start-card-label">口も目も動かす</span><strong>本体・口・目のパーツ画像</strong><span>差分画像を組み合わせて作る</span></a><a class="start-card" href="#vrm"><span class="start-card-label">VRM対応</span><strong>VRMモデルで作る</strong><span>3Dモデルに口パクや動きを付ける</span></a></nav>
         </div>
       </section>
@@ -151,6 +151,9 @@
 <dl class="definition-grid"><div><dt>レイヤー</dt><dd>素材の重なり順、表示、位置のロックを管理します。</dd></div><div><dt>アセット</dt><dd>読み込んだ画像・音声・VRM・動きを置いておく場所です。使う素材をここからドラッグします。</dd></div><div><dt>プレビュー</dt><dd>完成時の見た目を確認します。画像やモデルを直接選び、配置やポーズを調整できます。</dd></div><div><dt>タイムライン</dt><dd>素材を使う時間を決めます。上が音声、下が画像や動きの行です。</dd></div></dl>
 <h3>右のプロパティは、3つのタブに分かれています</h3><dl class="definition-grid"><div><dt>配置</dt><dd>位置・大きさ・回転、表示する時間を調整します。</dd></div><div><dt>動き</dt><dd>口パク・目パチ、VRMのポーズ・モーション・呼吸などを設定します。</dd></div><div><dt>見た目</dt><dd>不透明度、VRMの光源・材質・表情などを調整します。</dd></div><div><dt>作品設定</dt><dd>パネル下部から、作品全体のタイムラインの長さなどを設定します。</dd></div></dl>
 <p>見出しを押すと設定を開閉できます。タブと開閉状態はこのPCに記憶します。パネルの境界をドラッグすると広さを変えられ、「表示 → パネル配置を初期化」で戻せます。</p>
+<h3>表示の軽さや書き出しの画質を調整する</h3><p>「編集 → 設定…」（Ctrl+,）で、プレビューと動画出力の内部レンダリング解像度を別々に選べます。低い倍率は軽く、高い倍率は輪郭が滑らかになります。初期値はどちらも125％です。キャンバスや保存する動画のサイズは変わりません。</p><p>「適用」でこのPCに記憶します。「初期値に戻す」の後も「適用」が必要です。動画出力には開始時の設定を使います。</p>
+<p>輪郭のギザギザが気になるときは、同じ設定画面の「アンチエイリアス」を選びます。「FXAA（軽量）」は解像度を上げずに2D・3Dの輪郭を整えますが、細部が少し柔らかくなることがあります。「モデル4点（高品質）」は3Dの輪郭を滑らかにし、処理は重くなります。初期値はプレビューが「なし」、動画出力が「モデル4点」です。</p>
+<p>縮小・斜め表示では、ミップマップとGPUに合わせた最大4倍の異方性フィルタを自動で使います。解像度を上げずに、細かい模様のちらつきや斜めの面のぼけを抑えます。透明画像は縁に色がにじまないよう処理し、外部編集の読み直しにも反映します。元のVRM材質で指定されたピクセル調の補間は保持します。</p>
 <p class="task-links"><a href="#assets">素材の読み込み</a> ／ <a href="#timeline">配置と時間の調整</a> ／ <a href="#keyframes">途中で位置やポーズを変える</a></p>
           </section>
 
@@ -323,10 +326,11 @@ void main() {
 <details class="inline-details"><summary>旧版のプロジェクトと復旧について</summary><p>0.4.4は、奥行きと共通カメラを含むv4形式で保存します。0.3系のv2、0.4.0〜0.4.3のv3ファイルは開くときに移行しますが、保存するまでは元ファイルを変えません。基本的な配置やキーを引き継ぎますが、旧版と見た目が完全に一致するとは限りません。v4で保存すると0.4.3以前では開けないため、元の作品を残す場合は「名前を付けて保存」で別名にしてください。v1など、それ以前の形式は対象外です。</p><p>作業中は復旧用データを自動保存します。正常に終了できなかったときは、次回起動時に復旧を案内します。通常の保存やバックアップも併せて行ってください。</p></details>
           </section>
 
-          <section class="guide-section searchable" id="export" data-search="動画 書き出し 出力 透明 アルファ Premiere Pro DaVinci Resolve ProRes FFV1 軽量 WebM MP4 背景 解像度">
+          <section class="guide-section searchable" id="export" data-search="動画 書き出し 出力 透明 アルファ Premiere Pro DaVinci Resolve ProRes FFV1 軽量 WebM MP4 背景 解像度 音声 WAV 別出力 無音">
             <header class="section-heading"><p class="section-number">09</p><h2>透明な動画を書き出す</h2></header>
 
 <p>「ファイル → 動画を書き出す」またはCtrl＋Eで開きます。初期設定は「軽量WebM」、背景は「透明（アルファ）」です。</p>
+<h3>動画編集ソフトで音声を読めないとき</h3><p>「音声の保存先」で「WAVに分ける（編集ソフト向け）」を選びます。動画の保存先に続いてWAVの保存先を選ぶと、無音の動画と音声WAVを保存します。編集ソフトでは両方を同じ開始位置に置いてください。音量や無音区間は書き出し範囲に合わせます。WAVはPCM 24-bitです。どちらかの保存をキャンセルした場合、書き出しは始まりません。</p>
 <figure class="guide-shot"><a class="image-zoom-trigger" href="assets/export-light.png" aria-label="用途・背景・出力サイズを選ぶ動画書き出し画面を拡大表示"><img src="assets/export-light.png" data-theme-light="assets/export-light.png" data-theme-dark="assets/export-dark.png" alt="用途・背景・出力サイズを選ぶ動画書き出し画面" loading="lazy" width="1600" height="1000"></a><figcaption>用途・背景・サイズ・範囲を確認し、代表フレームを見てから書き出します。透明にしたいときは「透明（アルファ）」を選んでください。</figcaption></figure>
 <table class="help-table"><thead><tr><th>目的</th><th>選ぶ形式</th><th>特徴</th></tr></thead><tbody><tr><th>軽い透明動画を作る</th><td>軽量WebM</td><td>透明度を保ちながら容量を抑えます。</td></tr><tr><th>Premiere Proへ渡す</th><td>ProRes 4444 Alpha / MOV</td><td>動画編集に使うアルファ付き素材です。</td></tr><tr><th>劣化を抑えて保管する</th><td>可逆アルファマスター / FFV1 / MKV</td><td>透明度を含むマスター素材です。</td></tr><tr><th>一般的なプレイヤーで確認する</th><td>互換MP4・カラーキー / H.264</td><td>背景色付きの確認用です。透明度は保持しません。</td></tr></tbody></table>
 <p>画像とVRMの混在作品も同じ手順で書き出せます。プレビューの表示倍率は作業用です。動画の解像度は、この画面の出力サイズで指定します。</p><p>0.4.4では、<a href="#scene-depth">画像とモデルの奥行き・共通投影</a>もプレビューと同じ配置で書き出します。操作ハンドルや選択枠は動画に入りません。「未記録プレビュー」がある場合は、先にキーへ記録してください。</p><p>書き出しには開始時の素材を使います。処理中に元の画像やモデルを編集した場合は、完了後にもう一度書き出すと反映されます。処理は進捗から取り消せます。素材を保存中で読み込めない場合は、保存が終わってから再実行してください。</p><p class="note">透明動画は、Windows標準のプレイヤーでは再生できないことがあります。仕上げ先の編集ソフトへ読み込み、背景の上に重ねて確認してください。形式ごとの対応状況は編集ソフトによって異なります。</p>
