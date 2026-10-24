@@ -86,7 +86,7 @@
           <p class="breadcrumb">LipSyncOne / ヘルプ</p>
           <h1>LipSyncOne ヘルプ</h1>
           <p>画像やVRMモデルと音声から、口パク・目パチ・動きの付いた透明動画を作る操作を紹介します。</p>
-          <p class="version-note">Windows 11 x64 ／ 0.4.10の使い方 ／ 2026年10月22日更新</p>
+          <p class="version-note">Windows 11 x64 ／ 0.4.11の使い方 ／ 2026年10月22日更新</p>
           <nav class="start-paths" aria-label="作りたいものから始める"><a class="start-card" href="#sample-three"><span class="start-card-label">いちばん簡単</span><strong>全身画像2枚で口パク</strong><span>口だけが違う2枚と音声から作る</span></a><a class="start-card" href="#parts-start"><span class="start-card-label">口も目も動かす</span><strong>本体・口・目のパーツ画像</strong><span>差分画像を組み合わせて作る</span></a><a class="start-card" href="#vrm"><span class="start-card-label">VRM対応</span><strong>VRMモデルで作る</strong><span>3Dモデルに口パクや動きを付ける</span></a></nav>
         </div>
       </section>
@@ -126,6 +126,7 @@
         <div class="help-content">
           <section class="guide-section searchable" id="quick-start" data-search="はじめて 最初 手順 サンプル3 男の子 画像2枚 全身 口パク リップシンク 音声 動画 書き出し HOME 制作を始める">
             <header class="section-heading"><p class="section-number">START</p><h2>まずはサンプルで動画を作る</h2></header>
+<p>Homeの「制作モード」で「2Dのみ」か「2D＋3D」を選んでから新規作成します。2Dのみでは画像と音声を使う機能に絞り、3D用の操作を隠します。後から3Dを使いたい場合は「編集 → 制作モード → 2D＋3D」を選んでください。3D素材がない作品は同じメニューから2Dのみに戻せます。現在のモードにはチェックが付き、選んだモードは作品に保存されます。既存作品は今までどおり開けます。</p>
 
 <p>画像と音声を用意すれば、口パクを自動で付けられます。まずは、準備の少ない「全身画像2枚」で試してみましょう。</p>
 <p class="note">0.4.4では、画像とVRMの奥行きを同じ画面で調整し、その配置で動画を書き出せます。以前の作品を開く場合は、保存形式の案内もご確認ください。</p>
@@ -214,7 +215,7 @@
 <p>「手足を移動（IK）」では、手首・足首の移動に肘・膝が追従します。「関節を回転（FK）」では、選んだ関節を回せます。ドラッグを離すと確定し、Escで取り消します。</p>
 <h3>VRMAモーションを並べる</h3><p>.vrmaファイルを読み込み、アセットの「動き」からタイムラインのVRMレイヤーへドラッグします。帯を移動すると開始時刻、端を動かすと長さを変えられます。</p>
 <figure class="guide-shot"><a class="image-zoom-trigger" href="assets/vrm-motion-light.png" aria-label="VRMのモーションと口形を別の行で確認するタイムラインを拡大表示"><img src="assets/vrm-motion-light.png" data-theme-light="assets/vrm-motion-light.png" data-theme-dark="assets/vrm-motion-dark.png" alt="VRMのモーションと口形を別の行で確認するタイムライン" loading="lazy" width="1600" height="1000"></a><figcaption>青い帯はモーション、その下の「レイヤー名 · 口形」は口パクの解析結果です。口形の行は確認用で、素材は配置しません。</figcaption></figure>
-<p>同じ行の同じ時間には、画像・モーションを重ねて置けません。2つのモーションを隙間なく並べると、次の動きへ滑らかにつながります。帯を選び、「動き → モーション」の「ブレンド（フレーム）」でつなぐ長さを変えられます。初期値は6フレーム、0ならすぐに切り替わります。</p>
+<p>同じ行の同じ時間には、画像・モーションを重ねて置けません。モーションの開始・終了は基本ポーズへ滑らかにつながり、隙間なく並べたモーション同士も滑らかに切り替わります。帯を選び、「動き → モーション」の「ブレンド（フレーム）」でつなぐ長さを変えられます。初期値は6フレーム、0ならすぐに切り替わります。短いモーションでは自動で短縮します。</p>
 <p>同じプロパティで、速さや「繰り返す」を変更できます。Deleteや「モーションを解除」で選んだ配置だけを外せます。音声は別に配置してください。</p>
 <details class="inline-details" id="motion-conversion"><summary>FBX・GLBの動きやポーズを使う</summary>
 <p>「アセット → 動き → 読み込み」からFBXまたはGLBを選びます。モデル自体ではなく、人型の動きだけを取り込みます。0.4.6から使えます。</p>
@@ -276,6 +277,8 @@ void main() {
 
           <section class="guide-section searchable" id="timeline" data-search="タイムライン レイヤー スクロールバー 縦スクロール 位置 入力倍率 回転 左右反転 S R ホイール 整数 長さ 自動 手動 フレーム 余白 縮小 プレビュー 音声 カンバス サイズ">
             <header class="section-heading"><p class="section-number">07</p><h2>配置と表示する時間を調整する</h2></header>
+
+<p>タイムラインのレイヤー名の左にある目のボタンで、表示・非表示を切り替えられます。左のレイヤー一覧と連動し、非表示にした内容は動画にも出ません。VRMの「口形」は確認用の行なので、モデルの行から切り替えてください。</p>
 
 <h3>素材を使う時間を変える</h3><p>タイムラインの帯をドラッグすると開始位置、左右の端をドラッグすると長さを変えられます。同じ行の同じ時間へは、2つ以上の素材を置けません。別の行や空いている時間へ配置してください。</p>
 <p>音声は1行のまとめ表示から始まります。配置や削除をするときは「個別」を押して音声行を開き、「まとめる」で戻せます。まとめ表示でも波形をドラッグして再生位置を動かせます。表示の切り替えで音声の配置や再生内容は変わりません。</p>
