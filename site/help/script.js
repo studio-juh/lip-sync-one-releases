@@ -10,6 +10,24 @@ const searchableText = new Map(sections.map(section => [section,
   normalize(`${section.dataset.search ?? ""} ${section.textContent ?? ""}`),
 ]));
 const detailsBeforeSearch = new Map();
+let selectedSection = sections[0];
+const offlineNotice = document.querySelector(".offline-notice");
+if (offlineNotice) offlineNotice.hidden = location.protocol !== "file:";
+
+function anchorTarget(hash) {
+  try { return document.getElementById(decodeURIComponent(hash.slice(1))); } catch { return null; }
+}
+
+function showSection(section) {
+  selectedSection = section;
+  for (const candidate of sections) candidate.hidden = candidate !== section;
+  for (const link of navLinks) {
+    const active = link.hash === `#${section?.id}`;
+    link.classList.toggle("active", active);
+    if (active) link.setAttribute("aria-current", "location");
+    else link.removeAttribute("aria-current");
+  }
+}
 
 const filenameCopyStatus = document.querySelector("#filename-copy-status");
 async function copyFilename(filename) {
@@ -108,15 +126,12 @@ function normalize(value) {
 function filterHelp() {
   const query = normalize(search?.value ?? "");
   const terms = query.split(/\s+/u).filter(Boolean);
-  let visibleCount = 0;
+  const matches = sections.filter(section => terms.every(term => searchableText.get(section).includes(term)));
   for (const section of sections) {
-    const visible = terms.every(term => searchableText.get(section).includes(term));
-    section.hidden = !visible;
-    if (visible) visibleCount += 1;
     for (const detail of section.querySelectorAll("details")) {
       if (terms.length) {
         if (!detailsBeforeSearch.has(detail)) detailsBeforeSearch.set(detail, detail.open);
-        if (visible && terms.every(term => normalize(detail.textContent ?? "").includes(term))) detail.open = true;
+        if (matches.includes(section) && terms.every(term => normalize(detail.textContent ?? "").includes(term))) detail.open = true;
       } else if (detailsBeforeSearch.has(detail)) {
         detail.open = detailsBeforeSearch.get(detail);
         detailsBeforeSearch.delete(detail);
@@ -125,13 +140,15 @@ function filterHelp() {
   }
   for (const link of navLinks) {
     const section = document.getElementById(link.hash.slice(1))?.closest(".searchable");
-    link.hidden = section?.hidden ?? false;
+    link.hidden = !matches.includes(section);
   }
-  if (noResults) noResults.hidden = visibleCount > 0;
+  const bookmarked = anchorTarget(location.hash)?.closest(".searchable") ?? sections[0];
+  showSection(terms.length ? (matches.includes(selectedSection) ? selectedSection : matches[0]) : bookmarked);
+  if (noResults) noResults.hidden = matches.length > 0;
   if (searchClear) searchClear.hidden = terms.length === 0;
   if (searchStatus) searchStatus.textContent = terms.length
-    ? `「${search.value.trim()}」の検索結果：${visibleCount}件`
-    : `${sections.length}項目の使い方を掲載しています。`;
+    ? `「${search.value.trim()}」の検索結果：${matches.length}件。目次から項目を選んでください。`
+    : `${sections.length}項目の使い方を掲載しています。目次から選んだ項目を表示します。`;
 }
 
 search?.addEventListener("input", filterHelp);
@@ -140,14 +157,20 @@ searchClear?.addEventListener("click", () => {
   filterHelp();
   search?.focus();
 });
-function revealAnchor(hash) {
-  if (hash.length <= 1) return;
-  let target;
-  try { target = document.getElementById(decodeURIComponent(hash.slice(1))); } catch { return; }
+function revealAnchor(hash, scroll = false) {
+  const target = anchorTarget(hash || `#${sections[0]?.id}`);
   if (!target) return;
   if (search?.value) { search.value = ""; filterHelp(); }
-  for (let parent = target.parentElement; parent; parent = parent.parentElement) {
+  const section = target.closest(".searchable");
+  if (section) showSection(section);
+  else if (target.id === "top") showSection(sections[0]);
+  for (let parent = target; parent; parent = parent.parentElement) {
     if (parent instanceof HTMLDetailsElement) parent.open = true;
+  }
+  if (scroll) {
+    target.scrollIntoView({ block: "start", behavior: "instant" });
+    // The section is a keyboard destination too, without adding a tab stop.
+    if (section) { section.tabIndex = -1; section.focus({ preventScroll: true }); }
   }
 }
 // Task links and bookmarks must also reach filtered or folded sections.
@@ -155,9 +178,9 @@ document.addEventListener("click", event => {
   const anchor = event.target instanceof Element ? event.target.closest('a[href^="#"]') : null;
   if (anchor) revealAnchor(anchor.hash);
 });
-window.addEventListener("hashchange", () => revealAnchor(location.hash));
+window.addEventListener("hashchange", () => revealAnchor(location.hash, true));
 filterHelp();
-revealAnchor(location.hash);
+revealAnchor(location.hash, location.hash.length > 1);
 document.addEventListener("keydown", (event) => {
   if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
     event.preventDefault();
@@ -169,21 +192,6 @@ document.addEventListener("keydown", (event) => {
     search.blur();
   }
 });
-
-const observer = typeof IntersectionObserver === "undefined" ? null : new IntersectionObserver((entries) => {
-  const visible = entries
-    .filter((entry) => entry.isIntersecting)
-    .sort((left, right) => right.intersectionRatio - left.intersectionRatio)[0];
-  if (!visible) return;
-  for (const link of navLinks) {
-    const active = link.hash === `#${visible.target.id}`;
-    link.classList.toggle("active", active);
-    if (active) link.setAttribute("aria-current", "location");
-    else link.removeAttribute("aria-current");
-  }
-}, { rootMargin: "-18% 0px -68%", threshold: [0.05, 0.2, 0.5] });
-
-for (const section of sections) observer?.observe(section);
 
 const imageLightbox = document.querySelector(".image-lightbox");
 const lightboxImage = imageLightbox?.querySelector(".image-lightbox-image");

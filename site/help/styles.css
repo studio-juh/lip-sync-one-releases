@@ -37,7 +37,19 @@
 
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
-html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+html { scroll-padding-top: 76px; scrollbar-gutter: stable; }
+:is(html, .side-nav, .help-table, .filename-example) {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-dark) var(--surface);
+}
+:is(html, .side-nav, .help-table, .filename-example)::-webkit-scrollbar { width: 10px; height: 10px; }
+:is(html, .side-nav, .help-table, .filename-example)::-webkit-scrollbar-track { background: var(--surface); }
+:is(html, .side-nav, .help-table, .filename-example)::-webkit-scrollbar-thumb {
+  border: 2px solid var(--surface);
+  border-radius: 8px;
+  background: var(--border-dark);
+}
+:is(html, .side-nav, .help-table, .filename-example)::-webkit-scrollbar-thumb:hover { background: var(--muted); }
 body {
   margin: 0;
   background: var(--page);
@@ -189,10 +201,14 @@ kbd {
   position: sticky;
   top: 82px;
   display: grid;
-  padding-bottom: 20px;
+  min-width: 0;
+  padding: 0 8px 20px 0;
   border-right: 1px solid var(--border);
   max-height: calc(100vh - 106px);
   overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+  grid-auto-rows: max-content;
 }
 .side-nav p {
   margin: 0 0 7px;
@@ -201,7 +217,8 @@ kbd {
   font-weight: 600;
 }
 .side-nav a {
-  margin-right: -1px;
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 5px 15px 5px 0;
   border-right: 2px solid transparent;
   color: var(--muted);
@@ -507,11 +524,12 @@ body.image-lightbox-open { overflow: hidden; }
     padding: 0 0 15px;
     border-right: 0;
     border-bottom: 1px solid var(--border);
-    max-height: none;
-    overflow: visible;
+    max-height: min(260px, 40vh);
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   .side-nav p { display: none; }
-  .side-nav a { flex: 0 0 auto; padding: 5px 8px; border: 0; }
+  .side-nav a { padding: 5px 8px; border: 0; }
   .side-nav a.active { border-bottom: 2px solid var(--accent); }
 }
 
@@ -562,3 +580,7 @@ body.image-lightbox-open { overflow: hidden; }
   .image-zoom-trigger img { transition: none; }
 }
 .offline-notice { margin: 0; padding: 8px 24px; font-size: .875rem; }
+
+@media (forced-colors: active) {
+  :is(html, .side-nav, .help-table, .filename-example) { scrollbar-color: auto; }
+}
