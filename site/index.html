@@ -3,113 +3,114 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="LipSyncOne（リップシンク One）は、立ち絵の差分画像と音声から口パク・目パチアニメーションを自動生成する、Windows 11向けのリップシンクジェネレーターです。VOICEVOXやゆっくり実況、解説動画に使う2Dアニメーション素材を、背景透過の動画で書き出せます。">
+    <meta name="description" content="PSDのフォルダとレイヤーから本体・口・目を選び、音声に合わせた口パク・目パチ付きの透明動画を作成。画像2枚・パーツ画像・VRMにも対応するWindows 11向けアプリです。">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="theme-color" content="#f7f7f7">
-    <meta property="og:title" content="LipSyncOne｜Windowsの口パク・目パチアニメーション作成アプリ">
-    <meta property="og:description" content="LipSyncOne（リップシンク One）は、立ち絵の差分画像と音声から口パク・目パチアニメーションを自動生成する、Windows 11向けのリップシンクジェネレーターです。VOICEVOXやゆっくり実況、解説動画に使う2Dアニメーション素材を、背景透過の動画で書き出せます。">
+    <meta property="og:title" content="LipSyncOne 0.5.0｜PSD・画像・VRMから口パク付き透明動画を作成">
+    <meta property="og:description" content="PSDのフォルダとレイヤーから本体・口・目を選び、音声に合わせた口パク・目パチ付きの透明動画を作成。画像2枚・パーツ画像・VRMにも対応するWindows 11向けアプリです。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lipsyncone.studiojuh.com/">
-    <meta property="og:image" content="https://lipsyncone.studiojuh.com/assets/editor-dark.png">
+    <meta property="og:image" content="https://lipsyncone.studiojuh.com/help/assets/psd-character-dark.png">
     <meta property="og:locale" content="ja_JP">
     <meta property="og:site_name" content="LipSyncOne">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="LipSyncOne｜Windowsの口パク・目パチアニメーション作成アプリ">
-    <meta name="twitter:description" content="LipSyncOne（リップシンク One）は、立ち絵の差分画像と音声から口パク・目パチアニメーションを自動生成する、Windows 11向けのリップシンクジェネレーターです。VOICEVOXやゆっくり実況、解説動画に使う2Dアニメーション素材を、背景透過の動画で書き出せます。">
-    <meta name="twitter:image" content="https://lipsyncone.studiojuh.com/assets/editor-dark.png">
-    <title>LipSyncOne｜Windowsの口パク・目パチアニメーション作成アプリ</title>
+    <meta name="twitter:title" content="LipSyncOne 0.5.0｜PSD・画像・VRMから口パク付き透明動画を作成">
+    <meta name="twitter:description" content="PSDのフォルダとレイヤーから本体・口・目を選び、音声に合わせた口パク・目パチ付きの透明動画を作成。画像2枚・パーツ画像・VRMにも対応するWindows 11向けアプリです。">
+    <meta name="twitter:image" content="https://lipsyncone.studiojuh.com/help/assets/psd-character-dark.png">
+    <title>LipSyncOne 0.5.0｜PSD・画像・VRMから口パク付き透明動画を作成</title>
     <link rel="canonical" href="https://lipsyncone.studiojuh.com/">
     <link rel="stylesheet" href="./styles.css">
     <script src="./script.js?v=20261019-guide" defer></script>
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "Organization",
-            "@id": "https://lipsyncone.studiojuh.com/#organization",
-            "name": "studio-juh",
-            "url": "https://lipsyncone.studiojuh.com/"
-          },
-          {
-            "@type": "SoftwareApplication",
-            "@id": "https://lipsyncone.studiojuh.com/#software",
-            "name": "LipSyncOne",
-            "url": "https://lipsyncone.studiojuh.com/",
-            "description": "LipSyncOne（リップシンク One）は、立ち絵の差分画像と音声から口パク・目パチアニメーションを自動生成する、Windows 11向けのリップシンクジェネレーターです。VOICEVOXやゆっくり実況、解説動画に使う2Dアニメーション素材を、背景透過の動画で書き出せます。",
-            "applicationCategory": "MultimediaApplication",
-            "operatingSystem": "Windows 11 x64",
-            "softwareVersion": "0.5.0",
-            "inLanguage": "ja-JP",
-            "isAccessibleForFree": true,
-            "downloadUrl": "https://github.com/studio-juh/lip-sync-one-releases/releases/latest",
-            "releaseNotes": "https://github.com/studio-juh/lip-sync-one-releases/releases/tag/v0.5.0",
-            "image": "https://lipsyncone.studiojuh.com/assets/editor-dark.png",
-            "screenshot": "https://lipsyncone.studiojuh.com/assets/editor-dark.png",
-            "featureList": [
-              "立ち絵の差分画像と音声から口パク・リップシンク動画を自動生成",
-              "目パチ・まばたき（瞬き）の2Dアニメーション作成",
-              "2枚・3枚・Rhubarb A〜H/Xの口形設定",
-              "中割を含む差分画像のコマアニメーション",
-              "VOICEVOXなどで書き出したWAV・MP3音声のローカル解析",
-              "ゆっくり実況・解説動画向けの背景透過アニメーション素材",
-              "アルファ付きProRes 4444・FFV1・VP9 WebM書き出し"
-            ],
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "JPY",
-              "availability": "https://schema.org/InStock",
-              "url": "https://github.com/studio-juh/lip-sync-one-releases/releases/latest"
-            },
-            "publisher": {
-              "@id": "https://lipsyncone.studiojuh.com/#organization"
-            },
-            "sameAs": [
-              "https://github.com/studio-juh/lip-sync-one-releases",
-              "https://hanairo-m.booth.pm/items/8707179",
-              "https://ko-fi.com/studiojuh"
-            ],
-            "alternateName": [
-              "リップシンク One",
-              "lipsync one",
-              "lip sync one",
-              "lipsyncone"
-            ]
-          },
-          {
-            "@type": "WebPage",
-            "@id": "https://lipsyncone.studiojuh.com/#webpage",
-            "url": "https://lipsyncone.studiojuh.com/",
-            "name": "LipSyncOne｜Windowsの口パク・目パチアニメーション作成アプリ",
-            "description": "LipSyncOne（リップシンク One）は、立ち絵の差分画像と音声から口パク・目パチアニメーションを自動生成する、Windows 11向けのリップシンクジェネレーターです。VOICEVOXやゆっくり実況、解説動画に使う2Dアニメーション素材を、背景透過の動画で書き出せます。",
-            "inLanguage": "ja-JP",
-            "about": {
-              "@id": "https://lipsyncone.studiojuh.com/#software"
-            },
-            "isPartOf": {
-              "@id": "https://lipsyncone.studiojuh.com/#website"
-            }
-          },
-          {
-            "@type": "WebSite",
-            "@id": "https://lipsyncone.studiojuh.com/#website",
-            "name": "LipSyncOne",
-            "alternateName": [
-              "リップシンク One",
-              "lipsync one",
-              "lip sync one",
-              "lipsyncone"
-            ],
-            "url": "https://lipsyncone.studiojuh.com/",
-            "inLanguage": "ja-JP",
-            "publisher": {
-              "@id": "https://lipsyncone.studiojuh.com/#organization"
-            }
-          }
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lipsyncone.studiojuh.com/#organization",
+      "name": "studio-juh",
+      "url": "https://lipsyncone.studiojuh.com/"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://lipsyncone.studiojuh.com/#software",
+      "name": "LipSyncOne",
+      "url": "https://lipsyncone.studiojuh.com/",
+      "description": "PSDのフォルダとレイヤーから本体・口・目を選び、音声に合わせた口パク・目パチ付きの透明動画を作成。画像2枚・パーツ画像・VRMにも対応するWindows 11向けアプリです。",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Windows 11 x64",
+      "softwareVersion": "0.5.0",
+      "inLanguage": "ja-JP",
+      "isAccessibleForFree": true,
+      "downloadUrl": "https://github.com/studio-juh/lip-sync-one-releases/releases/latest",
+      "releaseNotes": "https://github.com/studio-juh/lip-sync-one-releases/releases/tag/v0.5.0",
+      "image": "https://lipsyncone.studiojuh.com/help/assets/psd-character-dark.png",
+      "screenshot": "https://lipsyncone.studiojuh.com/help/assets/psd-character-dark.png",
+      "featureList": [
+        "PSDのフォルダ・複数レイヤーから本体・口形・目を選んでキャラクター化",
+        "立ち絵の差分画像と音声から口パク・リップシンク動画を自動生成",
+        "目パチ・まばたき（瞬き）の2Dアニメーション作成",
+        "2枚・3枚・Rhubarb A〜H/Xの口形設定",
+        "中割を含む差分画像のコマアニメーション",
+        "VOICEVOXなどで書き出したWAV・MP3音声のローカル解析",
+        "ゆっくり実況・解説動画向けの背景透過アニメーション素材",
+        "アルファ付きProRes 4444・FFV1・VP9 WebM書き出し"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "JPY",
+        "availability": "https://schema.org/InStock",
+        "url": "https://github.com/studio-juh/lip-sync-one-releases/releases/latest"
+      },
+      "publisher": {
+        "@id": "https://lipsyncone.studiojuh.com/#organization"
+      },
+      "sameAs": [
+        "https://github.com/studio-juh/lip-sync-one-releases",
+        "https://hanairo-m.booth.pm/items/8707179",
+        "https://ko-fi.com/studiojuh"
+      ],
+      "alternateName": [
+        "リップシンク One",
+        "lipsync one",
+        "lip sync one",
+        "lipsyncone"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://lipsyncone.studiojuh.com/#webpage",
+      "url": "https://lipsyncone.studiojuh.com/",
+      "name": "LipSyncOne 0.5.0｜PSD・画像・VRMから口パク付き透明動画を作成",
+      "description": "PSDのフォルダとレイヤーから本体・口・目を選び、音声に合わせた口パク・目パチ付きの透明動画を作成。画像2枚・パーツ画像・VRMにも対応するWindows 11向けアプリです。",
+      "inLanguage": "ja-JP",
+      "about": {
+        "@id": "https://lipsyncone.studiojuh.com/#software"
+      },
+      "isPartOf": {
+        "@id": "https://lipsyncone.studiojuh.com/#website"
       }
-    </script>
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lipsyncone.studiojuh.com/#website",
+      "name": "LipSyncOne",
+      "alternateName": [
+        "リップシンク One",
+        "lipsync one",
+        "lip sync one",
+        "lipsyncone"
+      ],
+      "url": "https://lipsyncone.studiojuh.com/",
+      "inLanguage": "ja-JP",
+      "publisher": {
+        "@id": "https://lipsyncone.studiojuh.com/#organization"
+      }
+    }
+  ]
+}
+</script>
     <link rel="icon" type="image/svg+xml" href="./assets/app-icon.svg">
   </head>
   <body class="product-page">
@@ -118,40 +119,151 @@
       <div class="header-inner">
         <a class="brand" href="#top" aria-label="LipSyncOne 製品紹介の先頭へ"> <img class="brand-mark" src="./assets/app-icon.svg" width="34" height="34" alt=""> <span><strong>LipSyncOne</strong><small>リップシンク One</small></span> </a>
         <nav class="header-actions" aria-label="ページ内リンク">
-          <a href="#features">できること</a><a href="#workflow">使いかた</a><a href="#samples">無料素材</a><a href="./help/">ヘルプ</a> <button class="theme-toggle" type="button" aria-label="表示テーマを切り替える">表示切替</button> <a class="download-button" href="#download">ダウンロード</a>
+          <a href="#workflow">PSDで作る</a><a href="#start">素材から選ぶ</a><a href="#samples">無料素材</a><a href="./help/">ヘルプ</a> <button class="theme-toggle" type="button" aria-label="表示テーマを切り替える">表示切替</button> <a class="download-button" href="#download">ダウンロード</a>
         </nav>
       </div>
     </header>
     <main id="main">
-      <section class="product-hero" id="top">
+<section class="product-hero" id="top"><div class="page-width"><div class="hero-heading"><div>
+<p class="product-eyebrow">LipSyncOne 0.5.0 · PSDからのキャラクター作成に対応</p>
+<h1>立ち絵を選んで、<br>声に合わせて、<br><span>透明動画へ。</span></h1></div><div class="hero-intro">
+<p>PSDのフォルダとレイヤーから、本体・口・目を選ぶ。音声を置けば、口パク付きの動画素材を作れます。</p>
+<p>画像2枚・パーツ画像・VRMからも制作できます。ゆっくり実況や音声合成の解説動画に、いつもの編集ソフトへ重ねて使える素材を。</p>
+<div class="hero-actions"><a class="download-button" href="https://github.com/studio-juh/lip-sync-one-releases/releases/latest">0.5.0をダウンロード</a><a class="secondary-button" href="./help/#psd-start">PSDから作る手順</a></div>
+<p class="hero-meta">Windows 11 x64 · 無料で利用可能 · 音声解析はPC内で実行</p></div></div><figure class="product-shot hero-shot"><a class="image-zoom-trigger" href="./help/assets/psd-character-light.png" aria-label="PSDのレイヤーと差分の割り当て画面を拡大する"><img src="./help/assets/psd-character-light.png" data-theme-light="./help/assets/psd-character-light.png" data-theme-dark="./help/assets/psd-character-dark.png" width="1600" height="1000" fetchpriority="high" alt="0.5.0のPSD作成画面。フォルダとレイヤーを選び、口形と目の差分をプレビューで確認"></a><figcaption><span>フォルダとレイヤーを見ながら、本体・口・目を組み立てます。クリックで拡大。</span><span class="shot-version">0.5.0のPSD取り込み</span></figcaption></figure>
+<ul class="hero-facts" aria-label="製品の特徴"><li><strong>PSDから選ぶ</strong><span>本体・口・目を元の位置で合成</span></li><li><strong>音声に合わせる</strong><span>口パクを自動解析・調整</span></li><li><strong>透明で書き出す</strong><span>WebM・MOV・MKVに対応</span></li></ul></div></section>
+<section class="product-section start-section" id="start" aria-labelledby="start-title"><div class="page-width">
+<header class="product-section-heading"><p class="product-eyebrow">手元の素材から始める</p><h2 id="start-title">どの素材からでも、<br>声に合うキャラクターへ。</h2></header>
+<div class="material-paths">
+<a class="material-path primary-path" href="./help/#psd-start"><span>PSD · 0.5.0で対応</span><h3>PSDの立ち絵</h3><p>本体・口・目をフォルダとレイヤーから選択。複数レイヤーも1つの差分に合成できます。</p><strong>PSDの手順へ →</strong></a>
+<a class="material-path" href="./help/#sample-three"><span>全身画像2枚</span><h3>閉じ口と開き口</h3><p>同じ位置・大きさの2枚で始められます。素材がない方は無料サンプル3で試せます。</p><strong>画像2枚の手順へ →</strong></a>
+<a class="material-path" href="./help/#parts-start"><span>PNGなどのパーツ画像</span><h3>本体・口・目の画像</h3><p>別々の画像を組み合わせて、口パクと目パチを設定します。</p><strong>パーツ画像の手順へ →</strong></a>
+<a class="material-path" href="./help/#vrm"><span>VRMモデル</span><h3>3Dキャラクター</h3><p>モデルに口パクと目パチを付け、ポーズやモーションも調整できます。</p><strong>VRMの手順へ →</strong></a>
+</div></div></section>
+<section class="product-section" id="workflow" aria-labelledby="workflow-title"><div class="page-width">
+<header class="product-section-heading"><p class="product-eyebrow">0.5.0のPSDワークフロー</p><h2 id="workflow-title">レイヤーを選んで、<br>最初の1本まで。</h2><p>PSD内の位置と透明度を保ち、差分を確認しながら作成できます。</p></header>
+<ol class="psd-steps"><li><span class="step-number">01</span><h3>本体を組み立てる</h3><p>「キャラクターを追加 → PSDから作成…」で読み込み、フォルダやレイヤーの目アイコンで本体の表示を選びます。</p></li><li><span class="step-number">02</span><h3>口・目を割り当てる</h3><p>右で口形・目の状態を選び、中央のチェックで差分を割り当てます。選んだ差分は本体から自動除外されます。</p></li><li><span class="step-number">03</span><h3>音声を置いて確認</h3><p>キャラクターを作成し、音声行へWAVを配置します。解析された口パクと目パチを再生して調整します。</p></li><li><span class="step-number">04</span><h3>透明動画を書き出す</h3><p>「ファイル → 動画を書き出す」から、仕上げる編集ソフトに合う形式を選んで保存します。</p></li></ol>
+<p class="workflow-links"><a class="secondary-button" href="./help/#psd-start">画面付きのPSD手順へ</a><a href="./help/#export">書き出し形式の選び方 →</a></p>
+<p class="workflow-note">RGB・8bitの対応ラスターレイヤーが対象です。文字・特殊な合成・クリッピング・レイヤー効果などは完全には再現しません。<a href="./help/#psd-supported">対応範囲を確認する</a></p>
+</div></section>
+<section class="product-section feature-section" id="features" aria-labelledby="features-title">
         <div class="page-width">
-          <div class="hero-heading">
-            <div>
-              <p class="product-eyebrow">Windowsの口パク・目パチアニメーション作成アプリ</p>
-              <h1>立ち絵に声を合わせて、<br><span>透明動画に。</span></h1>
-            </div>
-            <div class="hero-intro">
-              <p>口が閉じた絵と、開いた絵。<br>最少2枚の画像と音声から、キャラクターが話す動画素材を作れます。</p>
-              <p>ゆっくり実況やVOICEVOXの解説動画に。書き出した素材は、Premiere ProやDaVinci Resolveなどで重ねて使えます。</p>
-              <div class="hero-actions">
-                <a class="download-button" href="https://github.com/studio-juh/lip-sync-one-releases/releases/latest">無料でダウンロード</a><a class="secondary-button" href="#workflow">画面を見ながら始める</a>
-              </div>
-              <p class="hero-meta">Windows 11 x64 · 公開版 v0.5.0 · 音声はPC内で解析</p>
-              <p class="screen-version-note">画面例は0.5.0の操作画面です。画像とVRMの制作をひとつのアプリで進められます。</p>
-            </div>
+          <header class="product-section-heading">
+            <p class="product-eyebrow">慣れてきたら</p>
+            <h2 id="features-title">選び直しも、見比べるのも。<br>作りながら調整できます。</h2>
+            <p>2枚で始めて、差分を増やして。音声に合わせて動きを付け、気になるところをあとから調整できます。</p>
+          </header>
+          <div class="feature-shots">
+            <article>
+              <figure class="product-shot">
+                <a class="image-zoom-trigger" href="./help/assets/mouth-setup-light.png" aria-label="口形設定を拡大する"><img src="./help/assets/mouth-setup-light.png" data-theme-light="./help/assets/mouth-setup-light.png" data-theme-dark="./help/assets/mouth-setup-dark.png" width="1600" height="1000" loading="lazy" decoding="async" alt="閉じ口・中口・大口の画像を選ぶ口形設定画面"></a>
+                <figcaption><span>2枚・3枚・9枚の口形に対応。</span><span class="shot-version">0.5.0 の画面</span></figcaption>
+              </figure>
+              <h3>画像の数に合わせて、口の動きを</h3>
+              <p>閉じ口と開き口の2枚から、中口を加えた3枚、Rhubarb A〜H/Xの9口形まで。持っている差分を使って始められます。</p>
+              <a href="./help/#mouth-setup">口形を設定する →</a>
+            </article>
+            <article>
+              <figure class="product-shot">
+                <a class="image-zoom-trigger" href="./help/assets/lip-sync-analysis-light.png" aria-label="音声解析の設定を拡大する"><img src="./help/assets/lip-sync-analysis-light.png" data-theme-light="./help/assets/lip-sync-analysis-light.png" data-theme-dark="./help/assets/lip-sync-analysis-dark.png" width="1600" height="1000" loading="lazy" decoding="async" alt="音声に合わせて音量の影響度や無音しきい値を調整する解析設定画面"></a>
+                <figcaption><span>音声ごとの解析設定を保存できます。</span><span class="shot-version">0.5.0 の画面</span></figcaption>
+              </figure>
+              <h3>声の大きさや言語に合わせて調整</h3>
+              <p>口の開きが合わないときは、音量の影響度や無音しきい値を調整して再解析。日本語・その他／英語も音声ごとに選べます。</p>
+              <a href="./help/#lip-sync">解析結果を調整する →</a>
+            </article>
           </div>
-          <figure class="product-shot hero-shot">
-            <a class="image-zoom-trigger" href="./assets/editor-light.png" aria-label="編集画面を拡大する"><img src="./assets/editor-light.png" data-theme-light="./assets/editor-light.png" data-theme-dark="./assets/editor-dark.png" width="1600" height="1000" fetchpriority="high" alt="左に画像と音声、中央にキャラクターのプレビュー、下に口パクと目パチのタイムラインが並ぶ編集画面"></a>
-            <figcaption><span>作る・再生する・調整するを、ひとつの画面で。<span class="zoom-hint">画像をクリックして拡大</span></span><span class="shot-version">0.5.0 の画面</span></figcaption>
-          </figure>
-          <ul class="hero-facts" aria-label="製品の特徴">
-            <li><strong>2枚から</strong><span>全身画像のまま口パク</span></li>
-            <li><strong>音声から自動で</strong><span>日本語・英語の口の動き</span></li>
-            <li><strong>背景は透明に</strong><span>いつもの編集ソフトへ</span></li>
-          </ul>
+          <div class="feature-notes"><article><h3>割り当てを保ちながら試せる</h3><p>PSDの口形モードを切り替えても、元へ戻すと割り当てを復元できます。同じPSDの読み直しでは、対応するレイヤーの設定を保持します。</p></article><article><h3>見たい差分をすぐ確認</h3><p>レイヤー検索・絞り込み、プレビューの拡大・移動と列幅調整に対応。割り当て先を選ぶと、プレビューも同じ差分へ切り替わります。</p></article>
+            <article>
+              <h3>音声がなくても、目パチ</h3>
+              <p>目パチは音声に関係なく動きます。キャラクターごとに間隔や表示区間を調整できます。</p>
+              <a href="./help/#eye-blink">目パチを付ける →</a>
+            </article>
+            <article>
+              <h3>元の画像を編集したら、再読み込み</h3>
+              <p>描き直した素材をそのまま制作へ。ファイルの再読み込みで、位置や設定を保って続きを作れます。</p>
+              <a href="./help/#assets">素材の準備と更新 →</a>
+            </article>
+            <article>
+              <h3>画像も音声も、PCの中で</h3>
+              <p>音声の解析はローカルで行います。画像や音声を外部サービスへ送らず、追加の解析モデル取得も不要です。</p>
+            </article>
+          </div>
         </div>
       </section>
-      <section class="product-section sample-section" id="samples" aria-labelledby="samples-title">
+<section class="product-section preview-section" id="development" aria-labelledby="development-title">
+        <div class="page-width">
+          <header class="product-section-heading">
+            <p class="development-label">VRMの操作画面</p>
+            <h2 id="development-title">3Dキャラクターにも<br>動きと表情を。</h2>
+            <p>VRMモデルに口パクや目パチ、ポーズ、呼吸を付けられます。VRMAモーションを並べたり、キーを使って動かしたりできます。画像のキャラクターや背景と同じ作品に配置し、透明動画として書き出せます。</p>
+          </header>
+          <div class="preview-gallery">
+            <figure class="product-shot">
+              <a class="image-zoom-trigger" href="./assets/preview-v040-vrm-pose-light.png" aria-label="VRMのVRMポーズ操作を拡大する"><img src="./assets/preview-v040-vrm-pose-light.png" data-theme-light="./assets/preview-v040-vrm-pose-light.png" data-theme-dark="./assets/preview-v040-vrm-pose-dark.png" width="1600" height="1000" loading="lazy" decoding="async" alt="VRM：3Dモデルの画面上のコントローラーでポーズを調整する画面"></a>
+              <figcaption><span>VRMのポーズを画面上で調整</span><span>VRM</span></figcaption>
+            </figure>
+            <figure class="product-shot">
+              <a class="image-zoom-trigger" href="./assets/preview-v040-vrm-motion-light.png" aria-label="VRMのモーション編集を拡大する"><img src="./assets/preview-v040-vrm-motion-light.png" data-theme-light="./assets/preview-v040-vrm-motion-light.png" data-theme-dark="./assets/preview-v040-vrm-motion-dark.png" width="1600" height="1000" loading="lazy" decoding="async" alt="VRM：VRMAの動きと口形を別々のタイムライン行に置く画面"></a>
+              <figcaption><span>モーションを並べて、つなぎ目をブレンド</span><span>VRM</span></figcaption>
+            </figure>
+            <figure class="product-shot">
+              <a class="image-zoom-trigger" href="./assets/preview-v040-keyframes-light.png" aria-label="VRMのキーフレーム編集を拡大する"><img src="./assets/preview-v040-keyframes-light.png" data-theme-light="./assets/preview-v040-keyframes-light.png" data-theme-dark="./assets/preview-v040-keyframes-dark.png" width="1600" height="1000" loading="lazy" decoding="async" alt="VRM：タイムラインで位置や回転のキーフレームを編集する画面"></a>
+              <figcaption><span>位置や回転をキーフレームで動かす</span><span>VRM</span></figcaption>
+            </figure>
+            <figure class="product-shot">
+              <a class="image-zoom-trigger" href="./assets/preview-v040-properties-position-light.png" aria-label="VRMのプロパティを拡大する"><img src="./assets/preview-v040-properties-position-light.png" data-theme-light="./assets/preview-v040-properties-position-light.png" data-theme-dark="./assets/preview-v040-properties-position-dark.png" width="1600" height="1000" loading="lazy" decoding="async" alt="VRM：配置・動き・見た目のタブで整理されたプロパティ画面"></a>
+              <figcaption><span>設定は「配置・動き・見た目」の3タブへ</span><span>VRM</span></figcaption>
+            </figure>
+          </div>
+          <details class="sample-terms" id="vrm-sample">
+            <summary>VRMサンプル「Vita」について（0.5.0以降向け）</summary>
+            <div>
+              <p>無料のVRM 1.0モデルと使いかた・出典をまとめたサンプルです。0.3系では読み込めません。</p>
+              <p><a class="secondary-button" href="https://github.com/studio-juh/lip-sync-one-releases/releases/download/sample-vrm-vita-v1/LipSyncOne_VRM_Sample_Vita_v1.zip">Vitaをダウンロード（ZIP · 12.2 MB）</a></p>
+              <p>作者：pixiv inc. / coati。<a href="https://hub.vroid.com/characters/4593660874193246717/models/7942721847119018516" rel="noreferrer">モデルの配布元・利用条件（CC0）</a>と同梱の案内をご確認ください。</p>
+            </div>
+          </details>
+        </div>
+      </section>
+<section class="product-section" id="formats" aria-labelledby="formats-title">
+        <div class="page-width format-layout">
+          <header class="product-section-heading">
+            <p class="product-eyebrow">仕上げは、使い慣れたソフトで</p>
+            <h2 id="formats-title">透明なまま、<br>動画素材として渡す。</h2>
+            <p>口パク素材を書き出したら、背景や字幕と重ねて完成へ。形式は仕上げ先に合わせて選べます。</p>
+            <a href="./help/#export">透明動画の書き出しを詳しく →</a>
+          </header>
+          <table class="format-table">
+            <caption class="sr-only">用途ごとの動画書き出し形式</caption>
+            <thead>
+              <tr>
+                <th scope="col">こんなときに</th>
+                <th scope="col">選ぶ形式</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Premiere Proなどで仕上げる</th>
+                <td><strong>ProRes 4444 Alpha</strong><span>MOV · 透明背景</span></td>
+              </tr>
+              <tr>
+                <th scope="row">容量を抑えて試す・保存する</th>
+                <td><strong>軽量WebM（VP9 Alpha）</strong><span>WebM · 透明背景 · 初期設定</span></td>
+              </tr>
+              <tr>
+                <th scope="row">画質を保ってマスターを残す</th>
+                <td><strong>FFV1</strong><span>MKV · 透明背景 · 可逆圧縮</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Windowsで見え方を確認する</th>
+                <td><strong>H.264 カラーキー</strong><span>MP4 · 色付き背景・透明度なし</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+<section class="product-section sample-section" id="samples" aria-labelledby="samples-title">
         <div class="page-width">
           <header class="product-section-heading">
             <p class="product-eyebrow">はじめての方へ</p>
@@ -218,183 +330,7 @@
           </details>
         </div>
       </section>
-      <section class="product-section" id="workflow" aria-labelledby="workflow-title">
-        <div class="page-width">
-          <header class="product-section-heading">
-            <p class="product-eyebrow">画像と音声から、動画まで</p>
-            <h2 id="workflow-title">4つのステップで、<br>最初の口パクを。</h2>
-            <p>サンプルのZIPを展開してから始めましょう。画面はクリックすると拡大できます。</p>
-          </header>
-          <div class="product-steps">
-            <article class="product-step">
-              <div class="step-copy">
-                <span class="step-number">01</span>
-                <h3>プロジェクトを作り、<br>画像と音声を読み込む</h3>
-                <p>HOMEの「制作を始める」から新規作成。「アセット → 読み込み」で、展開したPNGとWAVを選びます。</p>
-                <a href="./help/#quick-start">はじめから順に見る →</a>
-              </div>
-              <figure class="product-shot">
-                <a class="image-zoom-trigger" href="./assets/home-light.png" aria-label="HOME画面を拡大する"><img src="./assets/home-light.png" data-theme-light="./assets/home-light.png" data-theme-dark="./assets/home-dark.png" width="1600" height="1000" loading="lazy" decoding="async" alt="制作を始めるボタンと最近使ったプロジェクトが表示されたHOME画面"></a>
-                <figcaption><span>HOMEから新規作成。保存したプロジェクトもここから開けます。</span><span class="shot-version">0.5.0 の画面</span></figcaption>
-              </figure>
-            </article>
-            <article class="product-step">
-              <div class="step-copy">
-                <span class="step-number">02</span>
-                <h3>「キャラクターを追加」<br>で画像を選ぶ</h3>
-                <p>サンプル3は「全身画像2枚で口パク」で、閉じ口・開き口を指定します。サンプル1・2は「本体・口・目のパーツ画像」から、素材のグループを選びます。</p>
-                <a href="./help/#sample-three">2枚の全身画像で始める →</a>
-              </div>
-              <figure class="product-shot">
-                <a class="image-zoom-trigger" href="./help/assets/two-image-character-light.png" aria-label="全身画像2枚のキャラクター追加画面を拡大する"><img src="./help/assets/two-image-character-light.png" data-theme-light="./help/assets/two-image-character-light.png" data-theme-dark="./help/assets/two-image-character-dark.png" width="1600" height="1000" loading="lazy" decoding="async" alt="閉じ口と開き口の全身画像2枚を選び、プレビュー全体を見比べるキャラクター追加画面"></a>
-                <figcaption><span>閉じ口と開き口を1枚ずつ指定。2枚の画像全体を見比べられます。</span><span class="shot-version">0.5.0 の画面</span></figcaption>
-              </figure>
-            </article>
-            <article class="product-step">
-              <div class="step-copy">
-                <span class="step-number">03</span>
-                <h3>音声を置いて、<br>再生してみる</h3>
-                <p>アセットの音声を、タイムラインのキャラクター名が付いた音声行へドラッグ。口パクが自動で解析されたら、▶で動きを確認できます。</p>
-                <a href="./help/#lip-sync">口パクを調整する →</a>
-              </div>
-              <figure class="product-shot">
-                <a class="image-zoom-trigger" href="./assets/timeline-light.png" aria-label="口パクと音声のタイムラインを拡大する"><img src="./assets/timeline-light.png" data-theme-light="./assets/timeline-light.png" data-theme-dark="./assets/timeline-dark.png" width="1600" height="1000" loading="lazy" decoding="async" alt="音声と、口形・目パチの表示区間を確認できるタイムライン"></a>
-                <figcaption><span>音声と口の動きを見比べながら、その場で確認できます。</span><span class="shot-version">0.5.0 の画面</span></figcaption>
-              </figure>
-            </article>
-            <article class="product-step">
-              <div class="step-copy">
-                <span class="step-number">04</span>
-                <h3>背景が透明な<br>動画を書き出す</h3>
-                <p>「ファイル → 動画を書き出す」で形式を選びます。まずは「軽量WebM」、Premiere Proへ渡すなら「ProRes 4444 Alpha」を選んで保存します。</p>
-                <a href="./help/#export">書き出し形式の選びかた →</a>
-              </div>
-              <figure class="product-shot">
-                <a class="image-zoom-trigger" href="./assets/export-light.png" aria-label="動画書き出し画面を拡大する"><img src="./assets/export-light.png" data-theme-light="./assets/export-light.png" data-theme-dark="./assets/export-dark.png" width="1600" height="1000" loading="lazy" decoding="async" alt="代表フレームのプレビューと透明動画の形式を選べる書き出し画面"></a>
-                <figcaption><span>保存した動画を、いつもの編集ソフトへ重ねます。</span><span class="shot-version">0.5.0 の画面</span></figcaption>
-              </figure>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="product-section feature-section" id="features" aria-labelledby="features-title">
-        <div class="page-width">
-          <header class="product-section-heading">
-            <p class="product-eyebrow">慣れてきたら</p>
-            <h2 id="features-title">口パクも、目パチも。<br>キャラクターに合わせて。</h2>
-            <p>2枚で始めて、差分を増やして。音声に合わせて動きを付け、気になるところをあとから調整できます。</p>
-          </header>
-          <div class="feature-shots">
-            <article>
-              <figure class="product-shot">
-                <a class="image-zoom-trigger" href="./assets/mouth-setup-light.png" aria-label="口形設定を拡大する"><img src="./assets/mouth-setup-light.png" data-theme-light="./assets/mouth-setup-light.png" data-theme-dark="./assets/mouth-setup-dark.png" width="1600" height="1000" loading="lazy" decoding="async" alt="閉じ口・中口・大口の画像を選ぶ口形設定画面"></a>
-                <figcaption><span>2枚・3枚・9枚の口形に対応。</span><span class="shot-version">0.5.0 の画面</span></figcaption>
-              </figure>
-              <h3>画像の数に合わせて、口の動きを</h3>
-              <p>閉じ口と開き口の2枚から、中口を加えた3枚、Rhubarb A〜H/Xの9口形まで。持っている差分を使って始められます。</p>
-              <a href="./help/#mouth-setup">口形を設定する →</a>
-            </article>
-            <article>
-              <figure class="product-shot">
-                <a class="image-zoom-trigger" href="./assets/lip-sync-analysis-light.png" aria-label="音声解析の設定を拡大する"><img src="./assets/lip-sync-analysis-light.png" data-theme-light="./assets/lip-sync-analysis-light.png" data-theme-dark="./assets/lip-sync-analysis-dark.png" width="1600" height="1000" loading="lazy" decoding="async" alt="音声に合わせて音量の影響度や無音しきい値を調整する解析設定画面"></a>
-                <figcaption><span>音声ごとの解析設定を保存できます。</span><span class="shot-version">0.5.0 の画面</span></figcaption>
-              </figure>
-              <h3>声の大きさや言語に合わせて調整</h3>
-              <p>口の開きが合わないときは、音量の影響度や無音しきい値を調整して再解析。日本語・その他／英語も音声ごとに選べます。</p>
-              <a href="./help/#lip-sync">解析結果を調整する →</a>
-            </article>
-          </div>
-          <div class="feature-notes">
-            <article>
-              <h3>音声がなくても、目パチ</h3>
-              <p>目パチは音声に関係なく動きます。キャラクターごとに間隔や表示区間を調整できます。</p>
-              <a href="./help/#eye-blink">目パチを付ける →</a>
-            </article>
-            <article>
-              <h3>元の画像を編集したら、再読み込み</h3>
-              <p>描き直した素材をそのまま制作へ。ファイルの再読み込みで、位置や設定を保って続きを作れます。</p>
-              <a href="./help/#assets">素材の準備と更新 →</a>
-            </article>
-            <article>
-              <h3>画像も音声も、PCの中で</h3>
-              <p>音声の解析はローカルで行います。画像や音声を外部サービスへ送らず、追加の解析モデル取得も不要です。</p>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="product-section" id="formats" aria-labelledby="formats-title">
-        <div class="page-width format-layout">
-          <header class="product-section-heading">
-            <p class="product-eyebrow">仕上げは、使い慣れたソフトで</p>
-            <h2 id="formats-title">透明なまま、<br>動画素材として渡す。</h2>
-            <p>口パク素材を書き出したら、背景や字幕と重ねて完成へ。形式は仕上げ先に合わせて選べます。</p>
-            <a href="./help/#export">透明動画の書き出しを詳しく →</a>
-          </header>
-          <table class="format-table">
-            <caption class="sr-only">用途ごとの動画書き出し形式</caption>
-            <thead>
-              <tr>
-                <th scope="col">こんなときに</th>
-                <th scope="col">選ぶ形式</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Premiere Proなどで仕上げる</th>
-                <td><strong>ProRes 4444 Alpha</strong><span>MOV · 透明背景</span></td>
-              </tr>
-              <tr>
-                <th scope="row">容量を抑えて試す・保存する</th>
-                <td><strong>軽量WebM（VP9 Alpha）</strong><span>WebM · 透明背景 · 初期設定</span></td>
-              </tr>
-              <tr>
-                <th scope="row">画質を保ってマスターを残す</th>
-                <td><strong>FFV1</strong><span>MKV · 透明背景 · 可逆圧縮</span></td>
-              </tr>
-              <tr>
-                <th scope="row">Windowsで見え方を確認する</th>
-                <td><strong>H.264 カラーキー</strong><span>MP4 · 色付き背景・透明度なし</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-      <section class="product-section preview-section" id="development" aria-labelledby="development-title">
-        <div class="page-width">
-          <header class="product-section-heading">
-            <p class="development-label">0.5.0 の画面</p>
-            <h2 id="development-title">3Dキャラクターにも<br>動きと表情を。</h2>
-            <p>VRMモデルに口パクや目パチ、ポーズ、呼吸を付けられます。VRMAモーションを並べたり、キーを使って動かしたりできます。画像のキャラクターや背景と同じ作品に配置し、透明動画として書き出せます。</p>
-          </header>
-          <div class="preview-gallery">
-            <figure class="product-shot">
-              <a class="image-zoom-trigger" href="./assets/preview-v040-vrm-pose-light.png" aria-label="0.5.0のVRMポーズ操作を拡大する"><img src="./assets/preview-v040-vrm-pose-light.png" data-theme-light="./assets/preview-v040-vrm-pose-light.png" data-theme-dark="./assets/preview-v040-vrm-pose-dark.png" width="1600" height="1000" loading="lazy" decoding="async" alt="0.5.0：3Dモデルの画面上のコントローラーでポーズを調整する画面"></a>
-              <figcaption><span>VRMのポーズを画面上で調整</span><span>0.5.0</span></figcaption>
-            </figure>
-            <figure class="product-shot">
-              <a class="image-zoom-trigger" href="./assets/preview-v040-vrm-motion-light.png" aria-label="0.5.0のモーション編集を拡大する"><img src="./assets/preview-v040-vrm-motion-light.png" data-theme-light="./assets/preview-v040-vrm-motion-light.png" data-theme-dark="./assets/preview-v040-vrm-motion-dark.png" width="1600" height="1000" loading="lazy" decoding="async" alt="0.5.0：VRMAの動きと口形を別々のタイムライン行に置く画面"></a>
-              <figcaption><span>モーションを並べて、つなぎ目をブレンド</span><span>0.5.0</span></figcaption>
-            </figure>
-            <figure class="product-shot">
-              <a class="image-zoom-trigger" href="./assets/preview-v040-keyframes-light.png" aria-label="0.5.0のキーフレーム編集を拡大する"><img src="./assets/preview-v040-keyframes-light.png" data-theme-light="./assets/preview-v040-keyframes-light.png" data-theme-dark="./assets/preview-v040-keyframes-dark.png" width="1600" height="1000" loading="lazy" decoding="async" alt="0.5.0：タイムラインで位置や回転のキーフレームを編集する画面"></a>
-              <figcaption><span>位置や回転をキーフレームで動かす</span><span>0.5.0</span></figcaption>
-            </figure>
-            <figure class="product-shot">
-              <a class="image-zoom-trigger" href="./assets/preview-v040-properties-position-light.png" aria-label="0.5.0のプロパティを拡大する"><img src="./assets/preview-v040-properties-position-light.png" data-theme-light="./assets/preview-v040-properties-position-light.png" data-theme-dark="./assets/preview-v040-properties-position-dark.png" width="1600" height="1000" loading="lazy" decoding="async" alt="0.5.0：配置・動き・見た目のタブで整理されたプロパティ画面"></a>
-              <figcaption><span>設定は「配置・動き・見た目」の3タブへ</span><span>0.5.0</span></figcaption>
-            </figure>
-          </div>
-          <details class="sample-terms" id="vrm-sample">
-            <summary>VRMサンプル「Vita」について（0.5.0以降向け）</summary>
-            <div>
-              <p>無料のVRM 1.0モデルと使いかた・出典をまとめたサンプルです。0.3系では読み込めません。</p>
-              <p><a class="secondary-button" href="https://github.com/studio-juh/lip-sync-one-releases/releases/download/sample-vrm-vita-v1/LipSyncOne_VRM_Sample_Vita_v1.zip">Vitaをダウンロード（ZIP · 12.2 MB）</a></p>
-              <p>作者：pixiv inc. / coati。<a href="https://hub.vroid.com/characters/4593660874193246717/models/7942721847119018516" rel="noreferrer">モデルの配布元・利用条件（CC0）</a>と同梱の案内をご確認ください。</p>
-            </div>
-          </details>
-        </div>
-      </section>
-      <section class="product-section" id="questions" aria-labelledby="questions-title">
+<section class="product-section" id="questions" aria-labelledby="questions-title">
         <div class="page-width questions-layout">
           <header class="product-section-heading">
             <p class="product-eyebrow">困ったとき・始める前に</p>
@@ -402,7 +338,7 @@
             <p>操作手順は、画面付きのヘルプでも確認できます。</p>
             <a href="./help/">ヘルプを開く →</a>
           </header>
-          <div class="product-faq">
+          <div class="product-faq"><details><summary>どんなPSDに対応していますか？</summary><p>RGB・8bitの対応ラスターレイヤーを読み込めます。本体・口・目は複数レイヤーを合成できます。PSB、文字・調整レイヤー、特殊な合成や効果の完全再現には対応していません。<a href="./help/#psd-supported">PSDの対応範囲</a></p></details><details><summary>取り込んだ後もPSD原本は必要ですか？</summary><p>はい。作品はPSD原本を参照します。別のPCへ渡すときは「アセットを収集」を使ってください。外部編集後は同じレイヤーの画素を更新しますが、レイヤー構成や位置の変更には注意が必要です。<a href="./help/#psd-refresh">原本の保管と再読込</a></p></details>
             <details>
               <summary>絵が描けなくても試せますか？</summary>
               <p>はい。無料サンプルに画像と音声、使いかたが入っています。最初はサンプル3の男の子を使うと、全身画像2枚を選ぶだけで口パクを試せます。<a href="#samples">サンプルを選ぶ</a></p>
@@ -438,7 +374,7 @@
           </div>
         </div>
       </section>
-      <section class="product-download" id="download" aria-labelledby="download-title">
+<section class="product-download" id="download" aria-labelledby="download-title">
         <div class="page-width">
           <div class="download-top">
             <div>
@@ -469,7 +405,7 @@
           </div>
         </div>
       </section>
-    </main>
+</main>
     <footer class="site-footer">
       <div class="page-width footer-inner">
         <div>
