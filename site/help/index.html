@@ -62,7 +62,7 @@
 <script src="script.js" defer></script>
 </head>
 <body>
-    <p class="offline-notice" hidden>このヘルプはアプリに同梱されています。操作説明と画像はオフラインで閲覧できます。お問い合わせ・公式サイトへのリンクにはインターネット接続が必要です。</p>
+    <p class="offline-notice" hidden>ヘルプ原稿のローカルプレビューです。アプリの操作ガイドは公式オンラインヘルプで提供します。お問い合わせ・公式サイトへのリンクにはインターネット接続が必要です。</p>
     <a class="skip-link" href="#main">本文へ移動</a>
 
     <header class="site-header">
@@ -86,7 +86,7 @@
           <p class="breadcrumb">LipSyncOne / ヘルプ</p>
           <h1>LipSyncOne ヘルプ</h1>
           <p>PSD・画像・VRMと音声から、口パク・目パチの付いた透明動画を作る手順を案内します。</p>
-          <p class="version-note">Windows 11 x64 ／ 0.5.0の使い方 ／ 2026年10月28日更新</p>
+          <p class="version-note">Windows 11 x64 ／ 0.5.1の使い方 ／ 2026年10月28日更新</p>
           <nav class="start-paths" aria-label="素材から始める">
 <a class="start-card" href="#psd-start"><span class="start-card-label">0.5.0で対応</span><strong>PSDから作る</strong><span>フォルダ・レイヤーで本体と差分を選ぶ</span></a>
 <a class="start-card" href="#sample-three"><span class="start-card-label">素材がない方にも</span><strong>全身画像2枚で作る</strong><span>無料サンプルで最初の1本を試す</span></a>
@@ -134,6 +134,7 @@
 <p>立ち絵と音声から、口パク・目パチの付いた透明動画を作ります。0.5.0ではPSDのフォルダとレイヤーから本体・口・目を組み立てられます。手元の素材に合う手順を選んでください。</p>
 <ol class="procedure compact-procedure"><li><strong>キャラクターを作る</strong><span><a href="#psd-start">PSDから本体・口・目を選ぶ</a>、<a href="#sample-three">全身画像2枚を使う</a>、<a href="#parts-start">パーツ画像を組み合わせる</a>、<a href="#vrm">VRMモデルを使う</a>から選べます。素材がない場合は<a href="#quick-start">無料サンプル</a>で試せます。</span></li><li><strong>音声を置く</strong><span>WAVを読み込み、キャラクターの音声行へ置きます。口パクの解析が終わったら再生し、<a href="#lip-sync">口の動き</a>と<a href="#eye-blink">目パチ</a>を確認します。</span></li><li><strong>透明動画を書き出す</strong><span>「ファイル → 動画を書き出す」から保存します。<a href="#export">仕上げる編集ソフトに合う形式</a>を選び、背景が透明な動画素材として使います。</span></li></ol>
 <h3>はじめる前に</h3><p><a href="#install">インストール</a>を済ませ、HOMEの「新規プロジェクト」を選びます。PSD・画像だけなら制作モードは「2Dのみ」、VRMも使う場合は「2D＋3D」です。後から「編集 → 制作モード」で切り替えられます。</p>
+<p>新規プロジェクトの設定でアスペクト比・解像度を選び、透明キャンバスのプレビューで横長・縦長などの形を確認します。幅と高さの自由入力もできます。選んだ寸法は、最初の画像やPSDを追加した後も保持されます。新規作成直後は空のレイヤー一覧から始まります。</p>
 <p>操作する場所が分からないときは<a href="#workspace">画面の見方</a>へ。0.4.18を利用中の方は<a href="#updates">アップデートの手順</a>をご覧ください。</p>
 </section>
 <section class="guide-section searchable" id="psd-start" data-search="PSD レイヤー グループ フォルダ 本体 差分 口 目 チェック 割当 合成 Photoshop 再読込 0.5.0">
@@ -191,6 +192,7 @@
             <header class="section-heading"><p class="section-number">02</p><h2>素材を読み込む</h2></header>
 
 <p>アセットの「読み込み」から、画像や音声を追加します。画像はPNG・JPEG、音声はWAV・MP3に対応します。透明な背景には、透明度を持つPNGを使ってください。</p>
+<h3>PSD原本を一覧へ登録する</h3><p>「PSD」タブを選び、アセット見出し右の「読み込み」からPSDを追加します。ファイルのドロップでも登録できます。原本の名前を押すと、PSDからキャラクターを作る画面が開きます。</p><p>一覧のチェックで原本を選ぶと、タブ横に選択件数と「削除」が表示されます。画像素材から参照している原本は削除できません。未使用の原本はまとめて一覧から外せ、1回の「元に戻す」で復元できます。元のPSDファイルは削除しません。</p>
 <figure class="guide-shot"><a class="image-zoom-trigger" href="assets/assets-light.png" aria-label="画像・音声・VRM・動きのタブがあるアセットパネルを拡大表示"><img src="assets/assets-light.png" data-theme-light="assets/assets-light.png" data-theme-dark="assets/assets-dark.png" alt="画像・音声・VRM・動きのタブがあるアセットパネル" loading="lazy" width="1600" height="1000"></a><figcaption>読み込むとアセットに登録されます。画像はレイヤーへ、音声はキャラクターの音声行へドラッグして使います。音声の再生ボタンでは配置前に音を確認できます。</figcaption></figure>
 <p>素材が多いときは「検索・フィルタ」を開き、名前や使用状況で絞り込みます。閉じると素材を広く表示できます。</p>
 <details class="inline-details"><summary>パーツ画像をファイル名でまとめて設定する</summary>
@@ -295,6 +297,7 @@ void main() {
 
           <section class="guide-section searchable" id="lip-sync" data-search="リップシンク 口パク Rhubarb 自動解析 音声 音量 影響度 25 無音 しきい値 キュー 再解析 言語 英語 日本語 PocketSphinx">
             <header class="section-heading"><p class="section-number">05</p><h2>音声に合わせて口パクを付ける</h2></header>
+<p>再生・一時停止・停止・シークはプレビュー下部で操作します。音声タイムラインの空き区間を右クリックして「無音を追加…」を選ぶと、ほかの音声をずらさずに無音を配置できます。</p>
 
 <p>口形を設定したキャラクターの音声行へ音声を置くと、自動解析が始まります。終わったらタイムラインを再生し、声と口の動きを確認してください。</p>
 <h3>解析する言語を選ぶ</h3><p>タイムラインの音声を選び、プロパティの「解析する言語」で「日本語・その他」または「英語」を選びます。初期値は「日本語・その他」です。選択は保存され、再解析でも引き継がれます。</p><p>変更した言語は次の解析から使います。配置済みの口パクを更新するときは、「リップシンク」から解析し直してください。</p>
