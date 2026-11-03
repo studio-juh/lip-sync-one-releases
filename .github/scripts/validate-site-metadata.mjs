@@ -20,6 +20,8 @@ const pages = [
   },
 ];
 
+pages.push({ path: "en/index.html", canonical: "https://lipsyncone.studiojuh.com/en/", expectedType: "SoftwareApplication", lang: "en" }, { path: "en/help/index.html", canonical: "https://lipsyncone.studiojuh.com/en/help/", expectedType: "WebSite", lang: "en" });
+
 const sitemap = await read("sitemap.xml");
 const robots = await read("robots.txt");
 const llms = await read("llms.txt");
@@ -48,7 +50,8 @@ for (const name of verificationFiles) {
 
 for (const page of pages) {
   const html = await read(page.path);
-  assert.match(html, /<html lang="ja"/);
+  assert.ok(html.includes('<html lang="' + (page.lang ?? "ja") + '"'), page.path + " language");
+  for (const locale of ["ja", "en", "x-default"]) assert.ok(html.includes('hreflang="' + locale + '"'), page.path + " alternate " + locale);
   assert.match(html, /<meta name="robots" content="index, follow, max-image-preview:large">/);
   assert.match(html, new RegExp(`<link rel="canonical" href="${escapeRegExp(page.canonical)}">`));
   assert.match(html, new RegExp(`<meta property="og:url" content="${escapeRegExp(page.canonical)}">`));
@@ -111,3 +114,11 @@ async function read(path) {
 function escapeRegExp(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
+
+// Localized help keeps existing deep links, not just the navigation headings.
+const japaneseHelp = await read("help/index.html"), englishHelp = await read("en/help/index.html");
+const englishIds = new Set([...englishHelp.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]));
+for (const [, id] of japaneseHelp.matchAll(/\bid="([^"]+)"/g)) assert.ok(englishIds.has(id), "English help missing anchor: " + id);
+assert.equal((englishHelp.match(/class="guide-section searchable"/g) ?? []).length, (japaneseHelp.match(/class="guide-section searchable"/g) ?? []).length, "Both guides cover every topic");
+assert.match(englishHelp, /Generate speech with VOICEVOX/);
+assert.match(englishHelp, /data-language-switch/);

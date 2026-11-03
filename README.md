@@ -1,68 +1,39 @@
 # LipSyncOne Releases
 
-LipSyncOne（リップシンク One）のWindows配布ファイルと公式サイトを公開するリポジトリです。アプリケーションのソースコードは含みません。
+LipSyncOneのWindows配布ファイルと公式サイトを公開するrepositoryです。アプリsourceは含みません。
 
-## 公開中のアプリ
+GitHub / 公式サイトの現行公開版は **0.5.5**。BOOTHの商品版0.3.9・ローカルZIP生成とは区別します。通常ReleaseはNSIS EXE、Updater署名、latest.json、SHA256SUMS.txtの4assetです。Store / MSIXは停止中です。
 
-Windows 11 x64向け **v0.3.9** を公開しています。
+- 日本語製品ページ: https://lipsyncone.studiojuh.com/
+- English: https://lipsyncone.studiojuh.com/en/
+- 日本語ヘルプ: https://lipsyncone.studiojuh.com/help/
+- English guide: https://lipsyncone.studiojuh.com/en/help/
+- Download: https://github.com/studio-juh/lip-sync-one-releases/releases/latest
 
-- [最新版をダウンロード](https://github.com/studio-juh/lip-sync-one-releases/releases/latest)
-- [公式サイト](https://lipsyncone.studiojuh.com/)
-- [画面付きヘルプ](https://lipsyncone.studiojuh.com/help/)
-- [BOOTH](https://hanairo-m.booth.pm/items/8707179)
-- [お問い合わせ](https://marshmallow-qa.com/jyfux4yi4cp85hw)
+## サイトの保守
 
-通常のリリースはNSISセットアップEXE、Updater署名、latest.json、SHA256SUMS.txtの4点です。ポータブル版や旧版互換用feedは提供しません。アプリ内の更新確認は「ヘルプ → アップデートを確認」から手動で行います。起動時の自動確認はありません。配布バイナリはGitHub Releasesへ置き、Gitには登録しません。
+site/をCloudflare Workers Static Assetsへ公開します。公開ページは日英それぞれのcanonical / OGP / JSON-LDと相互hreflangを持ちます。切替はhashを保持し、日本語URLを維持します。説明だけの更新ではアプリのRelease assetを差し替えません。
 
-## 公式サイトの構成
+英語の製品紹介原稿はsite/en/index.html。ヘルプ本文・共有CSS / JavaScript・画像はアプリrepositoryのdocs/offline-help/、英語原稿はそのen/index.htmlです。scripts/release/site.mjsとsite-localization.mjsで両言語を同期します。英語版の共有ファイルはsite/help/を参照します。画像は日本語UIの参照例と明記し、英語撮影済みとは扱いません。
 
-製品紹介とヘルプを site/ からCloudflare Workers Static Assetsへ公開します。GitHub Pagesは使いません。
+通常のアプリ公開では、製品紹介の日本語告知2段落、英語のdata-release-announcementと版表示を既存workflowで更新します。英語の告知はReleaseの変更説明へのリンクで、古い翻訳内容を新しい版へ流用しません。
 
-- 製品紹介：最少2枚からの始めかた、3種類のサンプル比較、画像付き4手順、口形と解析の調整、透明動画の形式、よくある質問。
-- ヘルプ：目的別の詳しい操作手順。アプリ同梱ヘルプと本文・画像を同期し、サイト固有のcanonical / OGP / JSON-LDは維持します。
-- 開発中の機能：0.4.0のVRM・VRMA・キーフレーム・プロパティは「0.4.0 開発版の画面」と明記した別枠だけで紹介します。公開0.3.9の機能と混同させません。
+## サンプル
 
-0.4.0を公開するときは、製品紹介の開発版枠を正式機能の紹介へ更新してください。バージョン番号の一括置換だけでは、未公開の注記が残ります。
+site/downloads/のサンプル1 / 2 / 3 ZIPはアプリrepositoryで生成し、原本の利用案内・音声クレジットを維持します。Git管理対象外のZIPを配置してからdeployします。
 
-### スクリーンショット
+| Sample | 内容 | 音声 |
+| --- | --- | --- |
+| 1 | 茶髪の女の子・パーツPNG7枚 / WAV2本 | VOICEVOX:櫻歌ミコ |
+| 2 | 銀髪の女の子・パーツPNG7枚 / WAV2本 | VOICEVOX:春日部つむぎ |
+| 3 | 男の子・全身PNG2枚 / WAV1本 / GIF | VOICEVOX:猫使アル |
 
-製品紹介の共通2D操作の画像は site/assets/ の editor、home、mouth-setup、lip-sync-analysis、timeline、exportと、site/help/assets/two-image-characterです。現在の画面例は0.4.0開発版で撮影し、冒頭と各画像のキャプションにその旨を明記します。公開0.3.9で使える制作手順を主に案内し、表示の違いと区別します。VRM等の0.4.0専用画像には preview-v040- を付け、開発版の別枠で紹介します。
+画像はAI生成・位置調整した素材で、音声キャラクターの公式立ち絵ではありません。サンプル3には目パチ画像はありません。利用 / 再配布と必要creditは各ZIPのREADME・話者規約を確認してください。ZIP内説明と音声は日本語です。Vita VRMは既存のsample-vrm-vita-v1 Releaseから案内し、モデルのCC0と作者creditを保持します。
 
-同じ画面の -light.png と -dark.png を対で用意し、data-theme-light / data-theme-dark属性でサイトテーマに追従させます。画像は切り抜かず全体を表示し、クリックまたはキーボードで拡大できます。Escで閉じると元の画像へフォーカスが戻ります。
+## 検証と公開
 
-サンプルのプレビューは sample-girl.png、sample-silver.png、sample-boy.png。実際の配布素材を使用します。ヘルプ本文・CSS・スクリプト・画像は site/help/ 配下で独立して管理し、製品紹介の表示へ影響させません。
+pnpm checkで日英4ページのmetadata・sitemap・内部anchorとヘルプ項目、Search Console確認file、サンプルZIPを確認します。pnpm site:deployは同じ検査後に既存Cloudflare Workerへdeployします。既存の認証・custom domainを使用します。
 
-### 無料サンプル
+代表UIはアプリrepositoryのscripts/release/site-ui.mjsで日英切替・英語検索・filename copy・画像拡大 / Escape・固定geometryと画像decodeを確認。PC / 狭幅・両themeでoverflowを確認します。公開後はsite.mjsのverifyPublicSiteで日英HTML・CSS / JS・サンプル3種とchecksumを実HTTP照合します。
 
-以下のZIPを site/downloads/ に配置してから検証・デプロイします。ZIPと素材の原本はGit管理対象外です。サイト掲載用のプレビュー画像・スクリーンショットはsite/assetsで管理します。
-
-| ファイル | 内容 |
-| --- | --- |
-| LipSyncOne_SampleAssets_v1.zip | 茶髪の女の子、パーツPNG 7枚、櫻歌ミコの音声WAV 2本、利用案内 |
-| LipSyncOne_SampleAssets2_v1.zip | 銀髪の女の子、パーツPNG 7枚、春日部つむぎの音声WAV 2本、利用案内 |
-| LipSyncOne_SampleAssets3_v1.zip | 男の子の全身PNG 2枚、猫使アルの音声WAV 1本、確認用GIF、利用案内 |
-
-アプリrepositoryの pnpm package:samples 等で publish/samples/ に生成します。サンプル3の2枚は口以外の画素が一致するよう調整済みで、目パチの差分は含みません。画像はAIで生成・位置調整したもので、音声キャラクターの公式立ち絵ではありません。声名・クレジット・利用規約のリンクは公開ページと同梱READMEで揃えてください。
-
-VRMサンプルVitaのZIPは既存のGitHub Release sample-vrm-vita-v1 から案内します。アプリでの利用は0.4.0以降向けです。
-
-## ローカル確認と公開
-
-```powershell
-pnpm install
-pnpm dev
-pnpm check
-pnpm site:deploy
-```
-
-pnpm checkはmetadata、JSON-LD、ページ内アンカー、Search Console確認ファイル、サンプルZIPの存在を検証します。デプロイ前にはPCと狭幅、ライト・ダーク両テーマで、画像の読込・拡大・FAQの開閉・ダウンロード導線を確認してください。公開後は配信されたHTMLと各ZIPも確認します。
-
-アプリrepositoryのリリーススクリプトは製品紹介の「vX.Y.Zを公開しました。」と、その直後の更新案内の段落を置換します。この2段落の構造を変更する場合は、同時に scripts/release/site.mjs のannouncement契約を更新します。
-
-## 検索向けの公開情報
-
-canonical、OG / Twitter Card、JSON-LD、robots.txt、sitemap.xml、llms.txtを本文と揃えます。公開版はSoftwareApplicationのsoftwareVersionに記載し、未公開機能をそのfeatureListへ混ぜません。サイトマップのlastmodは実際の内容更新日です。
-
-本文では「リップシンク One / LipSyncOne」を使い、口パク・目パチ（まばたき・瞬き）、Windows、立ち絵アニメーション、VOICEVOX、ゆっくり実況、背景透過動画を自然な用途説明に含めます。英字の別表記はalternateNameへまとめます。検索順位や即時反映は保証しません。
-
-site/google*.html はGoogle Search Consoleの所有権確認に使います。登録後も削除せず、再確認できる状態を保ちます。
+site/google*.html、robots.txtのbot policy、共通theme、公開用headは保護します。アプリ内の更新確認はHelp → Check for Updatesからの手動操作で、起動時には自動確認しません。制作 / 音声解析はローカルで行います。

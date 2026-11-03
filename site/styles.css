@@ -746,3 +746,8 @@ body.image-lightbox-open { overflow: hidden; }
   .material-path { padding: 22px; }
   .workflow-links { align-items: flex-start; flex-direction: column; }
 }
+
+/* Language and theme controls reserve their dimensions in either state. */
+.header-actions > a.language-link { display: inline-flex !important; flex: 0 0 54px; justify-content: center; white-space: nowrap; }
+.theme-toggle { inline-size: 84px; white-space: nowrap; }
+@media (max-width: 600px) { .header-inner { flex-wrap: wrap; padding-block: 10px; } .header-actions { margin-left: auto; } }

@@ -73,3 +73,8 @@
 
 - ダークテーマは少し明るい中立グレー、ライトテーマも文字と枠を調整しています。
 - スクリーンショットはサイトのライト・ダークテーマに追従し、クリックして拡大できます。
+
+## English
+- Product: https://lipsyncone.studiojuh.com/en/
+- User guide: https://lipsyncone.studiojuh.com/en/help/
+- A free Windows 11 x64 app for lip-synced transparent video from PSD, images and VRM. Audio analysis runs locally.

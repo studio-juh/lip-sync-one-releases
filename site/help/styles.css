@@ -135,6 +135,10 @@ code {
   cursor: pointer;
 }
 .theme-toggle:hover { background: var(--surface-strong); }
+.theme-toggle { inline-size: 84px; white-space: nowrap; }
+.header-actions > a.language-link { display: inline-flex; flex: 0 0 54px; justify-content: center; white-space: nowrap; }
+.search-status { block-size: 3.5em; overflow: auto; }
+.side-nav nav { display: grid; }
 .download-button, .secondary-button {
   display: inline-flex;
   min-height: 34px;
@@ -431,7 +435,7 @@ body.image-lightbox-open { overflow: hidden; }
 .filename-copy-row code { min-width: 0; overflow-wrap: anywhere; user-select: all; }
 .filename-copy-button {
   flex: 0 0 auto;
-  min-width: 80px;
+  inline-size: 88px;
   padding: 3px 8px;
   border: 1px solid var(--border-dark);
   border-radius: 3px;
@@ -584,4 +588,11 @@ body.image-lightbox-open { overflow: hidden; }
 
 @media (forced-colors: active) {
   :is(html, .side-nav, .help-table, .filename-example) { scrollbar-color: auto; }
+}
+.header-actions > a.language-link { display: inline-flex !important; }
+#help-search-clear[hidden] { display: inline-block !important; visibility: hidden; pointer-events: none; }
+#help-search-clear { inline-size: 112px; }
+@media (max-width: 600px) {
+  .header-inner { flex-wrap: wrap; padding-block: 10px; gap: 8px; }
+  .header-actions { margin-left: auto; }
 }

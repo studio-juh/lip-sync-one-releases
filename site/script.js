@@ -1,4 +1,9 @@
 const root = document.documentElement;
+const english = root.lang === "en";
+const ui = (ja, en) => english ? en : ja;
+for (const link of document.querySelectorAll("[data-language-switch]")) {
+  link.addEventListener("click", () => { const url = new URL(link.href); url.hash = location.hash; link.href = url.href; });
+}
 const themeButton = document.querySelector(".theme-toggle");
 const search = document.querySelector("#help-search");
 const sections = [...document.querySelectorAll(".searchable")];
@@ -19,7 +24,7 @@ async function copyFilename(filename) {
   buffer.className = "clipboard-buffer";
   buffer.value = filename;
   buffer.readOnly = true;
-  buffer.setAttribute("aria-label", "コピーするファイル名");
+  buffer.setAttribute("aria-label", ui("コピーするファイル名", "Filename to copy"));
   document.body.append(buffer);
   try {
     buffer.focus({ preventScroll: true });
@@ -38,27 +43,27 @@ for (const code of document.querySelectorAll(".filename-table code")) {
   const button = document.createElement("button");
   button.type = "button";
   button.className = "filename-copy-button";
-  button.textContent = "コピー";
-  button.setAttribute("aria-label", `${filename} をコピー`);
+  button.textContent = ui("コピー", "Copy");
+  button.setAttribute("aria-label", english ? `Copy ${filename}` : `${filename} をコピー`);
   code.replaceWith(row);
   row.append(code, button);
   let resetLabel;
   button.addEventListener("click", async () => {
     try {
       await copyFilename(filename);
-      button.textContent = "コピー済み";
+      button.textContent = ui("コピー済み", "Copied");
       window.clearTimeout(resetLabel);
-      resetLabel = window.setTimeout(() => { button.textContent = "コピー"; }, 2000);
-      if (filenameCopyStatus) filenameCopyStatus.textContent = `${filename} をコピーしました。`;
+      resetLabel = window.setTimeout(() => { button.textContent = ui("コピー", "Copy"); }, 2000);
+      if (filenameCopyStatus) filenameCopyStatus.textContent = english ? `Copied ${filename}.` : `${filename} をコピーしました。`;
     } catch {
       window.clearTimeout(resetLabel);
-      button.textContent = "コピー";
+      button.textContent = ui("コピー", "Copy");
       const selection = window.getSelection();
       const range = document.createRange();
       range.selectNodeContents(code);
       selection?.removeAllRanges();
       selection?.addRange(range);
-      if (filenameCopyStatus) filenameCopyStatus.textContent = "ファイル名を選択しました。Ctrl+Cでコピーしてください。";
+      if (filenameCopyStatus) filenameCopyStatus.textContent = ui("ファイル名を選択しました。Ctrl+Cでコピーしてください。", "Filename selected. Press Ctrl+C to copy.");
     }
   });
 }
@@ -82,10 +87,10 @@ function updateThemeButton() {
   }
   if (!themeButton) return;
   const dark = root.dataset.theme === "dark";
-  themeButton.textContent = dark ? "ライト表示" : "ダーク表示";
+  themeButton.textContent = dark ? ui("ライト表示", "Light") : ui("ダーク表示", "Dark");
   themeButton.setAttribute(
     "aria-label",
-    dark ? "ライトテーマに切り替える" : "ダークテーマに切り替える",
+    dark ? ui("ライトテーマに切り替える", "Switch to light theme") : ui("ダークテーマに切り替える", "Switch to dark theme"),
   );
 }
 

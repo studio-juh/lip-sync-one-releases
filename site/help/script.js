@@ -1,4 +1,21 @@
 const root = document.documentElement;
+const english = root.lang === "en";
+const labels = english ? {
+  copy: "Copy", copied: "Copied", filename: "Filename to copy",
+  copyFailed: "Filename selected. Press Ctrl+C to copy.",
+  light: "Light", dark: "Dark", switchLight: "Switch to light theme", switchDark: "Switch to dark theme",
+} : {
+  copy: "コピー", copied: "コピー済み", filename: "コピーするファイル名",
+  copyFailed: "ファイル名を選択しました。Ctrl+Cでコピーしてください。",
+  light: "ライト表示", dark: "ダーク表示", switchLight: "ライトテーマに切り替える", switchDark: "ダークテーマに切り替える",
+};
+for (const link of document.querySelectorAll("[data-language-switch]")) {
+  link.addEventListener("click", () => {
+    const destination = new URL(link.href);
+    destination.hash = location.hash;
+    link.href = destination.href;
+  });
+}
 const themeButton = document.querySelector(".theme-toggle");
 const search = document.querySelector("#help-search");
 const sections = [...document.querySelectorAll(".searchable")];
@@ -43,7 +60,7 @@ async function copyFilename(filename) {
   buffer.className = "clipboard-buffer";
   buffer.value = filename;
   buffer.readOnly = true;
-  buffer.setAttribute("aria-label", "コピーするファイル名");
+  buffer.setAttribute("aria-label", labels.filename);
   document.body.append(buffer);
   try {
     buffer.focus({ preventScroll: true });
@@ -62,27 +79,27 @@ for (const code of document.querySelectorAll(".filename-table code")) {
   const button = document.createElement("button");
   button.type = "button";
   button.className = "filename-copy-button";
-  button.textContent = "コピー";
-  button.setAttribute("aria-label", `${filename} をコピー`);
+  button.textContent = labels.copy;
+  button.setAttribute("aria-label", english ? `Copy ${filename}` : `${filename} をコピー`);
   code.replaceWith(row);
   row.append(code, button);
   let resetLabel;
   button.addEventListener("click", async () => {
     try {
       await copyFilename(filename);
-      button.textContent = "コピー済み";
+      button.textContent = labels.copied;
       window.clearTimeout(resetLabel);
-      resetLabel = window.setTimeout(() => { button.textContent = "コピー"; }, 2000);
-      if (filenameCopyStatus) filenameCopyStatus.textContent = `${filename} をコピーしました。`;
+      resetLabel = window.setTimeout(() => { button.textContent = labels.copy; }, 2000);
+      if (filenameCopyStatus) filenameCopyStatus.textContent = english ? `Copied ${filename}.` : `${filename} をコピーしました。`;
     } catch {
       window.clearTimeout(resetLabel);
-      button.textContent = "コピー";
+      button.textContent = labels.copy;
       const selection = window.getSelection();
       const range = document.createRange();
       range.selectNodeContents(code);
       selection?.removeAllRanges();
       selection?.addRange(range);
-      if (filenameCopyStatus) filenameCopyStatus.textContent = "ファイル名を選択しました。Ctrl+Cでコピーしてください。";
+      if (filenameCopyStatus) filenameCopyStatus.textContent = labels.copyFailed;
     }
   });
 }
@@ -103,10 +120,10 @@ function updateThemeButton() {
   }
   if (!themeButton) return;
   const dark = root.dataset.theme === "dark";
-  themeButton.textContent = dark ? "ライト表示" : "ダーク表示";
+  themeButton.textContent = dark ? labels.light : labels.dark;
   themeButton.setAttribute(
     "aria-label",
-    dark ? "ライトテーマに切り替える" : "ダークテーマに切り替える",
+    dark ? labels.switchLight : labels.switchDark,
   );
 }
 
@@ -120,7 +137,7 @@ themeButton?.addEventListener("click", () => {
 });
 
 function normalize(value) {
-  return value.normalize("NFKC").trim().toLocaleLowerCase("ja");
+  return value.normalize("NFKC").trim().toLocaleLowerCase(english ? "en" : "ja");
 }
 
 function filterHelp() {
@@ -146,9 +163,11 @@ function filterHelp() {
   showSection(terms.length ? (matches.includes(selectedSection) ? selectedSection : matches[0]) : bookmarked);
   if (noResults) noResults.hidden = matches.length > 0;
   if (searchClear) searchClear.hidden = terms.length === 0;
-  if (searchStatus) searchStatus.textContent = terms.length
-    ? `「${search.value.trim()}」の検索結果：${matches.length}件。目次から項目を選んでください。`
-    : `${sections.length}項目の使い方を掲載しています。目次から選んだ項目を表示します。`;
+  if (searchStatus) searchStatus.textContent = english
+    ? (terms.length ? `${matches.length} topics match “${search.value.trim()}”. Choose a topic from the contents.`
+      : `${sections.length} help topics. Choose a topic from the contents.`)
+    : (terms.length ? `「${search.value.trim()}」の検索結果：${matches.length}件。目次から項目を選んでください。`
+      : `${sections.length}項目の使い方を掲載しています。目次から選んだ項目を表示します。`);
 }
 
 search?.addEventListener("input", filterHelp);
