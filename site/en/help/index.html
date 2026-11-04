@@ -38,7 +38,7 @@
     <section class="page-intro" id="top">
       <p class="breadcrumb">LipSyncOne / Help</p><h1>LipSyncOne Help</h1>
       <p>Make transparent, lip-synced character videos from PSD files, images or VRM models and audio.</p>
-      <p class="version-note">Windows 11 x64 / Guide for 0.5.5 / Updated November 3, 2026</p>
+      <p class="version-note">Windows 11 x64 / Guide for 0.5.6 / Updated November 4, 2026</p>
       <p class="workflow-note">The reference screenshots show the Japanese interface. Instructions use English menu names. Select English in the app's Language menu.</p>
       <nav class="start-paths" aria-label="Choose your starting material">
         <a class="start-card" href="#psd-start"><span class="start-card-label">Layered artwork</span><strong>Start from PSD</strong><span>Choose body, mouth and eye layers</span></a>
@@ -208,6 +208,7 @@ void main() {
         </section>
         <section class="guide-section searchable" id="troubleshooting" data-search="troubleshooting errors no sound waveform missing images mouth eyes export failed Master audio preparation failed">
           <header class="section-heading"><p class="section-number">HELP</p><h2>Troubleshooting</h2></header>
+          <details class="inline-details"><summary>An error occurs or audio analysis stops partway</summary><p>Repeat the failed operation, then open Help → Diagnostics…. Select the matching time to see its error code, log ID and processing stage. Choose Save Diagnostic Report to create a new JSON file, or Open Log Folder to retrieve individual logs. The latest 30 errors are retained; analysis reports also include the engine exit code and failure reason. A progress value such as 13% alone cannot identify the cause. Review the report and include it with your reproduction steps when contacting support. Media, projects and entered text are not collected, and paths are redacted. Nothing is sent automatically. If local log storage fails, save the report before closing the app.</p></details>
           <details class="inline-details"><summary>Imported media does not appear on the timeline</summary><p>Import registers an asset. Drag images onto a layer and audio onto the character's audio row.</p></details>
           <details class="inline-details"><summary>No sound or waveform</summary><p>Confirm that audio is placed on the timeline. Try File → Reload Assets. Restore moved/renamed files or replace the asset reference. Read any message beside the playback controls and retry.</p></details>
           <details class="inline-details"><summary>Lip-sync analysis does not start</summary><p>Check that the character has mouth shapes and audio on its own row. Move audio from Shared / Unassigned to the intended character. Reinstall if the bundled engine is missing.</p></details>
