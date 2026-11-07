@@ -90,7 +90,7 @@
           <p class="breadcrumb">LipSyncOne / ヘルプ</p>
           <h1>LipSyncOne ヘルプ</h1>
           <p>PSD・画像・VRMと音声から、口パク・目パチの付いた透明動画を作る手順を案内します。</p>
-          <p class="version-note">Windows 11 x64 ／ 0.5.9の使い方 ／ 2026年11月8日更新</p>
+          <p class="version-note">Windows 11 x64 ／ 0.6.0の使い方 ／ 2026年11月8日更新</p>
           <nav class="start-paths" aria-label="素材から始める">
 <a class="start-card" href="#psd-start"><span class="start-card-label">0.5.0で対応</span><strong>PSDから作る</strong><span>フォルダ・レイヤーで本体と差分を選ぶ</span></a>
 <a class="start-card" href="#sample-three"><span class="start-card-label">素材がない方にも</span><strong>全身画像2枚で作る</strong><span>無料サンプルで最初の1本を試す</span></a>
@@ -317,8 +317,8 @@ void main() {
 <p>再生・一時停止・停止・シークはプレビュー下部で操作します。音声タイムラインの空き区間を右クリックして「無音を追加…」を選ぶと、ほかの音声をずらさずに無音を配置できます。</p>
 
 <p>口形を設定したキャラクターの音声行へ音声を置くと、自動解析が始まります。終わったらタイムラインを再生し、声と口の動きを確認してください。</p>
-<h3>解析する言語を選ぶ</h3><p>タイムラインの音声を選び、プロパティの「解析する言語」で「日本語・その他」または「英語」を選びます。初期値は「日本語・その他」です。選択は保存され、再解析でも引き継がれます。</p><p>変更した言語は次の解析から使います。配置済みの口パクを更新するときは、「リップシンク」から解析し直してください。</p>
-<h3>口が開きすぎる・静かな区間でも開くとき</h3><p>対象の口レイヤーや音声を選び、「リップシンク」の解析画面を開きます。「音量の影響度」や「無音しきい値」を少し上げて、解析し直してみてください。</p>
+<h3>解析方式を選ぶ</h3><p>音声クリップのプロパティまたは「リップシンク解析」の「解析方式」で、Rhubarb、音量（内蔵）、母音推定（内蔵）を選べます。音量方式は閉じ口・半開き・開きの3段階で動かし、母音推定は「あ・い・う・え・お」の口形を推定します。</p><p>初期設定はRhubarbです。Rhubarbを使うときは「解析する言語」で「日本語・その他」または「英語」を選べます。設定は音声クリップごとに保存されます。配置済みの口パクを更新するときは、解析し直してください。</p>
+<h3>口が開きすぎる・静かな区間でも開くとき</h3><p>「リップシンク解析」で「無音しきい値」を少し上げて、解析し直してみてください。Rhubarbでは「音量の影響度」も調整できます。</p>
 <figure class="guide-shot"><a class="image-zoom-trigger" href="assets/lip-sync-analysis-light.png" aria-label="解析言語と音量の影響度を確認するリップシンク解析画面を拡大表示"><img src="assets/lip-sync-analysis-light.png" data-theme-light="assets/lip-sync-analysis-light.png" data-theme-dark="assets/lip-sync-analysis-dark.png" alt="解析言語と音量の影響度を確認するリップシンク解析画面" loading="lazy" width="1600" height="1000"></a><figcaption>音量の影響度の初期値は25％、無音しきい値は−42 dBです。対象の音声を確認して「マスター音声を解析」を押します。</figcaption></figure>
 <p>解析中は進捗を確認でき、キャンセルできます。失敗しても配置した音声は残るので、設定を見直して再試行してください。</p><p class="note">音声はPC内で解析します。Rhubarbと必要なデータは同梱されており、解析用の追加ダウンロードや外部への音声送信はありません。</p>
           </section>
