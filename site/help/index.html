@@ -90,7 +90,7 @@
           <p class="breadcrumb">LipSyncOne / ヘルプ</p>
           <h1>LipSyncOne ヘルプ</h1>
           <p>PSD・画像・VRMと音声から、口パク・目パチの付いた透明動画を作る手順を案内します。</p>
-          <p class="version-note">Windows 11 x64 ／ 0.6.0の使い方 ／ 2026年11月8日更新</p>
+          <p class="version-note">Windows 11 x64 ／ 0.6.1の使い方 ／ 2026年11月8日更新</p>
           <nav class="start-paths" aria-label="素材から始める">
 <a class="start-card" href="#psd-start"><span class="start-card-label">0.5.0で対応</span><strong>PSDから作る</strong><span>フォルダ・レイヤーで本体と差分を選ぶ</span></a>
 <a class="start-card" href="#sample-three"><span class="start-card-label">素材がない方にも</span><strong>全身画像2枚で作る</strong><span>無料サンプルで最初の1本を試す</span></a>
@@ -330,6 +330,9 @@ void main() {
 </figure>
 <p>「母音推定（内蔵）」は「あ・い・う・え・お」の口形を推定します。「音量（内蔵）」は音の大きさに合わせて閉じ口・半開き・開きの3段階で動かします。初期設定はRhubarbです。Rhubarbでは「解析する言語」も選べます。</p>
 <h3>口が開きすぎる・静かな区間でも開くとき</h3><p>「リップシンク解析」で「無音しきい値」を少し上げて、解析し直してみてください。Rhubarbでは「音量の影響度」も調整できます。</p>
+<h3 id="vrm-mouth-volume">VRMの口の開き具合を音量に合わせる</h3>
+<p>0.6.1以降は、VRMのRhubarbと「母音推定（内蔵）」で、母音の形を保ったまま開き具合を音量に合わせられます。「リップシンク解析」で「音量の影響度」を上げるほど、同じクリップの小さい声で開きが控えめになります。再解析して「プロジェクトへ適用」を押してください。</p>
+<p>「う」だけを弱めたいときは、VRMレイヤーを選び、「動き → 口パク → 口形と表情の対応」で「F（う）」の強さを下げます。</p>
 <figure class="guide-shot"><a class="image-zoom-trigger" href="assets/lip-sync-analysis-light.png" aria-label="解析言語と音量の影響度を確認するリップシンク解析画面を拡大表示"><img src="assets/lip-sync-analysis-light.png" data-theme-light="assets/lip-sync-analysis-light.png" data-theme-dark="assets/lip-sync-analysis-dark.png" alt="解析言語と音量の影響度を確認するリップシンク解析画面" loading="lazy" width="1600" height="1000"></a><figcaption>音量の影響度の初期値は25％、無音しきい値は−42 dBです。対象の音声を確認して「マスター音声を解析」を押します。</figcaption></figure>
 <p>解析中は進捗を確認でき、キャンセルできます。失敗しても配置した音声は残るので、設定を見直して再試行してください。</p><p class="note">音声はPC内で解析します。Rhubarbと必要なデータは同梱されており、解析用の追加ダウンロードや外部への音声送信はありません。</p>
           </section>
@@ -443,6 +446,9 @@ void main() {
           <section class="guide-section searchable" id="troubleshooting" data-search="トラブル エラー 起動 解析 失敗 音声 表示されない 書き出し 再生 波形 SmartScreen Rhubarb Master audio preparation failed">
             <header class="section-heading"><p class="section-number">HELP</p><h2>困ったときは</h2></header>
             <p>Rhubarbで音声解析が途中で止まる場合は、<a href="#lip-sync-built-in">内蔵の解析方式へ切り替える手順</a>をご覧ください。</p>
+            <h3 id="diagnostic-log">診断ログを保存・消去する</h3>
+            <p>0.6.1以降は「ヘルプ → 診断ログ… → ログを全件消去…」から、確認後にアプリ内の診断ログを削除できます。先に「診断レポートを保存」で必要な記録を書き出しておくと、消去後もそのJSONを確認できます。</p>
+            <p>Rhubarbで解析に失敗した場合、保存したJSONには最後に到達した工程、実際のスレッド数、解析用WAVの形式、同梱モデルの状態が記録されます。短い問い合わせには「エラー情報をコピー」で800文字以内の要約を使えます。</p>
 
 <div class="faq-list">
 <details><summary>エラーが出る・音声解析が途中で失敗する</summary><p>問題が起きた操作を再実行し、「ヘルプ → 診断ログ…」を開いてください。該当時刻のエラーコード・ログID・工程を確認し、800文字以内の要約を「エラー情報をコピー」で問い合わせへ貼り付けられます。「診断レポートを保存」で新しいJSONへ保存できます。「保存フォルダーを開く」から個別ログも取得できます。直近30件を保存し、音声解析ではエンジンの終了コードや失敗理由も記録します。0.5.8では処理段階・経過時間・試行回数も残し、Windows終了コード0xC0000409の場合に限り1スレッドで一度だけ再試行します。成功・失敗を問わず最初のログと結び付けます。VOICEVOXはAPI名と接続・タイムアウト・HTTP応答・形式エラーを区別します。未起動・起動待ちの通常接続確認はログに残しません。タイムアウトや不正な応答、生成・試聴中の失敗は記録します。問い合わせコードはLS-と10桁の数字です。進捗13％だけでは原因を特定できず、この再試行ですべての環境が改善することを保証するものではありません。再現手順と、内容を確認したレポートを問い合わせに添えてください。素材・作品・入力文は収集せず、パス等は伏せ字にします。自動送信はありません。ログ保存に失敗した場合はアプリを閉じる前にレポートを保存してください。</p></details>

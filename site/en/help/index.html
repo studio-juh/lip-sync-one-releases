@@ -38,7 +38,7 @@
     <section class="page-intro" id="top">
       <p class="breadcrumb">LipSyncOne / Help</p><h1>LipSyncOne Help</h1>
       <p>Make transparent, lip-synced character videos from PSD files, images or VRM models and audio.</p>
-      <p class="version-note">Windows 11 x64 / Guide for 0.6.0 / Updated November 8, 2026</p>
+      <p class="version-note">Windows 11 x64 / Guide for 0.6.1 / Updated November 8, 2026</p>
       <p class="workflow-note">The reference screenshots show the Japanese interface. Instructions use English menu names. Select English in the app's Language menu.</p>
       <nav class="start-paths" aria-label="Choose your starting material">
         <a class="start-card" href="#psd-start"><span class="start-card-label">Layered artwork</span><strong>Start from PSD</strong><span>Choose body, mouth and eye layers</span></a>
@@ -159,6 +159,9 @@ void main() {
           </figure>
           <p>Vowel estimation (built-in) estimates the five Japanese vowel shapes. Volume (built-in) switches between closed, medium and open mouth shapes based on loudness. Rhubarb is the default and also lets you choose the speech language.</p>
           <h3>If the mouth opens too much or during quiet parts</h3><p>Open Lip Sync Analysis and raise the Silence Threshold slightly, then analyze again. With Rhubarb, you can also adjust Volume Influence. The defaults are −42 dB and 25%. Confirm the target audio before you start. You can cancel analysis and retry a failed analysis on the same audio. All three methods run on your PC with the components included in the app.</p>
+          <h3 id="vrm-mouth-volume">Adjust VRM mouth opening to match the volume</h3>
+          <p>Starting with 0.6.1, Rhubarb and Vowel estimation (built-in) can vary how wide a VRM mouth opens while keeping the vowel shape. Raise Volume influence in Lip Sync Analysis for a smaller opening during quieter parts of the same clip. Analyze again and choose Apply to project.</p>
+          <p>To soften just the Japanese <em>u</em> shape, select the VRM layer, open Motion → Lip sync → Mouth shape expressions, and lower the strength for F (u).</p>
         </section>
         <section class="guide-section searchable" id="eye-blink" data-search="eyes blink automatic interval randomness closed half timing silent audio">
           <header class="section-heading"><p class="section-number">06</p><h2>Add automatic blinking</h2></header>
@@ -222,6 +225,9 @@ void main() {
         <section class="guide-section searchable" id="troubleshooting" data-search="troubleshooting errors no sound waveform missing images mouth eyes export failed Master audio preparation failed">
           <header class="section-heading"><p class="section-number">HELP</p><h2>Troubleshooting</h2></header>
           <p>If Rhubarb stops partway through analysis, see <a href="#lip-sync-built-in">how to switch to a built-in analysis method</a>.</p>
+          <h3 id="diagnostic-log">Save or clear diagnostic logs</h3>
+          <p>In version 0.6.1 and later, choose Help → Diagnostics… → Clear All Logs… and confirm to delete the logs stored by the app. To keep a copy, choose Save Diagnostic Report before clearing the logs.</p>
+          <p>For a Rhubarb failure, the saved JSON shows the last stage reached, the actual worker count, the WAV format and the status of the bundled models. For a short support message, Copy Error Summary gives you a summary of up to 800 characters.</p>
           <details class="inline-details"><summary>An error occurs or audio analysis stops partway</summary><p>Repeat the failed operation, then open Help → Diagnostics…. Select the matching time to see its error code, log ID and processing stage. Copy Error Summary copies the displayed summary of 800 characters or fewer for a support request; full JSON reports remain available. Choose Save Diagnostic Report to create a new JSON file, or Open Log Folder to retrieve individual logs. The latest 30 errors are retained; analysis reports also include the engine exit code and failure reason. Version 0.5.8 also records safe processing phases, elapsed time and attempt settings. Only Windows exit code 0xC0000409 triggers one retry with a single worker, linking the outcome to the first failure. VOICEVOX reports include the API name and distinguish connection, timeout, HTTP and response-format errors. Routine connection checks while the engine is stopped or starting do not create logs. Timeouts, invalid responses and failures during generation or preview remain recorded. Support codes use LS- followed by ten digits. Progress such as 13% alone cannot identify the cause, and the retry is not a confirmed fix for every environment. Review the report and include it with your reproduction steps when contacting support. Media, projects and entered text are not collected, and paths are redacted. Nothing is sent automatically. If local log storage fails, save the report before closing the app.</p></details>
           <details class="inline-details"><summary>Imported media does not appear on the timeline</summary><p>Import registers an asset. Drag images onto a layer and audio onto the character's audio row.</p></details>
           <details class="inline-details"><summary>No sound or waveform</summary><p>Confirm that audio is placed on the timeline. Try File → Reload Assets. Restore moved/renamed files or replace the asset reference. Read any message beside the playback controls and retry.</p></details>
