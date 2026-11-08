@@ -317,7 +317,18 @@ void main() {
 <p>再生・一時停止・停止・シークはプレビュー下部で操作します。音声タイムラインの空き区間を右クリックして「無音を追加…」を選ぶと、ほかの音声をずらさずに無音を配置できます。</p>
 
 <p>口形を設定したキャラクターの音声行へ音声を置くと、自動解析が始まります。終わったらタイムラインを再生し、声と口の動きを確認してください。</p>
-<h3>解析方式を選ぶ</h3><p>音声クリップのプロパティまたは「リップシンク解析」の「解析方式」で、Rhubarb、音量（内蔵）、母音推定（内蔵）を選べます。音量方式は閉じ口・半開き・開きの3段階で動かし、母音推定は「あ・い・う・え・お」の口形を推定します。</p><p>初期設定はRhubarbです。Rhubarbを使うときは「解析する言語」で「日本語・その他」または「英語」を選べます。設定は音声クリップごとに保存されます。配置済みの口パクを更新するときは、解析し直してください。</p>
+<h3 id="lip-sync-built-in">Rhubarbで解析が途中で止まるとき</h3>
+<p>LipSyncOne 0.6.0から、音声クリップごとに解析方式を選べます。Rhubarbで同じ音声の解析が繰り返し止まる場合は、「母音推定（内蔵）」か「音量（内蔵）」で解析を試せます。どちらもRhubarbを使わず、音声の配置はそのままです。</p>
+<ol>
+  <li>タイムラインで対象の音声クリップを選びます。クリップがまとまって表示されている場合は「個別」に切り替えます。</li>
+  <li>プロパティの「リップシンク」を押して「リップシンク解析」を開きます。</li>
+  <li>「解析方式」を「母音推定（内蔵）」に変え、「マスター音声を解析」を押します。解析結果が出たら「プロジェクトへ適用」を押します。</li>
+</ol>
+<figure class="guide-shot compact">
+  <a class="image-zoom-trigger" href="assets/lip-sync-built-in-light.png" aria-label="母音推定（内蔵）を選んだリップシンク解析画面を拡大表示"><img src="assets/lip-sync-built-in-light.png" data-theme-light="assets/lip-sync-built-in-light.png" data-theme-dark="assets/lip-sync-built-in-dark.png" alt="リップシンク解析画面で解析方式に母音推定（内蔵）を選択。右下にマスター音声を解析ボタン。" loading="lazy" width="720" height="698"></a>
+  <figcaption>「母音推定（内蔵）」を選び、右下の「マスター音声を解析」を押します。</figcaption>
+</figure>
+<p>「母音推定（内蔵）」は「あ・い・う・え・お」の口形を推定します。「音量（内蔵）」は音の大きさに合わせて閉じ口・半開き・開きの3段階で動かします。初期設定はRhubarbです。Rhubarbでは「解析する言語」も選べます。</p>
 <h3>口が開きすぎる・静かな区間でも開くとき</h3><p>「リップシンク解析」で「無音しきい値」を少し上げて、解析し直してみてください。Rhubarbでは「音量の影響度」も調整できます。</p>
 <figure class="guide-shot"><a class="image-zoom-trigger" href="assets/lip-sync-analysis-light.png" aria-label="解析言語と音量の影響度を確認するリップシンク解析画面を拡大表示"><img src="assets/lip-sync-analysis-light.png" data-theme-light="assets/lip-sync-analysis-light.png" data-theme-dark="assets/lip-sync-analysis-dark.png" alt="解析言語と音量の影響度を確認するリップシンク解析画面" loading="lazy" width="1600" height="1000"></a><figcaption>音量の影響度の初期値は25％、無音しきい値は−42 dBです。対象の音声を確認して「マスター音声を解析」を押します。</figcaption></figure>
 <p>解析中は進捗を確認でき、キャンセルできます。失敗しても配置した音声は残るので、設定を見直して再試行してください。</p><p class="note">音声はPC内で解析します。Rhubarbと必要なデータは同梱されており、解析用の追加ダウンロードや外部への音声送信はありません。</p>
@@ -431,6 +442,7 @@ void main() {
 
           <section class="guide-section searchable" id="troubleshooting" data-search="トラブル エラー 起動 解析 失敗 音声 表示されない 書き出し 再生 波形 SmartScreen Rhubarb Master audio preparation failed">
             <header class="section-heading"><p class="section-number">HELP</p><h2>困ったときは</h2></header>
+            <p>Rhubarbで音声解析が途中で止まる場合は、<a href="#lip-sync-built-in">内蔵の解析方式へ切り替える手順</a>をご覧ください。</p>
 
 <div class="faq-list">
 <details><summary>エラーが出る・音声解析が途中で失敗する</summary><p>問題が起きた操作を再実行し、「ヘルプ → 診断ログ…」を開いてください。該当時刻のエラーコード・ログID・工程を確認し、800文字以内の要約を「エラー情報をコピー」で問い合わせへ貼り付けられます。「診断レポートを保存」で新しいJSONへ保存できます。「保存フォルダーを開く」から個別ログも取得できます。直近30件を保存し、音声解析ではエンジンの終了コードや失敗理由も記録します。0.5.8では処理段階・経過時間・試行回数も残し、Windows終了コード0xC0000409の場合に限り1スレッドで一度だけ再試行します。成功・失敗を問わず最初のログと結び付けます。VOICEVOXはAPI名と接続・タイムアウト・HTTP応答・形式エラーを区別します。未起動・起動待ちの通常接続確認はログに残しません。タイムアウトや不正な応答、生成・試聴中の失敗は記録します。問い合わせコードはLS-と10桁の数字です。進捗13％だけでは原因を特定できず、この再試行ですべての環境が改善することを保証するものではありません。再現手順と、内容を確認したレポートを問い合わせに添えてください。素材・作品・入力文は収集せず、パス等は伏せ字にします。自動送信はありません。ログ保存に失敗した場合はアプリを閉じる前にレポートを保存してください。</p></details>
