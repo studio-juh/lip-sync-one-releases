@@ -90,7 +90,7 @@
           <p class="breadcrumb">LipSyncOne / ヘルプ</p>
           <h1>LipSyncOne ヘルプ</h1>
           <p>PSD・画像・VRMと音声から、口パク・目パチの付いた透明動画を作る手順を案内します。</p>
-          <p class="version-note">Windows 11 x64 ／ 0.6.1の使い方 ／ 2026年11月8日更新</p>
+          <p class="version-note">Windows 11 x64 ／ 0.6.2の使い方 ／ 2026年11月8日更新</p>
           <nav class="start-paths" aria-label="素材から始める">
 <a class="start-card" href="#psd-start"><span class="start-card-label">0.5.0で対応</span><strong>PSDから作る</strong><span>フォルダ・レイヤーで本体と差分を選ぶ</span></a>
 <a class="start-card" href="#sample-three"><span class="start-card-label">素材がない方にも</span><strong>全身画像2枚で作る</strong><span>無料サンプルで最初の1本を試す</span></a>
@@ -312,7 +312,7 @@ void main() {
 <details class="inline-details"><summary>詳細9口形：A、B、C、D、E、F、G、H、Xの意味</summary><p>口形記号は開き具合の順番ではなく、発音ごとの形を表します。</p><table class="help-table"><thead><tr><th>口形</th><th>形の目安</th><th>主な音</th></tr></thead><tbody><tr><th>A</th><td>力を入れて唇を閉じる</td><td>P / B / M</td></tr><tr><th>B</th><td>歯を閉じ、口を少し開く</td><td>K / S / T、EE</td></tr><tr><th>C</th><td>口を開く</td><td>EH / AE</td></tr><tr><th>D</th><td>口を大きく開く</td><td>AA</td></tr><tr><th>E</th><td>口を少し丸める</td><td>AO / ER</td></tr><tr><th>F</th><td>唇をすぼめる</td><td>UW / OW / W</td></tr><tr><th>G</th><td>上の歯を下唇へ当てる</td><td>F / V</td></tr><tr><th>H</th><td>舌を上の歯の後ろへ上げる</td><td>L</td></tr><tr><th>X</th><td>力を抜いて口を閉じる</td><td>無音・発話の間</td></tr></tbody></table><p>かんたん2枚ではA・Xを閉口、B・C・D・E・F・G・Hを開口へまとめます。かんたん3枚では、閉口・中口・大口へ自動で振り分けます。</p></details>
           </section>
 
-          <section class="guide-section searchable" id="lip-sync" data-search="リップシンク 口パク Rhubarb 自動解析 音声 音量 影響度 25 無音 しきい値 キュー 再解析 言語 英語 日本語 PocketSphinx">
+          <section class="guide-section searchable" id="lip-sync" data-search="リップシンク 口パク Rhubarb 自動解析 音声 音量 影響度 25 無音 しきい値 キュー 再解析 言語 英語 日本語 PocketSphinx 既定の解析エンジン 母音推定">
             <header class="section-heading"><p class="section-number">05</p><h2>音声に合わせて口パクを付ける</h2></header>
 <p>再生・一時停止・停止・シークはプレビュー下部で操作します。音声タイムラインの空き区間を右クリックして「無音を追加…」を選ぶと、ほかの音声をずらさずに無音を配置できます。</p>
 
@@ -329,6 +329,8 @@ void main() {
   <figcaption>「母音推定（内蔵）」を選び、右下の「マスター音声を解析」を押します。</figcaption>
 </figure>
 <p>「母音推定（内蔵）」は「あ・い・う・え・お」の口形を推定します。「音量（内蔵）」は音の大きさに合わせて閉じ口・半開き・開きの3段階で動かします。初期設定はRhubarbです。Rhubarbでは「解析する言語」も選べます。</p>
+<h3 id="default-analysis-engine">新しく配置する音声の解析方式を決める</h3>
+<p>0.6.2以降は「編集 → 設定… → リップシンク」で「既定の解析エンジン」を選び、「適用」を押します。選んだ方式はアプリに保存され、その後に配置する音声クリップに使われます。配置済みのクリップを変更する場合は、タイムラインでそのクリップを選び、プロパティの「解析方式」を変更してください。</p>
 <h3>口が開きすぎる・静かな区間でも開くとき</h3><p>「リップシンク解析」で「無音しきい値」を少し上げて、解析し直してみてください。Rhubarbでは「音量の影響度」も調整できます。</p>
 <h3 id="vrm-mouth-volume">VRMの口の開き具合を音量に合わせる</h3>
 <p>0.6.1以降は、VRMのRhubarbと「母音推定（内蔵）」で、母音の形を保ったまま開き具合を音量に合わせられます。「リップシンク解析」で「音量の影響度」を上げるほど、同じクリップの小さい声で開きが控えめになります。再解析して「プロジェクトへ適用」を押してください。</p>
