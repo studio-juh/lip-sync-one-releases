@@ -38,7 +38,7 @@
     <section class="page-intro" id="top">
       <p class="breadcrumb">LipSyncOne / Help</p><h1>LipSyncOne Help</h1>
       <p>Turn PSD artwork, images or VRM models into talking characters. Add speech and blinking, then export transparent video for your video editor.</p>
-      <p class="version-note">Windows 11 x64 / Guide for 0.6.5 / Updated November 23, 2026</p>
+      <p class="version-note">Windows 11 x64 / Guide for 0.6.6 / Updated November 23, 2026</p>
       <p class="workflow-note">The reference screenshots show the Japanese interface. Instructions use English menu names. Select English in the app's Language menu.</p>
       <nav class="start-paths" aria-label="Choose your starting material">
         <a class="start-card" href="#psd-start"><span class="start-card-label">Layered artwork</span><strong>Start from PSD</strong><span>Choose body, mouth and eye layers</span></a>
@@ -156,7 +156,7 @@ void main() {
           <h3 id="lip-sync-built-in">Choose an analysis method</h3>
           <p>Each audio clip can use one of three local analysis engines. Vowel estimation (built-in) estimates the five Japanese vowel shapes. Volume (built-in) switches between closed, medium and open shapes based on loudness. Rhubarb analyzes speech and offers a language setting. The factory default is Rhubarb; you can change it below.</p>
           <p>If Rhubarb stops partway through analysis, try Vowel estimation (built-in) or Volume (built-in). Both work independently of Rhubarb. Changing methods keeps your audio placement.</p>
-          <p>We reproduced a Rhubarb crash when its installation path contains Japanese characters. If this applies to your installation, try a built-in method below. Installing to a location whose full path uses ASCII characters is another workaround for Rhubarb. The same exit code can also have other causes.</p>
+          <p>In version 0.6.5 and earlier, Rhubarb could stop during analysis if its installation path contained Japanese characters. Version 0.6.6 fixes this issue. Use <a href="#updates">Help → Check for updates</a>, then analyze the same audio again. You can keep your installation folder and Windows language settings.</p>
           <ol>
             <li>Select the audio clip on the timeline. If clips appear as a single waveform, switch to Individual.</li>
             <li>In Properties, choose an Analysis method, then select Lip Sync to open the analysis dialog. You can also change the method in the dialog.</li>

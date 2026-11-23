@@ -90,7 +90,7 @@
           <p class="breadcrumb">LipSyncOne / ヘルプ</p>
           <h1>LipSyncOne ヘルプ</h1>
           <p>PSD・画像・VRMと音声から、口パク・目パチの付いた透明動画を作る手順を案内します。</p>
-          <p class="version-note">Windows 11 x64 ／ 0.6.5の使い方 ／ 2026年11月23日更新</p>
+          <p class="version-note">Windows 11 x64 ／ 0.6.6の使い方 ／ 2026年11月23日更新</p>
           <nav class="start-paths" aria-label="素材から始める">
 <a class="start-card" href="#psd-start"><span class="start-card-label">レイヤー付きの立ち絵</span><strong>PSDから作る</strong><span>フォルダー・レイヤーで本体と差分を選ぶ</span></a>
 <a class="start-card" href="#sample-three"><span class="start-card-label">素材がない方にも</span><strong>全身画像2枚で作る</strong><span>無料サンプルで最初の1本を試す</span></a>
@@ -330,7 +330,7 @@ void main() {
 <p>解析方式は音声クリップごとに選べます。画像の口形設定とVRMのどちらにも使えます。</p>
 <ul><li><strong>Rhubarb</strong>：発音に合わせて細かな口形を推定します。「解析する言語」で「日本語・その他」または「英語」を選びます。</li><li><strong>母音推定（内蔵）</strong>：日本語の「あ・い・う・え・お」を推定します。母音を決められない区間は音量で動かします。声質や録音条件によって結果は変わります。</li><li><strong>音量（内蔵）</strong>：音の大きさに合わせて、閉じ口・半開き・開きの3段階で動かします。</li></ul>
 <h3 id="lip-sync-built-in">Rhubarbで解析が途中で止まるとき</h3>
-<p>インストール先のパスに日本語が含まれる条件で、Rhubarbが途中で停止する問題を確認しています。該当する場合は、まず下の手順で内蔵方式をお試しください。Rhubarbを使う場合は、パス全体に日本語などを含まない場所へのインストールも回避策になります。ただし、同じ終了コードのエラーがすべてこの原因とは限りません。</p>
+<p>0.6.5以前では、インストール先のフォルダー名に日本語が含まれると、Rhubarbの解析が途中で止まることがありました。0.6.6で修正しました。<a href="#updates">「ヘルプ → アップデートを確認」</a>から更新し、同じ音声をもう一度解析してください。インストール先やWindowsの言語設定はそのままで使えます。</p>
 <p>音声の配置を残したまま、「母音推定（内蔵）」か「音量（内蔵）」へ切り替えて解析できます。どちらもRhubarbを使いません。</p>
 <ol>
   <li>タイムラインで対象の音声クリップを選びます。クリップがまとまって表示されている場合は「個別」に切り替えます。</li>
