@@ -38,7 +38,7 @@
     <section class="page-intro" id="top">
       <p class="breadcrumb">LipSyncOne / Help</p><h1>LipSyncOne Help</h1>
       <p>Turn PSD artwork, images or VRM models into talking characters. Add speech and blinking, then export transparent video for your video editor.</p>
-      <p class="version-note">Windows 11 x64 / Guide for 0.6.4 / Updated November 17, 2026</p>
+      <p class="version-note">Windows 11 x64 / Guide for 0.6.5 / Updated November 23, 2026</p>
       <p class="workflow-note">The reference screenshots show the Japanese interface. Instructions use English menu names. Select English in the app's Language menu.</p>
       <nav class="start-paths" aria-label="Choose your starting material">
         <a class="start-card" href="#psd-start"><span class="start-card-label">Layered artwork</span><strong>Start from PSD</strong><span>Choose body, mouth and eye layers</span></a>
@@ -156,6 +156,7 @@ void main() {
           <h3 id="lip-sync-built-in">Choose an analysis method</h3>
           <p>Each audio clip can use one of three local analysis engines. Vowel estimation (built-in) estimates the five Japanese vowel shapes. Volume (built-in) switches between closed, medium and open shapes based on loudness. Rhubarb analyzes speech and offers a language setting. The factory default is Rhubarb; you can change it below.</p>
           <p>If Rhubarb stops partway through analysis, try Vowel estimation (built-in) or Volume (built-in). Both work independently of Rhubarb. Changing methods keeps your audio placement.</p>
+          <p>We reproduced a Rhubarb crash when its installation path contains Japanese characters. If this applies to your installation, try a built-in method below. Installing to a location whose full path uses ASCII characters is another workaround for Rhubarb. The same exit code can also have other causes.</p>
           <ol>
             <li>Select the audio clip on the timeline. If clips appear as a single waveform, switch to Individual.</li>
             <li>In Properties, choose an Analysis method, then select Lip Sync to open the analysis dialog. You can also change the method in the dialog.</li>
@@ -224,9 +225,21 @@ void main() {
           <details class="inline-details" id="smart-app-control"><summary>Smart App Control</summary><p>This is a separate Windows protection feature. Read the stated blocking reason and Windows settings guidance. Changing protection affects the whole PC; do not change it only to dismiss a warning. The reference screenshot illustrates the settings screen and is not a recommended setting.</p><figure class="guide-shot"><a class="image-zoom-trigger" href="../../help/assets/smart-app-control-settings.png" aria-label="Enlarge: Smart App Control settings example; the shown choice is not a recommendation."><img src="../../help/assets/smart-app-control-settings.png" alt="Smart App Control settings example; the shown choice is not a recommendation. Japanese interface." loading="lazy" width="2062" height="1368"></a><figcaption>Smart App Control settings example; the shown choice is not a recommendation. Reference screenshot: Japanese interface.</figcaption></figure><p>See <a href="https://support.microsoft.com/windows/what-is-smart-app-control-285ea03d-fa88-4d56-882e-6698afdb7003">Microsoft's Smart App Control guidance</a>.</p></details>
           <details class="inline-details"><summary>Moving from older distributions</summary><p>The current distribution uses the NSIS installer. Close an old portable app and run the current setup. Microsoft Store packages are not part of the current regular distribution.</p></details>
         </section>
-        <section class="guide-section searchable" id="updates" data-search="update upgrade restart download purchase license BOOTH Rhubarb">
+        <section class="guide-section searchable" id="updates" data-search="update upgrade restart failed uninstall reinstall old version latest download purchase license BOOTH Rhubarb">
           <header class="section-heading"><p class="section-number">UPDATE</p><h2>Update the app</h2></header>
           <ol><li>Save your project.</li><li>Choose Help → Check for Updates. Checks are manual and do not run automatically at launch.</li><li>Read the release notes and choose Update and Restart. You can cancel the download. The app restarts after installation.</li></ol><p>See <a href="https://github.com/studio-juh/lip-sync-one-releases/releases">GitHub Releases</a> for release notes and available downloads. To register a BOOTH purchase certificate (.lso-license), open Help → Purchase Status and import it.</p>
+          <p>The download finishing and the app closing do not mean installation has succeeded. If the app does not restart, or still shows the old version when opened again, follow the steps below. When updating from 0.6.4 or earlier, a failure after the app exits may leave no diagnostic log.</p>
+          <p>When updating from 0.6.5 or later, LipSyncOne records failures to launch the installer. If the update remains incomplete, it also records this the next time you open the app. Use Help → Diagnostic logs… to <a href="#diagnostic-log">save a diagnostic report</a>.</p>
+          <h3 id="reinstall">Uninstall and install the latest version</h3>
+          <ol>
+            <li><strong>Save your work and close LipSyncOne.</strong> Keep a backup of your .ls1 projects and original PSD, image, audio and VRM files in another location. Move any projects or media out of the app's installation folder before uninstalling.</li>
+            <li><strong>Uninstall from Windows Settings.</strong> Open Settings → Apps → Installed apps, search for LipSyncOne, then choose the three-dot menu → Uninstall. Follow the prompts.</li>
+            <li><strong>Download a fresh copy of the latest installer.</strong> Get the setup EXE from the <a href="https://github.com/studio-juh/lip-sync-one-releases/releases/latest">official release page</a> and run it. If using a BOOTH ZIP, extract it and check that the setup EXE inside matches the latest version on the official release page before running it.</li>
+            <li><strong>Launch and check the version.</strong> Open LipSyncOne from the Start menu and choose Help → About LipSyncOne… to check the version. Once updated, open your saved project and try the operation again.</li>
+          </ol>
+          <figure class="guide-shot"><a class="image-zoom-trigger" href="../../help/assets/windows-uninstall.png" aria-label="Enlarge: Uninstall LipSyncOne from Windows Settings."><img src="../../help/assets/windows-uninstall.png" alt="Windows 11 Installed apps: LipSyncOne search result with Uninstall selected in the three-dot menu. Japanese interface." loading="lazy" width="1808" height="962"></a><figcaption>Reference screenshot: Windows 11 in Japanese. Version 0.6.4 is the version shown when this image was taken, not an indication of the latest release.</figcaption></figure>
+          <p>If the old version still opens, an existing shortcut may point to an older copy in another folder. Check both the version listed in Windows Installed apps and the version shown by the app you opened.</p>
+          <p>If you still need help, include the setup filename, the screen where installation stops, and any message or screenshot. Save a <a href="#diagnostic-log">diagnostic report</a> if one is available. Hide personal information, such as your Windows username, in public screenshots.</p>
         </section>
         <section class="guide-section searchable" id="shortcuts" data-search="shortcuts keyboard save undo redo play pause scale rotate keys copy paste search">
           <header class="section-heading"><p class="section-number">KEYBOARD</p><h2>Keyboard shortcuts</h2></header>
@@ -235,6 +248,7 @@ void main() {
         <section class="guide-section searchable" id="troubleshooting" data-search="troubleshooting errors no sound waveform missing images mouth eyes export failed Master audio preparation failed">
           <header class="section-heading"><p class="section-number">HELP</p><h2>Troubleshooting</h2></header>
           <p>If Rhubarb stops partway through analysis, see <a href="#lip-sync-built-in">how to switch to a built-in analysis method</a>.</p>
+          <p>If an update does not restart the app or leaves you on the old version, see <a href="#reinstall">how to uninstall and install the latest version</a>.</p>
           <h3 id="diagnostic-log">Save or clear diagnostic logs</h3>
           <p>After an error, open Help → Diagnostics… and select the entry with the matching time. The app keeps the latest 30 errors. Use Copy Error Summary for a support message of up to 800 characters, or Save Diagnostic Report for a JSON file with more detail. Open Log Folder gives you access to the individual saved logs.</p>
           <p>For an analysis failure, send the diagnostic report with your app version and the steps that caused it. For Rhubarb, the report includes the last processing stage, actual worker count, WAV format and status of the bundled models. A progress percentage such as 13% does not identify the cause on its own.</p>

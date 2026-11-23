@@ -90,7 +90,7 @@
           <p class="breadcrumb">LipSyncOne / ヘルプ</p>
           <h1>LipSyncOne ヘルプ</h1>
           <p>PSD・画像・VRMと音声から、口パク・目パチの付いた透明動画を作る手順を案内します。</p>
-          <p class="version-note">Windows 11 x64 ／ 0.6.4の使い方 ／ 2026年11月17日更新</p>
+          <p class="version-note">Windows 11 x64 ／ 0.6.5の使い方 ／ 2026年11月23日更新</p>
           <nav class="start-paths" aria-label="素材から始める">
 <a class="start-card" href="#psd-start"><span class="start-card-label">レイヤー付きの立ち絵</span><strong>PSDから作る</strong><span>フォルダー・レイヤーで本体と差分を選ぶ</span></a>
 <a class="start-card" href="#sample-three"><span class="start-card-label">素材がない方にも</span><strong>全身画像2枚で作る</strong><span>無料サンプルで最初の1本を試す</span></a>
@@ -330,6 +330,7 @@ void main() {
 <p>解析方式は音声クリップごとに選べます。画像の口形設定とVRMのどちらにも使えます。</p>
 <ul><li><strong>Rhubarb</strong>：発音に合わせて細かな口形を推定します。「解析する言語」で「日本語・その他」または「英語」を選びます。</li><li><strong>母音推定（内蔵）</strong>：日本語の「あ・い・う・え・お」を推定します。母音を決められない区間は音量で動かします。声質や録音条件によって結果は変わります。</li><li><strong>音量（内蔵）</strong>：音の大きさに合わせて、閉じ口・半開き・開きの3段階で動かします。</li></ul>
 <h3 id="lip-sync-built-in">Rhubarbで解析が途中で止まるとき</h3>
+<p>インストール先のパスに日本語が含まれる条件で、Rhubarbが途中で停止する問題を確認しています。該当する場合は、まず下の手順で内蔵方式をお試しください。Rhubarbを使う場合は、パス全体に日本語などを含まない場所へのインストールも回避策になります。ただし、同じ終了コードのエラーがすべてこの原因とは限りません。</p>
 <p>音声の配置を残したまま、「母音推定（内蔵）」か「音量（内蔵）」へ切り替えて解析できます。どちらもRhubarbを使いません。</p>
 <ol>
   <li>タイムラインで対象の音声クリップを選びます。クリップがまとまって表示されている場合は「個別」に切り替えます。</li>
@@ -443,11 +444,23 @@ void main() {
 </details><details class="inline-details"><summary>以前の配布形式について</summary><p>現在はNSISインストーラーに統一しています。以前のポータブル版から移る場合は旧アプリを終了し、現在のセットアップEXEを実行してください。Microsoft Store版は現在の通常配布には含めていません。</p></details>
           </section>
 
-          <section class="guide-section searchable" id="updates" data-search="更新 アップデート Rhubarb 同梱 BOOTH 購入状態 証明 portable">
+          <section class="guide-section searchable" id="updates" data-search="更新 アップデート 再起動 失敗 アンインストール 再インストール 入れ直す 旧版 最新版 Rhubarb 同梱 BOOTH 購入状態 証明 portable">
             <header class="section-heading"><p class="section-number">10</p><h2>アプリを更新する</h2></header>
 
 <p>「ヘルプ → アップデートを確認…」から手動で確認します。起動時の自動確認は行いません。</p><ol class="procedure compact-procedure"><li><strong>プロジェクトを保存する</strong><span>編集中の内容を保存します。</span></li><li><strong>更新を確認する</strong><span>新しい版がある場合は、案内を読んで「更新して再起動」を選びます。</span></li><li><strong>再起動を待つ</strong><span>更新ファイルの取得と適用が終わると、アプリを再起動します。取得中は取り消せます。</span></li></ol>
 <p>更新内容と公開状況は<a href="https://github.com/studio-juh/lip-sync-one-releases/releases">リリース一覧</a>で確認できます。</p>
+<p>ダウンロードが終わってアプリが閉じても、その時点では更新完了とは限りません。再起動しない、または開き直しても古い版のままの場合は、下の手順で入れ直してください。0.6.4以前からの更新では、アプリ終了後の失敗が診断ログに残らないことがあります。</p>
+<p>0.6.5以降からの更新では、更新プログラムの起動失敗を記録します。更新が完了していない場合も、次にアプリを開いた時に診断ログへ残します。「ヘルプ → 診断ログ…」から<a href="#diagnostic-log">診断レポートを保存</a>できます。</p>
+<h3 id="reinstall">アンインストールして最新版を入れ直す</h3>
+<ol class="procedure compact-procedure">
+<li><strong>作品を保存してアプリを閉じる</strong><span>念のため、作品ファイル（.ls1）と元のPSD・画像・音声・VRMなどを別の場所にもコピーしてください。アプリのインストール先に作品や素材を置いている場合は、先にそこから退避します。</span></li>
+<li><strong>Windowsの設定からアンインストールする</strong><span>「設定 → アプリ → インストールされているアプリ」を開き、「LipSyncOne」を検索します。右の「…」から「アンインストール」を選び、画面の案内に従います。</span></li>
+<li><strong>最新版をダウンロードしてインストールする</strong><span><a href="https://github.com/studio-juh/lip-sync-one-releases/releases/latest">公式配布ページ</a>から最新のセットアップEXEを改めてダウンロードし、実行します。BOOTHのZIPを使う場合は展開し、中のセットアップEXEの版が公式配布ページの最新版と同じか確認してから実行してください。</span></li>
+<li><strong>起動してバージョンを確認する</strong><span>スタートメニューからLipSyncOneを開き、「ヘルプ → LipSyncOneについて…」でバージョンを確認します。更新できていれば、保存しておいた作品を開いて操作を試してください。</span></li>
+</ol>
+<figure class="guide-shot"><a class="image-zoom-trigger" href="assets/windows-uninstall.png" aria-label="Windowsのアプリ一覧からLipSyncOneをアンインストールする画面を拡大表示"><img src="assets/windows-uninstall.png" alt="Windows 11の「インストールされているアプリ」でLipSyncOneを検索し、右の「…」から「アンインストール」を選ぶ画面" loading="lazy" width="1808" height="962"></a><figcaption>Windows 11の操作例です。画像内の0.6.4は撮影時のバージョンで、最新版を示すものではありません。</figcaption></figure>
+<p>入れ直した後も古い版が開く場合は、以前のショートカットが別の場所の旧版を指している可能性があります。Windowsのアプリ一覧に表示される版と、実際に起動したアプリの版を確認してください。</p>
+<p>解決しない場合は、使ったセットアップのファイル名、どの画面まで進んだか、表示されたメッセージやスクリーンショットを添えてお問い合わせください。診断ログがある場合は、<a href="#diagnostic-log">診断レポート</a>も保存してください。公開する画像からは、Windowsのユーザー名などの個人情報を隠してください。</p>
 <details class="inline-details"><summary>BOOTHの購入者証明について</summary><p>購入者証明ファイル（.lso-license）は「ヘルプ → 購入状態」から読み込みます。</p></details>
           </section>
 
@@ -460,6 +473,7 @@ void main() {
           <section class="guide-section searchable" id="troubleshooting" data-search="トラブル エラー 起動 解析 失敗 音声 表示されない 書き出し 再生 波形 SmartScreen Rhubarb Master audio preparation failed">
             <header class="section-heading"><p class="section-number">HELP</p><h2>困ったときは</h2></header>
             <p>Rhubarbで音声解析が途中で止まる場合は、<a href="#lip-sync-built-in">内蔵の解析方式へ切り替える手順</a>をご覧ください。</p>
+            <p>アップデート後に再起動しない、または古い版のままの場合は、<a href="#reinstall">アンインストールして最新版を入れ直す手順</a>をご覧ください。</p>
             <h3 id="diagnostic-log">診断ログを保存・消去する</h3>
             <p>問題が起きた操作をもう一度試し、「ヘルプ → 診断ログ…」を開きます。該当時刻のエラーコード・ログID・工程を確認してください。「エラー情報をコピー」で、800文字以内の要約をマシュマロなどへ貼り付けられます。再現手順も添えてください。</p>
             <p>詳しい情報は「診断レポートを保存」でJSONファイルへ保存できます。「保存フォルダーを開く」から個別ログも取得できます。直近30件を保持し、Rhubarbの失敗では最後に到達した工程、終了コード、実際のスレッド数、解析用WAVの形式、同梱モデルの状態などを記録します。</p>
